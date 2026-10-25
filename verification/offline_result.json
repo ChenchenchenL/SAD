@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "network_calls": 0,
+  "python": "3.12.14",
+  "checks": [
+    "information-boundary regression",
+    "main diagnosis audit",
+    "feedback audit",
+    "archived-vs-regenerated statistics",
+    "source CSV extraction",
+    "extension source/CI audit"
+  ]
+}

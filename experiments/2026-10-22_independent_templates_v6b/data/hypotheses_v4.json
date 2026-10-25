@@ -1,0 +1,49 @@
+{
+ "subtraction": [
+  "subtraction.always_borrow_left",
+  "subtraction.borrow_from_bottom",
+  "subtraction.borrow_no_decrement",
+  "subtraction.decompose_by_place_value_label",
+  "subtraction.diff_0_n_equals_n",
+  "subtraction.no_column_limit",
+  "subtraction.smaller_from_larger",
+  "subtraction.stops_borrow_at_zero"
+ ],
+ "fractions": [
+  "fractions.add_numerators_denominators",
+  "fractions.common_denominator_numerator",
+  "fractions.denominator_comparison_error",
+  "fractions.ignore_denominators",
+  "fractions.keep_common_denominator_for_multiplication",
+  "fractions.multiply_across_for_division",
+  "fractions.natural_number_bias_numerator_only",
+  "fractions.subtract_across"
+ ],
+ "decimals": [
+  "decimals.ignore_decimal_point",
+  "decimals.longer_is_larger",
+  "decimals.right_align_decimals",
+  "decimals.shorter_is_larger",
+  "decimals.whole_number_thinking"
+ ],
+ "negative_numbers": [
+  "negative_numbers.larger_absolute_value_always_wins",
+  "negative_numbers.multiplication_rule_for_addition",
+  "negative_numbers.negative_swaps_operation",
+  "negative_numbers.negative_times_negative_negative",
+  "negative_numbers.two_negatives_always_positive"
+ ],
+ "order_of_operations": [
+  "order_of_operations.addition_before_subtraction_always",
+  "order_of_operations.ignore_parentheses",
+  "order_of_operations.multiplication_before_division_always",
+  "order_of_operations.pemdas_strictly_sequential",
+  "order_of_operations.strict_left_to_right"
+ ],
+ "percentages": [
+  "percentages.add_percentages_directly",
+  "percentages.percent_equals_decimal",
+  "percentages.percentage_as_index",
+  "percentages.reverse_percentage_error"
+ ]
+}

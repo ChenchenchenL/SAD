@@ -1,0 +1,1223 @@
+{
+ "category": "fractions",
+ "settings": {
+  "builder": "v6b_corrected_independent_authored_templates",
+  "source": "v6 corrected for F1/F2; text/family disjoint from v5/v4, partial structural overlap"
+ },
+ "hypotheses": [
+  {
+   "id": "fractions.add_numerators_denominators"
+  },
+  {
+   "id": "fractions.common_denominator_numerator"
+  },
+  {
+   "id": "fractions.denominator_comparison_error"
+  },
+  {
+   "id": "fractions.ignore_denominators"
+  },
+  {
+   "id": "fractions.keep_common_denominator_for_multiplication"
+  },
+  {
+   "id": "fractions.multiply_across_for_division"
+  },
+  {
+   "id": "fractions.natural_number_bias_numerator_only"
+  },
+  {
+   "id": "fractions.subtract_across"
+  }
+ ],
+ "items": [
+  {
+   "text": "Calculate: 1/2 + 1/3 + 1/4",
+   "category": "fractions",
+   "family": "frac_add_three",
+   "split": "test",
+   "operation": "fraction_addition",
+   "correct": "13/12",
+   "predictions": {
+    "fractions.add_numerators_denominators": "1/3",
+    "fractions.common_denominator_numerator": "13/12",
+    "fractions.denominator_comparison_error": "13/12",
+    "fractions.ignore_denominators": "3",
+    "fractions.keep_common_denominator_for_multiplication": "13/12",
+    "fractions.multiply_across_for_division": "13/12",
+    "fractions.natural_number_bias_numerator_only": "13/12",
+    "fractions.subtract_across": "13/12"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": true,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": true,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "1/3",
+    "13/12",
+    "3"
+   ],
+   "meta": {
+    "template": "frac_add_three",
+    "operands": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      4
+     ]
+    ],
+    "operation": "addition",
+    "audit_kind": "frac_add_three"
+   },
+   "audit_expr": "1/2 + 1/3 + 1/4",
+   "item_id": "v6i:0018"
+  },
+  {
+   "text": "Calculate: 2/3 + 1/4 + 1/6",
+   "category": "fractions",
+   "family": "frac_add_three",
+   "split": "test",
+   "operation": "fraction_addition",
+   "correct": "13/12",
+   "predictions": {
+    "fractions.add_numerators_denominators": "4/13",
+    "fractions.common_denominator_numerator": "13/12",
+    "fractions.denominator_comparison_error": "13/12",
+    "fractions.ignore_denominators": "4",
+    "fractions.keep_common_denominator_for_multiplication": "13/12",
+    "fractions.multiply_across_for_division": "13/12",
+    "fractions.natural_number_bias_numerator_only": "13/12",
+    "fractions.subtract_across": "13/12"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": true,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": true,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "13/12",
+    "4",
+    "4/13"
+   ],
+   "meta": {
+    "template": "frac_add_three",
+    "operands": [
+     [
+      2,
+      3
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      1,
+      6
+     ]
+    ],
+    "operation": "addition",
+    "audit_kind": "frac_add_three"
+   },
+   "audit_expr": "2/3 + 1/4 + 1/6",
+   "item_id": "v6i:0019"
+  },
+  {
+   "text": "Calculate: 3/5 + 1/2 + 2/3",
+   "category": "fractions",
+   "family": "frac_add_three",
+   "split": "test",
+   "operation": "fraction_addition",
+   "correct": "53/30",
+   "predictions": {
+    "fractions.add_numerators_denominators": "3/5",
+    "fractions.common_denominator_numerator": "53/30",
+    "fractions.denominator_comparison_error": "53/30",
+    "fractions.ignore_denominators": "6",
+    "fractions.keep_common_denominator_for_multiplication": "53/30",
+    "fractions.multiply_across_for_division": "53/30",
+    "fractions.natural_number_bias_numerator_only": "53/30",
+    "fractions.subtract_across": "53/30"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": true,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": true,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "3/5",
+    "53/30",
+    "6"
+   ],
+   "meta": {
+    "template": "frac_add_three",
+    "operands": [
+     [
+      3,
+      5
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "operation": "addition",
+    "audit_kind": "frac_add_three"
+   },
+   "audit_expr": "3/5 + 1/2 + 2/3",
+   "item_id": "v6i:0020"
+  },
+  {
+   "text": "Calculate: 7/4 - 5/6",
+   "category": "fractions",
+   "family": "frac_sub_improper",
+   "split": "test",
+   "operation": "fraction_subtraction",
+   "correct": "11/12",
+   "predictions": {
+    "fractions.add_numerators_denominators": "11/12",
+    "fractions.common_denominator_numerator": "11/12",
+    "fractions.denominator_comparison_error": "11/12",
+    "fractions.ignore_denominators": "2",
+    "fractions.keep_common_denominator_for_multiplication": "11/12",
+    "fractions.multiply_across_for_division": "11/12",
+    "fractions.natural_number_bias_numerator_only": "11/12",
+    "fractions.subtract_across": "-1"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": true
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": true
+   },
+   "answers": [
+    "-1",
+    "11/12",
+    "2"
+   ],
+   "meta": {
+    "template": "frac_sub_improper",
+    "operands": [
+     [
+      7,
+      4
+     ],
+     [
+      5,
+      6
+     ]
+    ],
+    "operation": "subtraction",
+    "audit_kind": "frac_sub_improper"
+   },
+   "audit_expr": "7/4 - 5/6",
+   "item_id": "v6i:0021"
+  },
+  {
+   "text": "Calculate: 9/5 - 2/3",
+   "category": "fractions",
+   "family": "frac_sub_improper",
+   "split": "test",
+   "operation": "fraction_subtraction",
+   "correct": "17/15",
+   "predictions": {
+    "fractions.add_numerators_denominators": "17/15",
+    "fractions.common_denominator_numerator": "17/15",
+    "fractions.denominator_comparison_error": "17/15",
+    "fractions.ignore_denominators": "7",
+    "fractions.keep_common_denominator_for_multiplication": "17/15",
+    "fractions.multiply_across_for_division": "17/15",
+    "fractions.natural_number_bias_numerator_only": "17/15",
+    "fractions.subtract_across": "7/2"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": true
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": true
+   },
+   "answers": [
+    "17/15",
+    "7",
+    "7/2"
+   ],
+   "meta": {
+    "template": "frac_sub_improper",
+    "operands": [
+     [
+      9,
+      5
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "operation": "subtraction",
+    "audit_kind": "frac_sub_improper"
+   },
+   "audit_expr": "9/5 - 2/3",
+   "item_id": "v6i:0022"
+  },
+  {
+   "text": "Calculate: 8/3 - 5/4",
+   "category": "fractions",
+   "family": "frac_sub_improper",
+   "split": "test",
+   "operation": "fraction_subtraction",
+   "correct": "17/12",
+   "predictions": {
+    "fractions.add_numerators_denominators": "17/12",
+    "fractions.common_denominator_numerator": "17/12",
+    "fractions.denominator_comparison_error": "17/12",
+    "fractions.ignore_denominators": "3",
+    "fractions.keep_common_denominator_for_multiplication": "17/12",
+    "fractions.multiply_across_for_division": "17/12",
+    "fractions.natural_number_bias_numerator_only": "17/12",
+    "fractions.subtract_across": "-3"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": true
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": true
+   },
+   "answers": [
+    "-3",
+    "17/12",
+    "3"
+   ],
+   "meta": {
+    "template": "frac_sub_improper",
+    "operands": [
+     [
+      8,
+      3
+     ],
+     [
+      5,
+      4
+     ]
+    ],
+    "operation": "subtraction",
+    "audit_kind": "frac_sub_improper"
+   },
+   "audit_expr": "8/3 - 5/4",
+   "item_id": "v6i:0023"
+  },
+  {
+   "text": "Calculate: 2/5 * 3/5 * 4/5",
+   "category": "fractions",
+   "family": "frac_mul_three",
+   "split": "test",
+   "operation": "fraction_multiplication",
+   "correct": "24/125",
+   "predictions": {
+    "fractions.add_numerators_denominators": "24/125",
+    "fractions.common_denominator_numerator": "24/125",
+    "fractions.denominator_comparison_error": "24/125",
+    "fractions.ignore_denominators": "24",
+    "fractions.keep_common_denominator_for_multiplication": "24/5",
+    "fractions.multiply_across_for_division": "24/125",
+    "fractions.natural_number_bias_numerator_only": "24/125",
+    "fractions.subtract_across": "24/125"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": true,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": true,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "24",
+    "24/125",
+    "24/5"
+   ],
+   "meta": {
+    "template": "three_fractions",
+    "v6_template_family": "frac_mul_three",
+    "operands": [
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "operation": "multiplication",
+    "numerator1": 2,
+    "numerator2": 3,
+    "numerator3": 4,
+    "denominator": 5,
+    "correct_numerator": 24,
+    "correct_denominator": 125,
+    "correct_answer": "24/125",
+    "malrule_numerator": 24,
+    "malrule_denominator": 5,
+    "malrule_answer": "24/5",
+    "audit_kind": "frac_mul_three"
+   },
+   "audit_expr": "2/5 * 3/5 * 4/5",
+   "item_id": "v6i:0024"
+  },
+  {
+   "text": "Calculate: 3/7 * 5/7 * 2/7",
+   "category": "fractions",
+   "family": "frac_mul_three",
+   "split": "test",
+   "operation": "fraction_multiplication",
+   "correct": "30/343",
+   "predictions": {
+    "fractions.add_numerators_denominators": "30/343",
+    "fractions.common_denominator_numerator": "30/343",
+    "fractions.denominator_comparison_error": "30/343",
+    "fractions.ignore_denominators": "30",
+    "fractions.keep_common_denominator_for_multiplication": "30/7",
+    "fractions.multiply_across_for_division": "30/343",
+    "fractions.natural_number_bias_numerator_only": "30/343",
+    "fractions.subtract_across": "30/343"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": true,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": true,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "30",
+    "30/343",
+    "30/7"
+   ],
+   "meta": {
+    "template": "three_fractions",
+    "v6_template_family": "frac_mul_three",
+    "operands": [
+     [
+      3,
+      7
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      2,
+      7
+     ]
+    ],
+    "operation": "multiplication",
+    "numerator1": 3,
+    "numerator2": 5,
+    "numerator3": 2,
+    "denominator": 7,
+    "correct_numerator": 30,
+    "correct_denominator": 343,
+    "correct_answer": "30/343",
+    "malrule_numerator": 30,
+    "malrule_denominator": 7,
+    "malrule_answer": "30/7",
+    "audit_kind": "frac_mul_three"
+   },
+   "audit_expr": "3/7 * 5/7 * 2/7",
+   "item_id": "v6i:0025"
+  },
+  {
+   "text": "Calculate: 1/3 * 2/3 * 2/3",
+   "category": "fractions",
+   "family": "frac_mul_three",
+   "split": "test",
+   "operation": "fraction_multiplication",
+   "correct": "4/27",
+   "predictions": {
+    "fractions.add_numerators_denominators": "4/27",
+    "fractions.common_denominator_numerator": "4/27",
+    "fractions.denominator_comparison_error": "4/27",
+    "fractions.ignore_denominators": "4",
+    "fractions.keep_common_denominator_for_multiplication": "4/3",
+    "fractions.multiply_across_for_division": "4/27",
+    "fractions.natural_number_bias_numerator_only": "4/27",
+    "fractions.subtract_across": "4/27"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": true,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": true,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "4",
+    "4/27",
+    "4/3"
+   ],
+   "meta": {
+    "template": "three_fractions",
+    "v6_template_family": "frac_mul_three",
+    "operands": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "operation": "multiplication",
+    "numerator1": 1,
+    "numerator2": 2,
+    "numerator3": 2,
+    "denominator": 3,
+    "correct_numerator": 4,
+    "correct_denominator": 27,
+    "correct_answer": "4/27",
+    "malrule_numerator": 4,
+    "malrule_denominator": 3,
+    "malrule_answer": "4/3",
+    "audit_kind": "frac_mul_three"
+   },
+   "audit_expr": "1/3 * 2/3 * 2/3",
+   "item_id": "v6i:0026"
+  },
+  {
+   "text": "Calculate: 3/4 / 3",
+   "category": "fractions",
+   "family": "frac_div_whole",
+   "split": "test",
+   "operation": "fraction_division",
+   "correct": "1/4",
+   "predictions": {
+    "fractions.add_numerators_denominators": "1/4",
+    "fractions.common_denominator_numerator": "1/4",
+    "fractions.denominator_comparison_error": "1/4",
+    "fractions.ignore_denominators": "1",
+    "fractions.keep_common_denominator_for_multiplication": "1/4",
+    "fractions.multiply_across_for_division": "9/4",
+    "fractions.natural_number_bias_numerator_only": "1/4",
+    "fractions.subtract_across": "1/4"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "1",
+    "1/4",
+    "9/4"
+   ],
+   "meta": {
+    "template": "frac_div_whole",
+    "operands": [
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "whole": 3,
+    "operation": "division",
+    "a": 3,
+    "b": 4,
+    "c": 3,
+    "d": 1,
+    "audit_kind": "frac_div_whole"
+   },
+   "audit_expr": "3/4 / 3",
+   "item_id": "v6i:0027"
+  },
+  {
+   "text": "Calculate: 2/5 / 4",
+   "category": "fractions",
+   "family": "frac_div_whole",
+   "split": "test",
+   "operation": "fraction_division",
+   "correct": "1/10",
+   "predictions": {
+    "fractions.add_numerators_denominators": "1/10",
+    "fractions.common_denominator_numerator": "1/10",
+    "fractions.denominator_comparison_error": "1/10",
+    "fractions.ignore_denominators": "0",
+    "fractions.keep_common_denominator_for_multiplication": "1/10",
+    "fractions.multiply_across_for_division": "8/5",
+    "fractions.natural_number_bias_numerator_only": "1/10",
+    "fractions.subtract_across": "1/10"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "0",
+    "1/10",
+    "8/5"
+   ],
+   "meta": {
+    "template": "frac_div_whole",
+    "operands": [
+     [
+      2,
+      5
+     ],
+     [
+      4,
+      1
+     ]
+    ],
+    "whole": 4,
+    "operation": "division",
+    "a": 2,
+    "b": 5,
+    "c": 4,
+    "d": 1,
+    "audit_kind": "frac_div_whole"
+   },
+   "audit_expr": "2/5 / 4",
+   "item_id": "v6i:0028"
+  },
+  {
+   "text": "Calculate: 5/6 / 2",
+   "category": "fractions",
+   "family": "frac_div_whole",
+   "split": "test",
+   "operation": "fraction_division",
+   "correct": "5/12",
+   "predictions": {
+    "fractions.add_numerators_denominators": "5/12",
+    "fractions.common_denominator_numerator": "5/12",
+    "fractions.denominator_comparison_error": "5/12",
+    "fractions.ignore_denominators": "2",
+    "fractions.keep_common_denominator_for_multiplication": "5/12",
+    "fractions.multiply_across_for_division": "5/3",
+    "fractions.natural_number_bias_numerator_only": "5/12",
+    "fractions.subtract_across": "5/12"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "2",
+    "5/12",
+    "5/3"
+   ],
+   "meta": {
+    "template": "frac_div_whole",
+    "operands": [
+     [
+      5,
+      6
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "whole": 2,
+    "operation": "division",
+    "a": 5,
+    "b": 6,
+    "c": 2,
+    "d": 1,
+    "audit_kind": "frac_div_whole"
+   },
+   "audit_expr": "5/6 / 2",
+   "item_id": "v6i:0029"
+  },
+  {
+   "text": "Calculate: 3 / (2/5)",
+   "category": "fractions",
+   "family": "frac_whole_div",
+   "split": "test",
+   "operation": "fraction_division",
+   "correct": "15/2",
+   "predictions": {
+    "fractions.add_numerators_denominators": "15/2",
+    "fractions.common_denominator_numerator": "15/2",
+    "fractions.denominator_comparison_error": "15/2",
+    "fractions.ignore_denominators": "1",
+    "fractions.keep_common_denominator_for_multiplication": "15/2",
+    "fractions.multiply_across_for_division": "6/5",
+    "fractions.natural_number_bias_numerator_only": "15/2",
+    "fractions.subtract_across": "15/2"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "1",
+    "15/2",
+    "6/5"
+   ],
+   "meta": {
+    "template": "frac_whole_div",
+    "operands": [
+     [
+      3,
+      1
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "whole": 3,
+    "operation": "division",
+    "a": 3,
+    "b": 1,
+    "c": 2,
+    "d": 5,
+    "audit_kind": "frac_whole_div"
+   },
+   "audit_expr": "3 / (2/5)",
+   "item_id": "v6i:0030"
+  },
+  {
+   "text": "Calculate: 4 / (3/7)",
+   "category": "fractions",
+   "family": "frac_whole_div",
+   "split": "test",
+   "operation": "fraction_division",
+   "correct": "28/3",
+   "predictions": {
+    "fractions.add_numerators_denominators": "28/3",
+    "fractions.common_denominator_numerator": "28/3",
+    "fractions.denominator_comparison_error": "28/3",
+    "fractions.ignore_denominators": "1",
+    "fractions.keep_common_denominator_for_multiplication": "28/3",
+    "fractions.multiply_across_for_division": "12/7",
+    "fractions.natural_number_bias_numerator_only": "28/3",
+    "fractions.subtract_across": "28/3"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "1",
+    "12/7",
+    "28/3"
+   ],
+   "meta": {
+    "template": "frac_whole_div",
+    "operands": [
+     [
+      4,
+      1
+     ],
+     [
+      3,
+      7
+     ]
+    ],
+    "whole": 4,
+    "operation": "division",
+    "a": 4,
+    "b": 1,
+    "c": 3,
+    "d": 7,
+    "audit_kind": "frac_whole_div"
+   },
+   "audit_expr": "4 / (3/7)",
+   "item_id": "v6i:0031"
+  },
+  {
+   "text": "Calculate: 2 / (5/6)",
+   "category": "fractions",
+   "family": "frac_whole_div",
+   "split": "test",
+   "operation": "fraction_division",
+   "correct": "12/5",
+   "predictions": {
+    "fractions.add_numerators_denominators": "12/5",
+    "fractions.common_denominator_numerator": "12/5",
+    "fractions.denominator_comparison_error": "12/5",
+    "fractions.ignore_denominators": "0",
+    "fractions.keep_common_denominator_for_multiplication": "12/5",
+    "fractions.multiply_across_for_division": "5/3",
+    "fractions.natural_number_bias_numerator_only": "12/5",
+    "fractions.subtract_across": "12/5"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": false,
+    "fractions.ignore_denominators": true,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": true,
+    "fractions.natural_number_bias_numerator_only": false,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "0",
+    "12/5",
+    "5/3"
+   ],
+   "meta": {
+    "template": "frac_whole_div",
+    "operands": [
+     [
+      2,
+      1
+     ],
+     [
+      5,
+      6
+     ]
+    ],
+    "whole": 2,
+    "operation": "division",
+    "a": 2,
+    "b": 1,
+    "c": 5,
+    "d": 6,
+    "audit_kind": "frac_whole_div"
+   },
+   "audit_expr": "2 / (5/6)",
+   "item_id": "v6i:0032"
+  },
+  {
+   "text": "Which fraction is largest: 7/10, 2/15, 3/4, 5/9?",
+   "category": "fractions",
+   "family": "frac_compare_four",
+   "split": "test",
+   "operation": "fraction_comparison",
+   "correct": "3/4",
+   "predictions": {
+    "fractions.add_numerators_denominators": "3/4",
+    "fractions.common_denominator_numerator": "3/4",
+    "fractions.denominator_comparison_error": "2/15",
+    "fractions.ignore_denominators": "3/4",
+    "fractions.keep_common_denominator_for_multiplication": "3/4",
+    "fractions.multiply_across_for_division": "3/4",
+    "fractions.natural_number_bias_numerator_only": "7/10",
+    "fractions.subtract_across": "3/4"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": true,
+    "fractions.ignore_denominators": false,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": true,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": true,
+    "fractions.ignore_denominators": false,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": true,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "2/15",
+    "3/4",
+    "7/10"
+   ],
+   "meta": {
+    "template": "frac_compare_four",
+    "operands": [
+     [
+      7,
+      10
+     ],
+     [
+      2,
+      15
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      5,
+      9
+     ]
+    ],
+    "audit_kind": "frac_compare_four"
+   },
+   "audit_expr": "7/10, 2/15, 3/4, 5/9",
+   "item_id": "v6i:0033"
+  },
+  {
+   "text": "Which fraction is largest: 9/11, 3/13, 4/5, 6/7?",
+   "category": "fractions",
+   "family": "frac_compare_four",
+   "split": "test",
+   "operation": "fraction_comparison",
+   "correct": "6/7",
+   "predictions": {
+    "fractions.add_numerators_denominators": "6/7",
+    "fractions.common_denominator_numerator": "6/7",
+    "fractions.denominator_comparison_error": "3/13",
+    "fractions.ignore_denominators": "6/7",
+    "fractions.keep_common_denominator_for_multiplication": "6/7",
+    "fractions.multiply_across_for_division": "6/7",
+    "fractions.natural_number_bias_numerator_only": "9/11",
+    "fractions.subtract_across": "6/7"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": true,
+    "fractions.ignore_denominators": false,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": true,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": true,
+    "fractions.ignore_denominators": false,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": true,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "3/13",
+    "6/7",
+    "9/11"
+   ],
+   "meta": {
+    "template": "frac_compare_four",
+    "operands": [
+     [
+      9,
+      11
+     ],
+     [
+      3,
+      13
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "audit_kind": "frac_compare_four"
+   },
+   "audit_expr": "9/11, 3/13, 4/5, 6/7",
+   "item_id": "v6i:0034"
+  },
+  {
+   "text": "Which fraction is largest: 5/6, 9/11, 8/13, 3/4?",
+   "category": "fractions",
+   "family": "frac_compare_four",
+   "split": "test",
+   "operation": "fraction_comparison",
+   "correct": "5/6",
+   "predictions": {
+    "fractions.add_numerators_denominators": "5/6",
+    "fractions.common_denominator_numerator": "5/6",
+    "fractions.denominator_comparison_error": "8/13",
+    "fractions.ignore_denominators": "5/6",
+    "fractions.keep_common_denominator_for_multiplication": "5/6",
+    "fractions.multiply_across_for_division": "5/6",
+    "fractions.natural_number_bias_numerator_only": "9/11",
+    "fractions.subtract_across": "5/6"
+   },
+   "applicable": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": true,
+    "fractions.ignore_denominators": false,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": true,
+    "fractions.subtract_across": false
+   },
+   "triggers": {
+    "fractions.add_numerators_denominators": false,
+    "fractions.common_denominator_numerator": false,
+    "fractions.denominator_comparison_error": true,
+    "fractions.ignore_denominators": false,
+    "fractions.keep_common_denominator_for_multiplication": false,
+    "fractions.multiply_across_for_division": false,
+    "fractions.natural_number_bias_numerator_only": true,
+    "fractions.subtract_across": false
+   },
+   "answers": [
+    "5/6",
+    "8/13",
+    "9/11"
+   ],
+   "meta": {
+    "template": "frac_compare_four",
+    "operands": [
+     [
+      5,
+      6
+     ],
+     [
+      9,
+      11
+     ],
+     [
+      8,
+      13
+     ],
+     [
+      3,
+      4
+     ]
+    ],
+    "audit_kind": "frac_compare_four"
+   },
+   "audit_expr": "5/6, 9/11, 8/13, 3/4",
+   "item_id": "v6i:0035"
+  }
+ ]
+}

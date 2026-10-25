@@ -1,0 +1,81 @@
+{
+  "generated_at_utc": "2026-10-21T12:02:31.907498+00:00",
+  "python": "3.12.8",
+  "executable": "D:\\Program Files\\python\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "experiment": "2026-10-21_lomo_out_of_library",
+  "run_id": "20261021T120231Z_lomo_eps005",
+  "config": "experiments\\2026-10-21_lomo_out_of_library\\config.json",
+  "inputs": [
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/config.json",
+      "size_bytes": 436,
+      "sha256": "b7be60edf4d21ea4cd117d3685da42526b0ccc46a5cae15405385148617e908a"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/cases_test_v5_exclusion_corrected.json",
+      "size_bytes": 44273,
+      "sha256": "a47a41c385380d0306a4fc3a73a7ce0239db443d4f44bb888e90fe2bd53eb57e"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/priors_test_category.jsonl",
+      "size_bytes": 215841,
+      "sha256": "8ffc3a02593adba624d18604d7a6c1feeb14a566aba0a1138f9ee9b080860130"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_subtraction.json",
+      "size_bytes": 24850,
+      "sha256": "dd9668866f350ad00e4f2422017eda77f8b69a6ac4e1f1dc2ca5996ff2d0f655"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_fractions.json",
+      "size_bytes": 36805,
+      "sha256": "665e80874df3e178ac23e28e3c90f4fdeed5d4b148f5017125e1ef0a553dfd88"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_decimals.json",
+      "size_bytes": 25343,
+      "sha256": "dec2b72ac36b20ecfc991f7ad1f737ea62f388f4657967901f0ce66fd04d5233"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_negative_numbers.json",
+      "size_bytes": 25669,
+      "sha256": "e4ab84c00ea4e03ec7b3be9063350269d47b06d43e453c502ae9c020d5ad8ff5"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_order_of_operations.json",
+      "size_bytes": 24837,
+      "sha256": "2fd81d24ccf15149c2d6beff53d1145e3abb73ebed3f3261fb167a52f3e8a8e3"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_percentages.json",
+      "size_bytes": 16295,
+      "sha256": "4813b5b178084a8f8d6aeb7d7e0616e5ab2c50cd051b2ff31a8c9eb305032d5d"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/src/g0_lib.py",
+      "size_bytes": 31557,
+      "sha256": "713bd2e67e2004194415f865bd8bedfe628fe6b28bf6029519e3a90c47ddadb4"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/src/v5_engine.py",
+      "size_bytes": 26479,
+      "sha256": "bf4149a91997f23033cc4a12a185c73cc5d8154c5c827a939d06180318411b58"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/src/ablation.py",
+      "size_bytes": 21038,
+      "sha256": "46b254396575ec0fab68de51a693dff8636a065116ae3de3cc091bff025a9db7"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/src/lomo.py",
+      "size_bytes": 12789,
+      "sha256": "e7b3a1920509666a3ba1058151798839f15c631ab51b8fcc088125e3e41c4a51"
+    },
+    {
+      "path": "experiments/2026-10-21_lomo_out_of_library/run.py",
+      "size_bytes": 19317,
+      "sha256": "714b62d30223f580c7c47eff421040be24300a6911db8711baf4f41e14b5c353"
+    }
+  ]
+}

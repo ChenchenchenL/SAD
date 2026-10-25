@@ -1,0 +1,11 @@
+{
+  "experiment": "noise_misspecification",
+  "cases": "data/cases_test_v5_exclusion_corrected.json",
+  "priors": "data/priors_test_category.jsonl",
+  "bank_dir": "data",
+  "bank_prefix": "bank_v5_",
+  "diagnostician_eps": 0.05,
+  "seeds": 5,
+  "bootstrap": 2000,
+  "bootstrap_seed": 20261026
+}

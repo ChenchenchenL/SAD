@@ -1,0 +1,16 @@
+{
+  "experiment": "selection_comparison",
+  "cases": "data/cases_test_v5_exclusion_corrected.json",
+  "priors": "data/priors_test_category.jsonl",
+  "bank_dir": "data",
+  "bank_prefix": "bank_v5_",
+  "seeds": 5,
+  "eps": 0.05,
+  "max_obs": 7,
+  "k_fixed": 3,
+  "bootstrap": 2000,
+  "bootstrap_seed": 20261026,
+  "student_types": ["stable", "slip"],
+  "adaptive_arms": ["sm_maxent", "sm_ig", "sm_random", "sm_fixed_order"],
+  "k3_arms": ["k3_maxent", "k3_ig", "k3_random", "k3_fixed_order", "k3_random_legacy"]
+}

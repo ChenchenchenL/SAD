@@ -1,0 +1,641 @@
+{
+ "category": "percentages",
+ "settings": {
+  "builder": "v6b_corrected_independent_authored_templates",
+  "source": "v6 corrected for F1/F2; text/family disjoint from v5/v4, partial structural overlap"
+ },
+ "hypotheses": [
+  {
+   "id": "percentages.add_percentages_directly"
+  },
+  {
+   "id": "percentages.percent_equals_decimal"
+  },
+  {
+   "id": "percentages.percentage_as_index"
+  },
+  {
+   "id": "percentages.reverse_percentage_error"
+  }
+ ],
+ "items": [
+  {
+   "text": "What is 120% of 45?",
+   "category": "percentages",
+   "family": "pct_over_hundred",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "54",
+   "predictions": {
+    "percentages.add_percentages_directly": "54",
+    "percentages.percent_equals_decimal": "5400",
+    "percentages.percentage_as_index": "120",
+    "percentages.reverse_percentage_error": "54"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "120",
+    "54",
+    "5400"
+   ],
+   "meta": {
+    "template": "pct_over_hundred",
+    "percent": 120,
+    "value": 45,
+    "percentage": 120,
+    "total": 45,
+    "conversion_type": "percent_in_calculation",
+    "audit_kind": "pct_over_hundred"
+   },
+   "audit_expr": "120/100*45",
+   "item_id": "v6i:0081"
+  },
+  {
+   "text": "What is 150% of 30?",
+   "category": "percentages",
+   "family": "pct_over_hundred",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "45",
+   "predictions": {
+    "percentages.add_percentages_directly": "45",
+    "percentages.percent_equals_decimal": "4500",
+    "percentages.percentage_as_index": "150",
+    "percentages.reverse_percentage_error": "45"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "150",
+    "45",
+    "4500"
+   ],
+   "meta": {
+    "template": "pct_over_hundred",
+    "percent": 150,
+    "value": 30,
+    "percentage": 150,
+    "total": 30,
+    "conversion_type": "percent_in_calculation",
+    "audit_kind": "pct_over_hundred"
+   },
+   "audit_expr": "150/100*30",
+   "item_id": "v6i:0082"
+  },
+  {
+   "text": "What is 125% of 80?",
+   "category": "percentages",
+   "family": "pct_over_hundred",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "100",
+   "predictions": {
+    "percentages.add_percentages_directly": "100",
+    "percentages.percent_equals_decimal": "10000",
+    "percentages.percentage_as_index": "125",
+    "percentages.reverse_percentage_error": "100"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "100",
+    "10000",
+    "125"
+   ],
+   "meta": {
+    "template": "pct_over_hundred",
+    "percent": 125,
+    "value": 80,
+    "percentage": 125,
+    "total": 80,
+    "conversion_type": "percent_in_calculation",
+    "audit_kind": "pct_over_hundred"
+   },
+   "audit_expr": "125/100*80",
+   "item_id": "v6i:0083"
+  },
+  {
+   "text": "30 is 20% of what number?",
+   "category": "percentages",
+   "family": "pct_find_whole",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "150",
+   "predictions": {
+    "percentages.add_percentages_directly": "150",
+    "percentages.percent_equals_decimal": "600",
+    "percentages.percentage_as_index": "20",
+    "percentages.reverse_percentage_error": "150"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "150",
+    "20",
+    "600"
+   ],
+   "meta": {
+    "template": "pct_find_whole",
+    "part": 30,
+    "percentage": 20,
+    "percent": 20,
+    "formula_type": "find_total_from_percentage",
+    "conversion_type": "percent_in_calculation",
+    "audit_kind": "pct_find_whole"
+   },
+   "audit_expr": "30/(20/100)",
+   "item_id": "v6i:0084"
+  },
+  {
+   "text": "45 is 25% of what number?",
+   "category": "percentages",
+   "family": "pct_find_whole",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "180",
+   "predictions": {
+    "percentages.add_percentages_directly": "180",
+    "percentages.percent_equals_decimal": "1125",
+    "percentages.percentage_as_index": "25",
+    "percentages.reverse_percentage_error": "180"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "1125",
+    "180",
+    "25"
+   ],
+   "meta": {
+    "template": "pct_find_whole",
+    "part": 45,
+    "percentage": 25,
+    "percent": 25,
+    "formula_type": "find_total_from_percentage",
+    "conversion_type": "percent_in_calculation",
+    "audit_kind": "pct_find_whole"
+   },
+   "audit_expr": "45/(25/100)",
+   "item_id": "v6i:0085"
+  },
+  {
+   "text": "36 is 40% of what number?",
+   "category": "percentages",
+   "family": "pct_find_whole",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "90",
+   "predictions": {
+    "percentages.add_percentages_directly": "90",
+    "percentages.percent_equals_decimal": "1440",
+    "percentages.percentage_as_index": "40",
+    "percentages.reverse_percentage_error": "90"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "1440",
+    "40",
+    "90"
+   ],
+   "meta": {
+    "template": "pct_find_whole",
+    "part": 36,
+    "percentage": 40,
+    "percent": 40,
+    "formula_type": "find_total_from_percentage",
+    "conversion_type": "percent_in_calculation",
+    "audit_kind": "pct_find_whole"
+   },
+   "audit_expr": "36/(40/100)",
+   "item_id": "v6i:0086"
+  },
+  {
+   "text": "80 is increased by 10% and then increased by 25%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_two_increases",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "110",
+   "predictions": {
+    "percentages.add_percentages_directly": "108",
+    "percentages.percent_equals_decimal": "110",
+    "percentages.percentage_as_index": "110",
+    "percentages.reverse_percentage_error": "110"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "108",
+    "110"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v6_template_family": "pct_two_increases",
+    "initial_value": 80,
+    "percentage1": 10,
+    "percentage2": 25,
+    "problem_type": "two_increases",
+    "audit_kind": "pct_two_increases"
+   },
+   "audit_expr": "80*(1+10/100)*(1+25/100)",
+   "item_id": "v6i:0087"
+  },
+  {
+   "text": "100 is increased by 20% and then increased by 25%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_two_increases",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "150",
+   "predictions": {
+    "percentages.add_percentages_directly": "145",
+    "percentages.percent_equals_decimal": "150",
+    "percentages.percentage_as_index": "150",
+    "percentages.reverse_percentage_error": "150"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "145",
+    "150"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v6_template_family": "pct_two_increases",
+    "initial_value": 100,
+    "percentage1": 20,
+    "percentage2": 25,
+    "problem_type": "two_increases",
+    "audit_kind": "pct_two_increases"
+   },
+   "audit_expr": "100*(1+20/100)*(1+25/100)",
+   "item_id": "v6i:0088"
+  },
+  {
+   "text": "60 is increased by 50% and then increased by 20%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_two_increases",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "108",
+   "predictions": {
+    "percentages.add_percentages_directly": "102",
+    "percentages.percent_equals_decimal": "108",
+    "percentages.percentage_as_index": "108",
+    "percentages.reverse_percentage_error": "108"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "102",
+    "108"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v6_template_family": "pct_two_increases",
+    "initial_value": 60,
+    "percentage1": 50,
+    "percentage2": 20,
+    "problem_type": "two_increases",
+    "audit_kind": "pct_two_increases"
+   },
+   "audit_expr": "60*(1+50/100)*(1+20/100)",
+   "item_id": "v6i:0089"
+  },
+  {
+   "text": "200 is decreased by 20% and then increased by 10%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_dec_then_inc",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "176",
+   "predictions": {
+    "percentages.add_percentages_directly": "180",
+    "percentages.percent_equals_decimal": "176",
+    "percentages.percentage_as_index": "176",
+    "percentages.reverse_percentage_error": "176"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "176",
+    "180"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v6_template_family": "pct_dec_then_inc",
+    "initial_value": 200,
+    "percentage1": 20,
+    "percentage2": 10,
+    "problem_type": "decrease_then_increase",
+    "audit_kind": "pct_dec_then_inc"
+   },
+   "audit_expr": "200*(1-20/100)*(1+10/100)",
+   "item_id": "v6i:0090"
+  },
+  {
+   "text": "150 is decreased by 10% and then increased by 20%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_dec_then_inc",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "162",
+   "predictions": {
+    "percentages.add_percentages_directly": "165",
+    "percentages.percent_equals_decimal": "162",
+    "percentages.percentage_as_index": "162",
+    "percentages.reverse_percentage_error": "162"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "162",
+    "165"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v6_template_family": "pct_dec_then_inc",
+    "initial_value": 150,
+    "percentage1": 10,
+    "percentage2": 20,
+    "problem_type": "decrease_then_increase",
+    "audit_kind": "pct_dec_then_inc"
+   },
+   "audit_expr": "150*(1-10/100)*(1+20/100)",
+   "item_id": "v6i:0091"
+  },
+  {
+   "text": "240 is decreased by 25% and then increased by 20%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_dec_then_inc",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "216",
+   "predictions": {
+    "percentages.add_percentages_directly": "228",
+    "percentages.percent_equals_decimal": "216",
+    "percentages.percentage_as_index": "216",
+    "percentages.reverse_percentage_error": "216"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "216",
+    "228"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v6_template_family": "pct_dec_then_inc",
+    "initial_value": 240,
+    "percentage1": 25,
+    "percentage2": 20,
+    "problem_type": "decrease_then_increase",
+    "audit_kind": "pct_dec_then_inc"
+   },
+   "audit_expr": "240*(1-25/100)*(1+20/100)",
+   "item_id": "v6i:0092"
+  },
+  {
+   "text": "A is 25% larger than B. B is what percent smaller than A?",
+   "category": "percentages",
+   "family": "pct_compare_change",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "20",
+   "predictions": {
+    "percentages.add_percentages_directly": "20",
+    "percentages.percent_equals_decimal": "20",
+    "percentages.percentage_as_index": "20",
+    "percentages.reverse_percentage_error": "25"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "answers": [
+    "20",
+    "25"
+   ],
+   "meta": {
+    "template": "comparison_statements",
+    "v6_template_family": "pct_compare_change",
+    "given_percent": 25,
+    "direction": "larger",
+    "formula_type": "comparison_asymmetry",
+    "audit_kind": "pct_compare_change"
+   },
+   "audit_expr": "A is 25% larger than B. B is what percent smaller than A?",
+   "item_id": "v6i:0093"
+  },
+  {
+   "text": "A is 100% larger than B. B is what percent smaller than A?",
+   "category": "percentages",
+   "family": "pct_compare_change",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "50",
+   "predictions": {
+    "percentages.add_percentages_directly": "50",
+    "percentages.percent_equals_decimal": "50",
+    "percentages.percentage_as_index": "50",
+    "percentages.reverse_percentage_error": "100"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "answers": [
+    "100",
+    "50"
+   ],
+   "meta": {
+    "template": "comparison_statements",
+    "v6_template_family": "pct_compare_change",
+    "given_percent": 100,
+    "direction": "larger",
+    "formula_type": "comparison_asymmetry",
+    "audit_kind": "pct_compare_change"
+   },
+   "audit_expr": "A is 100% larger than B. B is what percent smaller than A?",
+   "item_id": "v6i:0094"
+  },
+  {
+   "text": "A is 20% smaller than B. B is what percent larger than A?",
+   "category": "percentages",
+   "family": "pct_compare_change",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "25",
+   "predictions": {
+    "percentages.add_percentages_directly": "25",
+    "percentages.percent_equals_decimal": "25",
+    "percentages.percentage_as_index": "25",
+    "percentages.reverse_percentage_error": "20"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "answers": [
+    "20",
+    "25"
+   ],
+   "meta": {
+    "template": "comparison_statements",
+    "v6_template_family": "pct_compare_change",
+    "given_percent": 20,
+    "direction": "smaller",
+    "formula_type": "comparison_asymmetry",
+    "audit_kind": "pct_compare_change"
+   },
+   "audit_expr": "A is 20% smaller than B. B is what percent larger than A?",
+   "item_id": "v6i:0095"
+  }
+ ]
+}

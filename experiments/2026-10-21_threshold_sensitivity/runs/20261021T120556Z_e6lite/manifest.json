@@ -1,0 +1,23 @@
+{
+ "generated_at": "20261021T120556Z",
+ "sha256": {
+  "config:config.json": "ced126ddb0135625cd7c56b897b0d8e114bb62cd0e901448ba3575f9984b4f11",
+  "banks:bank_v5_subtraction.json": "dd9668866f350ad00e4f2422017eda77f8b69a6ac4e1f1dc2ca5996ff2d0f655",
+  "banks:bank_v5_fractions.json": "665e80874df3e178ac23e28e3c90f4fdeed5d4b148f5017125e1ef0a553dfd88",
+  "banks:bank_v5_decimals.json": "dec2b72ac36b20ecfc991f7ad1f737ea62f388f4657967901f0ce66fd04d5233",
+  "banks:bank_v5_negative_numbers.json": "e4ab84c00ea4e03ec7b3be9063350269d47b06d43e453c502ae9c020d5ad8ff5",
+  "banks:bank_v5_order_of_operations.json": "2fd81d24ccf15149c2d6beff53d1145e3abb73ebed3f3261fb167a52f3e8a8e3",
+  "banks:bank_v5_percentages.json": "4813b5b178084a8f8d6aeb7d7e0616e5ab2c50cd051b2ff31a8c9eb305032d5d",
+  "test_cases:cases_test_v5_exclusion_corrected.json": "a47a41c385380d0306a4fc3a73a7ce0239db443d4f44bb888e90fe2bd53eb57e",
+  "test_priors:priors_test_category.jsonl": "8ffc3a02593adba624d18604d7a6c1feeb14a566aba0a1138f9ee9b080860130",
+  "dev_cases:cases_dev_v5.json": "6e37088ca29797976b6c7f7f36e25857cc4eb192490991c339224d225aab2c2a",
+  "dev_priors:priors_dev_category.jsonl": "dcc5717b2e2823fe2fe60690da5e5e22f9be198c744ef8970c8131ad7da6598e",
+  "frozen_test_episodes:test_category_eps05_corrected_episodes.json": "a6c721b9f26e80a735184c3642a2e11e9700470a4f974fd86e8a95ce5dd5b942",
+  "frozen_dev_episodes:dev_prior_episodes.json": "25bcb952f4290d0a7ee075616cc1b26c5d311246d836b26e7b3c4a1d6c39262d",
+  "code:applicability.py": "f7060493c6228de4b93f87ea23ce1f4d4767e5e7c705b72f4aa94117a36a98e8",
+  "code:e6lite.py": "13fc898c531521cfe43e39285da67b36fba7ee84f01d816e47cd2d684fdf7614",
+  "code:g0_lib.py": "713bd2e67e2004194415f865bd8bedfe628fe6b28bf6029519e3a90c47ddadb4",
+  "code:v5_engine.py": "bf4149a91997f23033cc4a12a185c73cc5d8154c5c827a939d06180318411b58",
+  "code:run.py": "b68e5a40a44574cc2be86eecc480026850815d09441419d80f6b2953415c588b"
+ }
+}

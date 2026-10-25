@@ -1,0 +1,4 @@
+# Preserve archived bytes and checksums on every operating system.
+* -text
+*.pdf binary
+*.gz binary

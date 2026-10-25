@@ -1,0 +1,977 @@
+{
+ "category": "order_of_operations",
+ "settings": {
+  "builder": "v6b_corrected_independent_authored_templates",
+  "source": "v6 corrected for F1/F2; text/family disjoint from v5/v4, partial structural overlap"
+ },
+ "hypotheses": [
+  {
+   "id": "order_of_operations.addition_before_subtraction_always"
+  },
+  {
+   "id": "order_of_operations.ignore_parentheses"
+  },
+  {
+   "id": "order_of_operations.multiplication_before_division_always"
+  },
+  {
+   "id": "order_of_operations.pemdas_strictly_sequential"
+  },
+  {
+   "id": "order_of_operations.strict_left_to_right"
+  }
+ ],
+ "items": [
+  {
+   "text": "Calculate: 84 / 7 * 3",
+   "category": "order_of_operations",
+   "family": "oo_muldiv_chain",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "36",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "36",
+    "order_of_operations.ignore_parentheses": "36",
+    "order_of_operations.multiplication_before_division_always": "4",
+    "order_of_operations.pemdas_strictly_sequential": "36",
+    "order_of_operations.strict_left_to_right": "36"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": true,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": true,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "36",
+    "4"
+   ],
+   "meta": {
+    "template": "basic_mult_div",
+    "v6_template_family": "oo_muldiv_chain",
+    "values": [
+     84,
+     7,
+     3
+    ],
+    "operations": [
+     "/",
+     "*"
+    ],
+    "operations_symbols": [
+     "÷",
+     "×"
+    ],
+    "expression": "84 / 7 * 3",
+    "operands": [
+     84,
+     7,
+     3
+    ],
+    "a": 84,
+    "b": 7,
+    "c": 3,
+    "op1": "/",
+    "op2": "*",
+    "audit_kind": "oo_muldiv_chain"
+   },
+   "audit_expr": "84 / 7 * 3",
+   "item_id": "v6i:0066"
+  },
+  {
+   "text": "Calculate: 72 / 6 * 4",
+   "category": "order_of_operations",
+   "family": "oo_muldiv_chain",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "48",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "48",
+    "order_of_operations.ignore_parentheses": "48",
+    "order_of_operations.multiplication_before_division_always": "3",
+    "order_of_operations.pemdas_strictly_sequential": "48",
+    "order_of_operations.strict_left_to_right": "48"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": true,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": true,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "3",
+    "48"
+   ],
+   "meta": {
+    "template": "basic_mult_div",
+    "v6_template_family": "oo_muldiv_chain",
+    "values": [
+     72,
+     6,
+     4
+    ],
+    "operations": [
+     "/",
+     "*"
+    ],
+    "operations_symbols": [
+     "÷",
+     "×"
+    ],
+    "expression": "72 / 6 * 4",
+    "operands": [
+     72,
+     6,
+     4
+    ],
+    "a": 72,
+    "b": 6,
+    "c": 4,
+    "op1": "/",
+    "op2": "*",
+    "audit_kind": "oo_muldiv_chain"
+   },
+   "audit_expr": "72 / 6 * 4",
+   "item_id": "v6i:0067"
+  },
+  {
+   "text": "Calculate: 96 / 8 * 2",
+   "category": "order_of_operations",
+   "family": "oo_muldiv_chain",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "24",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "24",
+    "order_of_operations.ignore_parentheses": "24",
+    "order_of_operations.multiplication_before_division_always": "6",
+    "order_of_operations.pemdas_strictly_sequential": "24",
+    "order_of_operations.strict_left_to_right": "24"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": true,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": true,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "24",
+    "6"
+   ],
+   "meta": {
+    "template": "basic_mult_div",
+    "v6_template_family": "oo_muldiv_chain",
+    "values": [
+     96,
+     8,
+     2
+    ],
+    "operations": [
+     "/",
+     "*"
+    ],
+    "operations_symbols": [
+     "÷",
+     "×"
+    ],
+    "expression": "96 / 8 * 2",
+    "operands": [
+     96,
+     8,
+     2
+    ],
+    "a": 96,
+    "b": 8,
+    "c": 2,
+    "op1": "/",
+    "op2": "*",
+    "audit_kind": "oo_muldiv_chain"
+   },
+   "audit_expr": "96 / 8 * 2",
+   "item_id": "v6i:0068"
+  },
+  {
+   "text": "Calculate: 48 / (2 * 4)",
+   "category": "order_of_operations",
+   "family": "oo_div_paren_product",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "6",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "6",
+    "order_of_operations.ignore_parentheses": "96",
+    "order_of_operations.multiplication_before_division_always": "6",
+    "order_of_operations.pemdas_strictly_sequential": "6",
+    "order_of_operations.strict_left_to_right": "6"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "6",
+    "96"
+   ],
+   "meta": {
+    "template": "basic_single_parentheses",
+    "v6_template_family": "oo_div_paren_product",
+    "values": [
+     48,
+     2,
+     4
+    ],
+    "operations": [
+     "/",
+     "*"
+    ],
+    "operations_symbols": [
+     "÷",
+     "×"
+    ],
+    "expression": "48 / (2 * 4)",
+    "operands": [
+     48,
+     2,
+     4
+    ],
+    "a": 48,
+    "b": 2,
+    "c": 4,
+    "op1": "/",
+    "op2": "*",
+    "audit_kind": "oo_div_paren_product"
+   },
+   "audit_expr": "48 / (2 * 4)",
+   "item_id": "v6i:0069"
+  },
+  {
+   "text": "Calculate: 60 / (3 * 4)",
+   "category": "order_of_operations",
+   "family": "oo_div_paren_product",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "5",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "5",
+    "order_of_operations.ignore_parentheses": "80",
+    "order_of_operations.multiplication_before_division_always": "5",
+    "order_of_operations.pemdas_strictly_sequential": "5",
+    "order_of_operations.strict_left_to_right": "5"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "5",
+    "80"
+   ],
+   "meta": {
+    "template": "basic_single_parentheses",
+    "v6_template_family": "oo_div_paren_product",
+    "values": [
+     60,
+     3,
+     4
+    ],
+    "operations": [
+     "/",
+     "*"
+    ],
+    "operations_symbols": [
+     "÷",
+     "×"
+    ],
+    "expression": "60 / (3 * 4)",
+    "operands": [
+     60,
+     3,
+     4
+    ],
+    "a": 60,
+    "b": 3,
+    "c": 4,
+    "op1": "/",
+    "op2": "*",
+    "audit_kind": "oo_div_paren_product"
+   },
+   "audit_expr": "60 / (3 * 4)",
+   "item_id": "v6i:0070"
+  },
+  {
+   "text": "Calculate: 96 / (4 * 6)",
+   "category": "order_of_operations",
+   "family": "oo_div_paren_product",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "4",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "4",
+    "order_of_operations.ignore_parentheses": "144",
+    "order_of_operations.multiplication_before_division_always": "4",
+    "order_of_operations.pemdas_strictly_sequential": "4",
+    "order_of_operations.strict_left_to_right": "4"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "144",
+    "4"
+   ],
+   "meta": {
+    "template": "basic_single_parentheses",
+    "v6_template_family": "oo_div_paren_product",
+    "values": [
+     96,
+     4,
+     6
+    ],
+    "operations": [
+     "/",
+     "*"
+    ],
+    "operations_symbols": [
+     "÷",
+     "×"
+    ],
+    "expression": "96 / (4 * 6)",
+    "operands": [
+     96,
+     4,
+     6
+    ],
+    "a": 96,
+    "b": 4,
+    "c": 6,
+    "op1": "/",
+    "op2": "*",
+    "audit_kind": "oo_div_paren_product"
+   },
+   "audit_expr": "96 / (4 * 6)",
+   "item_id": "v6i:0071"
+  },
+  {
+   "text": "Calculate: 15 - 2 * (3 + 1)",
+   "category": "order_of_operations",
+   "family": "oo_paren_sub_mul",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "7",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "7",
+    "order_of_operations.ignore_parentheses": "40",
+    "order_of_operations.multiplication_before_division_always": "7",
+    "order_of_operations.pemdas_strictly_sequential": "7",
+    "order_of_operations.strict_left_to_right": "7"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "40",
+    "7"
+   ],
+   "meta": {
+    "template": "nested_parentheses",
+    "v6_template_family": "oo_paren_sub_mul",
+    "values": [
+     15,
+     2,
+     3,
+     1
+    ],
+    "operations": [
+     "-",
+     "*",
+     "+"
+    ],
+    "operations_symbols": [
+     "-",
+     "×",
+     "+"
+    ],
+    "expression": "15 - 2 * (3 + 1)",
+    "operands": [
+     15,
+     2,
+     3,
+     1
+    ],
+    "audit_kind": "oo_paren_sub_mul"
+   },
+   "audit_expr": "15 - 2 * (3 + 1)",
+   "item_id": "v6i:0072"
+  },
+  {
+   "text": "Calculate: 20 - 3 * (2 + 3)",
+   "category": "order_of_operations",
+   "family": "oo_paren_sub_mul",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "5",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "5",
+    "order_of_operations.ignore_parentheses": "37",
+    "order_of_operations.multiplication_before_division_always": "5",
+    "order_of_operations.pemdas_strictly_sequential": "5",
+    "order_of_operations.strict_left_to_right": "5"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "37",
+    "5"
+   ],
+   "meta": {
+    "template": "nested_parentheses",
+    "v6_template_family": "oo_paren_sub_mul",
+    "values": [
+     20,
+     3,
+     2,
+     3
+    ],
+    "operations": [
+     "-",
+     "*",
+     "+"
+    ],
+    "operations_symbols": [
+     "-",
+     "×",
+     "+"
+    ],
+    "expression": "20 - 3 * (2 + 3)",
+    "operands": [
+     20,
+     3,
+     2,
+     3
+    ],
+    "audit_kind": "oo_paren_sub_mul"
+   },
+   "audit_expr": "20 - 3 * (2 + 3)",
+   "item_id": "v6i:0073"
+  },
+  {
+   "text": "Calculate: 18 - 4 * (1 + 2)",
+   "category": "order_of_operations",
+   "family": "oo_paren_sub_mul",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "6",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "6",
+    "order_of_operations.ignore_parentheses": "16",
+    "order_of_operations.multiplication_before_division_always": "6",
+    "order_of_operations.pemdas_strictly_sequential": "6",
+    "order_of_operations.strict_left_to_right": "6"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": true,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "16",
+    "6"
+   ],
+   "meta": {
+    "template": "nested_parentheses",
+    "v6_template_family": "oo_paren_sub_mul",
+    "values": [
+     18,
+     4,
+     1,
+     2
+    ],
+    "operations": [
+     "-",
+     "*",
+     "+"
+    ],
+    "operations_symbols": [
+     "-",
+     "×",
+     "+"
+    ],
+    "expression": "18 - 4 * (1 + 2)",
+    "operands": [
+     18,
+     4,
+     1,
+     2
+    ],
+    "audit_kind": "oo_paren_sub_mul"
+   },
+   "audit_expr": "18 - 4 * (1 + 2)",
+   "item_id": "v6i:0074"
+  },
+  {
+   "text": "Calculate: 40 - 12 + 7 - 5",
+   "category": "order_of_operations",
+   "family": "oo_add_sub_four",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "30",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "16",
+    "order_of_operations.ignore_parentheses": "30",
+    "order_of_operations.multiplication_before_division_always": "30",
+    "order_of_operations.pemdas_strictly_sequential": "30",
+    "order_of_operations.strict_left_to_right": "30"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": true,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": true,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "16",
+    "30"
+   ],
+   "meta": {
+    "template": "mixed_operations",
+    "v6_template_family": "oo_add_sub_four",
+    "values": [
+     40,
+     12,
+     7,
+     5
+    ],
+    "operations": [
+     "-",
+     "+",
+     "-"
+    ],
+    "operations_symbols": [
+     "-",
+     "+",
+     "-"
+    ],
+    "expression": "40 - 12 + 7 - 5",
+    "operands": [
+     40,
+     12,
+     7,
+     5
+    ],
+    "audit_kind": "oo_add_sub_four"
+   },
+   "audit_expr": "40 - 12 + 7 - 5",
+   "item_id": "v6i:0075"
+  },
+  {
+   "text": "Calculate: 35 - 9 + 6 - 4",
+   "category": "order_of_operations",
+   "family": "oo_add_sub_four",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "28",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "16",
+    "order_of_operations.ignore_parentheses": "28",
+    "order_of_operations.multiplication_before_division_always": "28",
+    "order_of_operations.pemdas_strictly_sequential": "28",
+    "order_of_operations.strict_left_to_right": "28"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": true,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": true,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "16",
+    "28"
+   ],
+   "meta": {
+    "template": "mixed_operations",
+    "v6_template_family": "oo_add_sub_four",
+    "values": [
+     35,
+     9,
+     6,
+     4
+    ],
+    "operations": [
+     "-",
+     "+",
+     "-"
+    ],
+    "operations_symbols": [
+     "-",
+     "+",
+     "-"
+    ],
+    "expression": "35 - 9 + 6 - 4",
+    "operands": [
+     35,
+     9,
+     6,
+     4
+    ],
+    "audit_kind": "oo_add_sub_four"
+   },
+   "audit_expr": "35 - 9 + 6 - 4",
+   "item_id": "v6i:0076"
+  },
+  {
+   "text": "Calculate: 50 - 18 + 9 - 7",
+   "category": "order_of_operations",
+   "family": "oo_add_sub_four",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "34",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "16",
+    "order_of_operations.ignore_parentheses": "34",
+    "order_of_operations.multiplication_before_division_always": "34",
+    "order_of_operations.pemdas_strictly_sequential": "34",
+    "order_of_operations.strict_left_to_right": "34"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": true,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": true,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": false
+   },
+   "answers": [
+    "16",
+    "34"
+   ],
+   "meta": {
+    "template": "mixed_operations",
+    "v6_template_family": "oo_add_sub_four",
+    "values": [
+     50,
+     18,
+     9,
+     7
+    ],
+    "operations": [
+     "-",
+     "+",
+     "-"
+    ],
+    "operations_symbols": [
+     "-",
+     "+",
+     "-"
+    ],
+    "expression": "50 - 18 + 9 - 7",
+    "operands": [
+     50,
+     18,
+     9,
+     7
+    ],
+    "audit_kind": "oo_add_sub_four"
+   },
+   "audit_expr": "50 - 18 + 9 - 7",
+   "item_id": "v6i:0077"
+  },
+  {
+   "text": "Calculate: 5 + 2 * 3 + 4",
+   "category": "order_of_operations",
+   "family": "oo_mixed_four",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "15",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "15",
+    "order_of_operations.ignore_parentheses": "15",
+    "order_of_operations.multiplication_before_division_always": "15",
+    "order_of_operations.pemdas_strictly_sequential": "15",
+    "order_of_operations.strict_left_to_right": "25"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": true
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": true
+   },
+   "answers": [
+    "15",
+    "25"
+   ],
+   "meta": {
+    "template": "mixed_operations",
+    "v6_template_family": "oo_mixed_four",
+    "values": [
+     5,
+     2,
+     3,
+     4
+    ],
+    "operations": [
+     "+",
+     "*",
+     "+"
+    ],
+    "operations_symbols": [
+     "+",
+     "×",
+     "+"
+    ],
+    "expression": "5 + 2 * 3 + 4",
+    "operands": [
+     5,
+     2,
+     3,
+     4
+    ],
+    "audit_kind": "oo_mixed_four"
+   },
+   "audit_expr": "5 + 2 * 3 + 4",
+   "item_id": "v6i:0078"
+  },
+  {
+   "text": "Calculate: 7 + 3 * 2 - 5",
+   "category": "order_of_operations",
+   "family": "oo_mixed_four",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "8",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "8",
+    "order_of_operations.ignore_parentheses": "8",
+    "order_of_operations.multiplication_before_division_always": "8",
+    "order_of_operations.pemdas_strictly_sequential": "8",
+    "order_of_operations.strict_left_to_right": "15"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": true
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": true
+   },
+   "answers": [
+    "15",
+    "8"
+   ],
+   "meta": {
+    "template": "mixed_operations",
+    "v6_template_family": "oo_mixed_four",
+    "values": [
+     7,
+     3,
+     2,
+     5
+    ],
+    "operations": [
+     "+",
+     "*",
+     "-"
+    ],
+    "operations_symbols": [
+     "+",
+     "×",
+     "-"
+    ],
+    "expression": "7 + 3 * 2 - 5",
+    "operands": [
+     7,
+     3,
+     2,
+     5
+    ],
+    "audit_kind": "oo_mixed_four"
+   },
+   "audit_expr": "7 + 3 * 2 - 5",
+   "item_id": "v6i:0079"
+  },
+  {
+   "text": "Calculate: 6 + 4 * 2 + 3",
+   "category": "order_of_operations",
+   "family": "oo_mixed_four",
+   "split": "test",
+   "operation": "order_of_operations",
+   "correct": "17",
+   "predictions": {
+    "order_of_operations.addition_before_subtraction_always": "17",
+    "order_of_operations.ignore_parentheses": "17",
+    "order_of_operations.multiplication_before_division_always": "17",
+    "order_of_operations.pemdas_strictly_sequential": "17",
+    "order_of_operations.strict_left_to_right": "23"
+   },
+   "applicable": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": true
+   },
+   "triggers": {
+    "order_of_operations.addition_before_subtraction_always": false,
+    "order_of_operations.ignore_parentheses": false,
+    "order_of_operations.multiplication_before_division_always": false,
+    "order_of_operations.pemdas_strictly_sequential": false,
+    "order_of_operations.strict_left_to_right": true
+   },
+   "answers": [
+    "17",
+    "23"
+   ],
+   "meta": {
+    "template": "mixed_operations",
+    "v6_template_family": "oo_mixed_four",
+    "values": [
+     6,
+     4,
+     2,
+     3
+    ],
+    "operations": [
+     "+",
+     "*",
+     "+"
+    ],
+    "operations_symbols": [
+     "+",
+     "×",
+     "+"
+    ],
+    "expression": "6 + 4 * 2 + 3",
+    "operands": [
+     6,
+     4,
+     2,
+     3
+    ],
+    "audit_kind": "oo_mixed_four"
+   },
+   "audit_expr": "6 + 4 * 2 + 3",
+   "item_id": "v6i:0080"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "cases": "data/cases_test_v6b.json",
+  "priors": "data/priors_v6b_category.jsonl",
+  "library_mode": "category",
+  "dataset_version": "v6b",
+  "model": "deepseek-v4.1-flash",
+  "prompt_version": "v6_independent_prior_2026-10-21",
+  "n_ok": 90,
+  "n_successful_rows": 90,
+  "n_unique_prior_keys": 87,
+  "top10_global_recall": 0.9777777777777777,
+  "top1_global": 0.6333333333333333,
+  "top10_category_recall": 0.9777777777777777,
+  "top1_category_rank": 0.6333333333333333,
+  "type_counts": {
+    "stable": 66,
+    "mixed": 9,
+    "unsure": 14,
+    "slip": 1
+  },
+  "usage": {
+    "input_tokens": 54677,
+    "output_tokens": 12201
+  },
+  "estimated_cost_usd": 0.02043398
+}

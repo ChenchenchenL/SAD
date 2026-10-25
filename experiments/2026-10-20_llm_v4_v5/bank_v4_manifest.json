@@ -1,0 +1,73 @@
+{
+  "subtraction": {
+    "items": 600,
+    "templates": 25,
+    "triggers": {
+      "subtraction.always_borrow_left": 323,
+      "subtraction.borrow_from_bottom": 500,
+      "subtraction.borrow_no_decrement": 500,
+      "subtraction.decompose_by_place_value_label": 0,
+      "subtraction.diff_0_n_equals_n": 268,
+      "subtraction.no_column_limit": 600,
+      "subtraction.smaller_from_larger": 500,
+      "subtraction.stops_borrow_at_zero": 161
+    }
+  },
+  "fractions": {
+    "items": 800,
+    "templates": 33,
+    "triggers": {
+      "fractions.add_numerators_denominators": 100,
+      "fractions.common_denominator_numerator": 88,
+      "fractions.denominator_comparison_error": 199,
+      "fractions.ignore_denominators": 343,
+      "fractions.keep_common_denominator_for_multiplication": 100,
+      "fractions.multiply_across_for_division": 96,
+      "fractions.natural_number_bias_numerator_only": 180,
+      "fractions.subtract_across": 100
+    }
+  },
+  "decimals": {
+    "items": 500,
+    "templates": 17,
+    "triggers": {
+      "decimals.ignore_decimal_point": 98,
+      "decimals.longer_is_larger": 119,
+      "decimals.right_align_decimals": 91,
+      "decimals.shorter_is_larger": 125,
+      "decimals.whole_number_thinking": 319
+    }
+  },
+  "negative_numbers": {
+    "items": 500,
+    "templates": 23,
+    "triggers": {
+      "negative_numbers.larger_absolute_value_always_wins": 164,
+      "negative_numbers.multiplication_rule_for_addition": 200,
+      "negative_numbers.negative_swaps_operation": 199,
+      "negative_numbers.negative_times_negative_negative": 100,
+      "negative_numbers.two_negatives_always_positive": 168
+    }
+  },
+  "order_of_operations": {
+    "items": 500,
+    "templates": 19,
+    "triggers": {
+      "order_of_operations.addition_before_subtraction_always": 141,
+      "order_of_operations.ignore_parentheses": 100,
+      "order_of_operations.multiplication_before_division_always": 79,
+      "order_of_operations.pemdas_strictly_sequential": 23,
+      "order_of_operations.strict_left_to_right": 139
+    }
+  },
+  "percentages": {
+    "items": 229,
+    "templates": 10,
+    "triggers": {
+      "percentages.add_percentages_directly": 0,
+      "percentages.percent_equals_decimal": 29,
+      "percentages.percentage_as_index": 92,
+      "percentages.reverse_percentage_error": 100
+    }
+  }
+}

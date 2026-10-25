@@ -1,0 +1,807 @@
+{
+ "category": "subtraction",
+ "settings": {
+  "builder": "v5_authored_structural_templates",
+  "level": 5,
+  "source": "human-authored templates, not MalruleLib generators"
+ },
+ "hypotheses": [
+  {
+   "id": "subtraction.always_borrow_left"
+  },
+  {
+   "id": "subtraction.borrow_from_bottom"
+  },
+  {
+   "id": "subtraction.borrow_no_decrement"
+  },
+  {
+   "id": "subtraction.decompose_by_place_value_label"
+  },
+  {
+   "id": "subtraction.diff_0_n_equals_n"
+  },
+  {
+   "id": "subtraction.no_column_limit"
+  },
+  {
+   "id": "subtraction.smaller_from_larger"
+  },
+  {
+   "id": "subtraction.stops_borrow_at_zero"
+  }
+ ],
+ "items": [
+  {
+   "text": "Calculate: 532 - 178",
+   "category": "subtraction",
+   "family": "sub_chain_borrow",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "354",
+   "predictions": {
+    "subtraction.always_borrow_left": "354",
+    "subtraction.borrow_from_bottom": "574",
+    "subtraction.borrow_no_decrement": "464",
+    "subtraction.decompose_by_place_value_label": "354",
+    "subtraction.diff_0_n_equals_n": "354",
+    "subtraction.no_column_limit": "354",
+    "subtraction.smaller_from_larger": "446",
+    "subtraction.stops_borrow_at_zero": "354"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "354",
+    "446",
+    "464",
+    "574"
+   ],
+   "meta": {
+    "template": "sub_chain_borrow",
+    "a": 532,
+    "b": 178
+   },
+   "audit_expr": "532-178",
+   "item_id": "v5i:0000"
+  },
+  {
+   "text": "Calculate: 864 - 321",
+   "category": "subtraction",
+   "family": "sub_no_borrow",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "543",
+   "predictions": {
+    "subtraction.always_borrow_left": "433",
+    "subtraction.borrow_from_bottom": "543",
+    "subtraction.borrow_no_decrement": "543",
+    "subtraction.decompose_by_place_value_label": "543",
+    "subtraction.diff_0_n_equals_n": "543",
+    "subtraction.no_column_limit": "543",
+    "subtraction.smaller_from_larger": "543",
+    "subtraction.stops_borrow_at_zero": "543"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": true,
+    "subtraction.borrow_from_bottom": false,
+    "subtraction.borrow_no_decrement": false,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": false,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": true,
+    "subtraction.borrow_from_bottom": false,
+    "subtraction.borrow_no_decrement": false,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": false,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "433",
+    "543"
+   ],
+   "meta": {
+    "template": "sub_no_borrow",
+    "a": 864,
+    "b": 321
+   },
+   "audit_expr": "864-321",
+   "item_id": "v5i:0001"
+  },
+  {
+   "text": "Calculate: 506 - 278",
+   "category": "subtraction",
+   "family": "sub_zero_cascade",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "228",
+   "predictions": {
+    "subtraction.always_borrow_left": "228",
+    "subtraction.borrow_from_bottom": "448",
+    "subtraction.borrow_no_decrement": "338",
+    "subtraction.decompose_by_place_value_label": "228",
+    "subtraction.diff_0_n_equals_n": "278",
+    "subtraction.no_column_limit": "228",
+    "subtraction.smaller_from_larger": "372",
+    "subtraction.stops_borrow_at_zero": "232"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "answers": [
+    "228",
+    "232",
+    "278",
+    "338",
+    "372",
+    "448"
+   ],
+   "meta": {
+    "template": "sub_zero_cascade",
+    "a": 506,
+    "b": 278
+   },
+   "audit_expr": "506-278",
+   "item_id": "v5i:0002"
+  },
+  {
+   "text": "Calculate: 452 - 137",
+   "category": "subtraction",
+   "family": "sub_borrow_from_bottom",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "315",
+   "predictions": {
+    "subtraction.always_borrow_left": "215",
+    "subtraction.borrow_from_bottom": "335",
+    "subtraction.borrow_no_decrement": "325",
+    "subtraction.decompose_by_place_value_label": "315",
+    "subtraction.diff_0_n_equals_n": "315",
+    "subtraction.no_column_limit": "315",
+    "subtraction.smaller_from_larger": "325",
+    "subtraction.stops_borrow_at_zero": "315"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": true,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": true,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "215",
+    "315",
+    "325",
+    "335"
+   ],
+   "meta": {
+    "template": "sub_borrow_from_bottom",
+    "a": 452,
+    "b": 137
+   },
+   "audit_expr": "452-137",
+   "item_id": "v5i:0003"
+  },
+  {
+   "text": "Calculate: 730 - 245",
+   "category": "subtraction",
+   "family": "sub_zero_ones",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "485",
+   "predictions": {
+    "subtraction.always_borrow_left": "485",
+    "subtraction.borrow_from_bottom": "505",
+    "subtraction.borrow_no_decrement": "595",
+    "subtraction.decompose_by_place_value_label": "485",
+    "subtraction.diff_0_n_equals_n": "495",
+    "subtraction.no_column_limit": "485",
+    "subtraction.smaller_from_larger": "515",
+    "subtraction.stops_borrow_at_zero": "485"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "485",
+    "495",
+    "505",
+    "515",
+    "595"
+   ],
+   "meta": {
+    "template": "sub_zero_ones",
+    "a": 730,
+    "b": 245
+   },
+   "audit_expr": "730-245",
+   "item_id": "v5i:0004"
+  },
+  {
+   "text": "Calculate: 703 - 258",
+   "category": "subtraction",
+   "family": "sub_zero_tens_stop",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "445",
+   "predictions": {
+    "subtraction.always_borrow_left": "445",
+    "subtraction.borrow_from_bottom": "665",
+    "subtraction.borrow_no_decrement": "555",
+    "subtraction.decompose_by_place_value_label": "445",
+    "subtraction.diff_0_n_equals_n": "455",
+    "subtraction.no_column_limit": "445",
+    "subtraction.smaller_from_larger": "555",
+    "subtraction.stops_borrow_at_zero": "455"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "answers": [
+    "445",
+    "455",
+    "555",
+    "665"
+   ],
+   "meta": {
+    "template": "sub_zero_tens_stop",
+    "a": 703,
+    "b": 258
+   },
+   "audit_expr": "703-258",
+   "item_id": "v5i:0005"
+  },
+  {
+   "text": "Calculate: 915 - 267",
+   "category": "subtraction",
+   "family": "sub_chain_borrow",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "648",
+   "predictions": {
+    "subtraction.always_borrow_left": "648",
+    "subtraction.borrow_from_bottom": "868",
+    "subtraction.borrow_no_decrement": "758",
+    "subtraction.decompose_by_place_value_label": "648",
+    "subtraction.diff_0_n_equals_n": "648",
+    "subtraction.no_column_limit": "648",
+    "subtraction.smaller_from_larger": "752",
+    "subtraction.stops_borrow_at_zero": "648"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "648",
+    "752",
+    "758",
+    "868"
+   ],
+   "meta": {
+    "template": "sub_chain_borrow",
+    "a": 915,
+    "b": 267
+   },
+   "audit_expr": "915-267",
+   "item_id": "v5i:0006"
+  },
+  {
+   "text": "Calculate: 947 - 513",
+   "category": "subtraction",
+   "family": "sub_no_borrow",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "434",
+   "predictions": {
+    "subtraction.always_borrow_left": "324",
+    "subtraction.borrow_from_bottom": "434",
+    "subtraction.borrow_no_decrement": "434",
+    "subtraction.decompose_by_place_value_label": "434",
+    "subtraction.diff_0_n_equals_n": "434",
+    "subtraction.no_column_limit": "434",
+    "subtraction.smaller_from_larger": "434",
+    "subtraction.stops_borrow_at_zero": "434"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": true,
+    "subtraction.borrow_from_bottom": false,
+    "subtraction.borrow_no_decrement": false,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": false,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": true,
+    "subtraction.borrow_from_bottom": false,
+    "subtraction.borrow_no_decrement": false,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": false,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "324",
+    "434"
+   ],
+   "meta": {
+    "template": "sub_no_borrow",
+    "a": 947,
+    "b": 513
+   },
+   "audit_expr": "947-513",
+   "item_id": "v5i:0007"
+  },
+  {
+   "text": "Calculate: 604 - 189",
+   "category": "subtraction",
+   "family": "sub_zero_cascade",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "415",
+   "predictions": {
+    "subtraction.always_borrow_left": "415",
+    "subtraction.borrow_from_bottom": "635",
+    "subtraction.borrow_no_decrement": "525",
+    "subtraction.decompose_by_place_value_label": "415",
+    "subtraction.diff_0_n_equals_n": "485",
+    "subtraction.no_column_limit": "415",
+    "subtraction.smaller_from_larger": "585",
+    "subtraction.stops_borrow_at_zero": "425"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "answers": [
+    "415",
+    "425",
+    "485",
+    "525",
+    "585",
+    "635"
+   ],
+   "meta": {
+    "template": "sub_zero_cascade",
+    "a": 604,
+    "b": 189
+   },
+   "audit_expr": "604-189",
+   "item_id": "v5i:0008"
+  },
+  {
+   "text": "Calculate: 623 - 148",
+   "category": "subtraction",
+   "family": "sub_borrow_from_bottom",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "475",
+   "predictions": {
+    "subtraction.always_borrow_left": "475",
+    "subtraction.borrow_from_bottom": "695",
+    "subtraction.borrow_no_decrement": "585",
+    "subtraction.decompose_by_place_value_label": "475",
+    "subtraction.diff_0_n_equals_n": "475",
+    "subtraction.no_column_limit": "475",
+    "subtraction.smaller_from_larger": "525",
+    "subtraction.stops_borrow_at_zero": "475"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "475",
+    "525",
+    "585",
+    "695"
+   ],
+   "meta": {
+    "template": "sub_borrow_from_bottom",
+    "a": 623,
+    "b": 148
+   },
+   "audit_expr": "623-148",
+   "item_id": "v5i:0009"
+  },
+  {
+   "text": "Calculate: 850 - 376",
+   "category": "subtraction",
+   "family": "sub_zero_ones",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "474",
+   "predictions": {
+    "subtraction.always_borrow_left": "474",
+    "subtraction.borrow_from_bottom": "694",
+    "subtraction.borrow_no_decrement": "584",
+    "subtraction.decompose_by_place_value_label": "474",
+    "subtraction.diff_0_n_equals_n": "486",
+    "subtraction.no_column_limit": "474",
+    "subtraction.smaller_from_larger": "526",
+    "subtraction.stops_borrow_at_zero": "474"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "474",
+    "486",
+    "526",
+    "584",
+    "694"
+   ],
+   "meta": {
+    "template": "sub_zero_ones",
+    "a": 850,
+    "b": 376
+   },
+   "audit_expr": "850-376",
+   "item_id": "v5i:0010"
+  },
+  {
+   "text": "Calculate: 802 - 367",
+   "category": "subtraction",
+   "family": "sub_zero_tens_stop",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "435",
+   "predictions": {
+    "subtraction.always_borrow_left": "435",
+    "subtraction.borrow_from_bottom": "655",
+    "subtraction.borrow_no_decrement": "545",
+    "subtraction.decompose_by_place_value_label": "435",
+    "subtraction.diff_0_n_equals_n": "465",
+    "subtraction.no_column_limit": "435",
+    "subtraction.smaller_from_larger": "565",
+    "subtraction.stops_borrow_at_zero": "445"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "answers": [
+    "435",
+    "445",
+    "465",
+    "545",
+    "565",
+    "655"
+   ],
+   "meta": {
+    "template": "sub_zero_tens_stop",
+    "a": 802,
+    "b": 367
+   },
+   "audit_expr": "802-367",
+   "item_id": "v5i:0011"
+  },
+  {
+   "text": "Calculate: 74 - 28",
+   "category": "subtraction",
+   "family": "sub_dev_two_digit",
+   "split": "dev",
+   "operation": "subtraction",
+   "correct": "46",
+   "predictions": {
+    "subtraction.always_borrow_left": "46",
+    "subtraction.borrow_from_bottom": "66",
+    "subtraction.borrow_no_decrement": "56",
+    "subtraction.decompose_by_place_value_label": "46",
+    "subtraction.diff_0_n_equals_n": "46",
+    "subtraction.no_column_limit": "46",
+    "subtraction.smaller_from_larger": "54",
+    "subtraction.stops_borrow_at_zero": "46"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "46",
+    "54",
+    "56",
+    "66"
+   ],
+   "meta": {
+    "template": "sub_dev_two_digit",
+    "a": 74,
+    "b": 28
+   },
+   "audit_expr": "74-28",
+   "item_id": "v5i:0012"
+  },
+  {
+   "text": "Calculate: 91 - 47",
+   "category": "subtraction",
+   "family": "sub_dev_two_digit",
+   "split": "dev",
+   "operation": "subtraction",
+   "correct": "44",
+   "predictions": {
+    "subtraction.always_borrow_left": "44",
+    "subtraction.borrow_from_bottom": "64",
+    "subtraction.borrow_no_decrement": "54",
+    "subtraction.decompose_by_place_value_label": "44",
+    "subtraction.diff_0_n_equals_n": "44",
+    "subtraction.no_column_limit": "44",
+    "subtraction.smaller_from_larger": "56",
+    "subtraction.stops_borrow_at_zero": "44"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": false,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": false
+   },
+   "answers": [
+    "44",
+    "54",
+    "56",
+    "64"
+   ],
+   "meta": {
+    "template": "sub_dev_two_digit",
+    "a": 91,
+    "b": 47
+   },
+   "audit_expr": "91-47",
+   "item_id": "v5i:0013"
+  },
+  {
+   "text": "Calculate: 305 - 167",
+   "category": "subtraction",
+   "family": "sub_dev_zero",
+   "split": "dev",
+   "operation": "subtraction",
+   "correct": "138",
+   "predictions": {
+    "subtraction.always_borrow_left": "138",
+    "subtraction.borrow_from_bottom": "358",
+    "subtraction.borrow_no_decrement": "248",
+    "subtraction.decompose_by_place_value_label": "138",
+    "subtraction.diff_0_n_equals_n": "168",
+    "subtraction.no_column_limit": "138",
+    "subtraction.smaller_from_larger": "262",
+    "subtraction.stops_borrow_at_zero": "142"
+   },
+   "applicable": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "triggers": {
+    "subtraction.always_borrow_left": false,
+    "subtraction.borrow_from_bottom": true,
+    "subtraction.borrow_no_decrement": true,
+    "subtraction.decompose_by_place_value_label": false,
+    "subtraction.diff_0_n_equals_n": true,
+    "subtraction.no_column_limit": false,
+    "subtraction.smaller_from_larger": true,
+    "subtraction.stops_borrow_at_zero": true
+   },
+   "answers": [
+    "138",
+    "142",
+    "168",
+    "248",
+    "262",
+    "358"
+   ],
+   "meta": {
+    "template": "sub_dev_zero",
+    "a": 305,
+    "b": 167
+   },
+   "audit_expr": "305-167",
+   "item_id": "v5i:0014"
+  }
+ ]
+}

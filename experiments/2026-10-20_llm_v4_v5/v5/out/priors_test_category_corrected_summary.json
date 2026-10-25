@@ -1,0 +1,12 @@
+{
+  "n_ok": 87,
+  "top1_global": 0.6436781609195402,
+  "top10_global_recall": 0.9885057471264368,
+  "top1_category_rank": 0.6436781609195402,
+  "top10_category_recall": 0.9885057471264368,
+  "usage": {
+    "input_tokens": 82367,
+    "output_tokens": 9760
+  },
+  "estimated_cost_usd": 0.027161960000000002
+}

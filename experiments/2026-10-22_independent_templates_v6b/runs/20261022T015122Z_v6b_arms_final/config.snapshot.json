@@ -1,0 +1,49 @@
+{
+ "experiment": "independent_templates_v6b",
+ "dataset_version": "v6b",
+ "frozen_at": "2026-10-22",
+ "purpose": "Corrected second-item-bank replication of the four-arm comparison (full SM / E-only / simplified SM without pair-mixed outputs / fixed-budget maxent k=3). Fixes F1/F2 data errors; text/family names are disjoint from v5/v4 but some structures overlap. Sensitivity/replication only; no threshold changes.",
+ "n_true_labels": 30,
+ "cases_per_label": 3,
+ "expected_cases": 90,
+ "seeds": 5,
+ "eps": 0.05,
+ "max_obs": 7,
+ "bootstrap": 2000,
+ "bootstrap_seed": 20261028,
+ "arms": {
+  "full_sm": "frozen v5 stability_mixed (posterior + E + LR + pair_guard + extra-none + pair/mixed terminals)",
+  "e_only": "posterior + E gate only; no LR, no pair guard, no pair/mixed terminals, no extra-none",
+  "simplified_sm": "full single gate + explicit none + extra none; pair/mixed terminals disabled",
+  "fixed3": "maxent selection, exactly 3 additional inquiries, posterior terminal without pairs"
+ },
+ "replication_criteria": {
+  "R1_full_sm_vs_fixed3": {
+   "slip_false_diff_max": -0.2,
+   "slip_false_ci_upper_below_zero": true,
+   "stable_correct_stop_diff_min": -0.05,
+   "stable_correct_diff_min": -0.05,
+   "note": "fixed3 has no adaptive correct-stop (N/A); stable_correct is the substantive stable-accuracy comparison."
+  },
+  "R2_e_only_vs_fixed3": {
+   "slip_false_diff_max": -0.2,
+   "stable_correct_stop_diff_min": -0.05,
+   "stable_correct_diff_min": -0.05,
+   "note": "fixed3 has no adaptive correct-stop (N/A); stable_correct is the substantive stable-accuracy comparison."
+  },
+  "R3_full_sm_vs_e_only": {
+   "slip_inquiries_diff_max": 0.0,
+   "abs_stable_correct_stop_diff_max": 0.05
+  },
+  "R4_simplified_sm_vs_full_sm": {
+   "slip_false_diff_max": 0.0,
+   "slip_inquiries_diff_max": 0.5
+  }
+ },
+ "prior_gate": {
+  "note": "Report category-conditioned prior top-1/top-10 recall on v6. If top-10 recall < 0.90, interpret arm results as prior-limited and do not tune prompts on v6 outcomes.",
+  "top10_min_for_primary_interpretation": 0.9
+ },
+ "claim_boundary": "Replication on a corrected second programmatically authored item bank. Text and family names do not overlap with v5 test+dev, but several structures do (reported in v6b_data_audit.json). This is a second-bank / partial-structural-extension check, not a strict unseen-structure holdout, external holdout, or risk certification.",
+ "no_threshold_changes": true
+}

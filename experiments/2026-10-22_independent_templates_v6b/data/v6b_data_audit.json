@@ -1,0 +1,145 @@
+{
+  "n_items": 96,
+  "n_cases": 90,
+  "correct_audit": {
+    "n_issues": 0,
+    "issues": []
+  },
+  "text_audit": {
+    "n_issues": 0,
+    "issues": []
+  },
+  "independent_bug_audit": {
+    "n_issues": 0,
+    "issues": []
+  },
+  "library_audit": {
+    "statuses": {
+      "library_match": 164,
+      "library_out_of_scope": 18
+    },
+    "n_mismatches": 0,
+    "mismatches": [],
+    "out_of_scope_structures": {
+      "frac_add_three/ignore_denominators": "library accepts two fractions; three-fraction extension verified independently",
+      "frac_mul_three/ignore_denominators": "library's ignore-denominators rule reads only the first two fractions; three-fraction extension verified independently",
+      "frac_compare_four/denominator_comparison_error": "library supports at most three fractions; four-way comparison verified independently",
+      "frac_compare_four/natural_number_bias_numerator_only": "library supports at most three fractions; four-way comparison verified independently",
+      "pct_find_whole/percent_equals_decimal": "library's percent_equals_decimal covers percent-of-value, not find-whole; independent formula verified",
+      "pct_compare_change/reverse_percentage_error": "library's reverse_percentage_error covers 'p% as much' comparison statements, not the larger/smaller asymmetry used here; independent formula verified"
+    }
+  },
+  "case_audit": {
+    "n_issues": 0,
+    "issues": [],
+    "true_label_verification": {
+      "library": 77,
+      "independent_only": 13,
+      "none": 0
+    }
+  },
+  "overlap_with_v4_v5": {
+    "text": {
+      "n": 0,
+      "items": []
+    },
+    "family": {
+      "n": 0,
+      "items": []
+    }
+  },
+  "structural_overlap_with_v5": {
+    "definition": "category + operation + arity + normalized text skeleton + category-specific structure (subtraction borrow profile; fraction arity/common denominator; decimal places; OO operator sequence/parentheses; percentage template). Coarse diagnostic, not a proof of uniqueness.",
+    "n_v5_items": 94,
+    "n_v6_items": 96,
+    "n_v6_items_with_matching_v5_signature": 18,
+    "n_v6_families_with_matching_v5_signature": 6,
+    "families": [
+      "neg_add_two_new",
+      "neg_minus_neg_new",
+      "neg_sub_pos_new",
+      "oo_add_sub_four",
+      "oo_muldiv_chain",
+      "sub3_zero_tail"
+    ],
+    "n_v6_cases_with_matching_v5_signature": 23,
+    "examples": [
+      {
+        "item": "Calculate: 800 - 476",
+        "family": "sub3_zero_tail"
+      },
+      {
+        "item": "Calculate: 600 - 283",
+        "family": "sub3_zero_tail"
+      },
+      {
+        "item": "Calculate: 900 - 547",
+        "family": "sub3_zero_tail"
+      },
+      {
+        "item": "Calculate: -6 + (-4)",
+        "family": "neg_add_two_new"
+      },
+      {
+        "item": "Calculate: -8 + (-5)",
+        "family": "neg_add_two_new"
+      },
+      {
+        "item": "Calculate: -7 + (-3)",
+        "family": "neg_add_two_new"
+      },
+      {
+        "item": "Calculate: -4 - 6",
+        "family": "neg_sub_pos_new"
+      },
+      {
+        "item": "Calculate: -3 - 7",
+        "family": "neg_sub_pos_new"
+      },
+      {
+        "item": "Calculate: -5 - 9",
+        "family": "neg_sub_pos_new"
+      },
+      {
+        "item": "Calculate: -6 - (-9)",
+        "family": "neg_minus_neg_new"
+      },
+      {
+        "item": "Calculate: -4 - (-11)",
+        "family": "neg_minus_neg_new"
+      },
+      {
+        "item": "Calculate: -8 - (-13)",
+        "family": "neg_minus_neg_new"
+      },
+      {
+        "item": "Calculate: 84 / 7 * 3",
+        "family": "oo_muldiv_chain"
+      },
+      {
+        "item": "Calculate: 72 / 6 * 4",
+        "family": "oo_muldiv_chain"
+      },
+      {
+        "item": "Calculate: 96 / 8 * 2",
+        "family": "oo_muldiv_chain"
+      },
+      {
+        "item": "Calculate: 40 - 12 + 7 - 5",
+        "family": "oo_add_sub_four"
+      },
+      {
+        "item": "Calculate: 35 - 9 + 6 - 4",
+        "family": "oo_add_sub_four"
+      },
+      {
+        "item": "Calculate: 50 - 18 + 9 - 7",
+        "family": "oo_add_sub_four"
+      }
+    ]
+  },
+  "declared_but_not_triggering": {
+    "n": 0,
+    "items": []
+  }
+}

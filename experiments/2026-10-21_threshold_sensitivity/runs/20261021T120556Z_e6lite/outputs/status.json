@@ -1,0 +1,57 @@
+{
+ "run": ".\\experiments\\2026-10-21_threshold_sensitivity\\runs\\20261021T120556Z_e6lite",
+ "timestamp": "20261021T120556Z",
+ "checks_pass": true,
+ "checks": {
+  "frozen_test_episodes_default_config": {
+   "n_frozen": 1305,
+   "n_got": 1305,
+   "n_common": 1305,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "pass": true
+  },
+  "frozen_dev_episodes_default_config": {
+   "n_frozen": 180,
+   "n_got": 180,
+   "n_common": 180,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "pass": true
+  },
+  "direct_loop_vs_prefix": {
+   "u1=0.9": {
+    "n_compared": 1305,
+    "n_mismatch": 0,
+    "pass": true,
+    "examples": []
+   },
+   "E=1": {
+    "n_compared": 1305,
+    "n_mismatch": 0,
+    "pass": true,
+    "examples": []
+   },
+   "P=0.1": {
+    "n_compared": 1305,
+    "n_mismatch": 0,
+    "pass": true,
+    "examples": []
+   },
+   "pair_guard=off": {
+    "n_compared": 1305,
+    "n_mismatch": 0,
+    "pass": true,
+    "examples": []
+   }
+  }
+ },
+ "elapsed_s": 3.4,
+ "outputs": [
+  "episodes_default_test.json",
+  "risk_coverage.pdf",
+  "risk_coverage.png",
+  "summary.json",
+  "tables.md"
+ ]
+}

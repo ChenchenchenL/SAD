@@ -1,0 +1,49 @@
+{
+ "timestamp": "20261022T015122Z",
+ "checks": {
+  "v5_full_sm_vs_frozen": {
+   "n_frozen": 1305,
+   "n_got": 1305,
+   "n_common": 1305,
+   "n_mismatch": 0,
+   "examples": [],
+   "pass": true
+  },
+  "v5_arms_vs_published_ablation": {
+   "worst_abs_diff": 0.0,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "pass": true
+  },
+  "v6_episode_counts": {
+   "expected": 5400,
+   "got": 5400,
+   "per_arm_type": {
+    "full_sm/stable": 450,
+    "full_sm/slip": 450,
+    "full_sm/mixed": 450,
+    "e_only/stable": 450,
+    "e_only/slip": 450,
+    "e_only/mixed": 450,
+    "simplified_sm/stable": 450,
+    "simplified_sm/slip": 450,
+    "simplified_sm/mixed": 450,
+    "fixed3/stable": 450,
+    "fixed3/slip": 450,
+    "fixed3/mixed": 450
+   },
+   "pass": true
+  }
+ },
+ "checks_pass": true,
+ "v6_skipped": {},
+ "v5_skipped": {},
+ "elapsed_s": 3.3,
+ "outputs": [
+  "episodes.json",
+  "four_arm_replication.pdf",
+  "four_arm_replication.png",
+  "summary.json",
+  "tables.md"
+ ]
+}

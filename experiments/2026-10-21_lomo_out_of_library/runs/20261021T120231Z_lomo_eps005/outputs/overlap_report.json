@@ -1,0 +1,357 @@
+{
+  "labels": {
+    "subtraction.always_borrow_left": {
+      "category": "subtraction",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "subtraction.borrow_from_bottom": {
+      "category": "subtraction",
+      "n_triggering_items": 13,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "subtraction.borrow_no_decrement": {
+      "category": "subtraction",
+      "n_triggering_items": 13,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "subtraction.smaller_from_larger": 2
+      },
+      "max_overlap_rule": "subtraction.smaller_from_larger",
+      "max_overlap_count": 2,
+      "n_overlap_rules_ge2": 1
+    },
+    "subtraction.decompose_by_place_value_label": {
+      "category": "subtraction",
+      "n_triggering_items": 0,
+      "identical_vectors": [
+        "subtraction.no_column_limit"
+      ],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "subtraction.diff_0_n_equals_n": {
+      "category": "subtraction",
+      "n_triggering_items": 7,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "subtraction.stops_borrow_at_zero": 1
+      },
+      "max_overlap_rule": "subtraction.stops_borrow_at_zero",
+      "max_overlap_count": 1,
+      "n_overlap_rules_ge2": 0
+    },
+    "subtraction.no_column_limit": {
+      "category": "subtraction",
+      "n_triggering_items": 0,
+      "identical_vectors": [
+        "subtraction.decompose_by_place_value_label"
+      ],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "subtraction.smaller_from_larger": {
+      "category": "subtraction",
+      "n_triggering_items": 13,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "subtraction.borrow_no_decrement": 2
+      },
+      "max_overlap_rule": "subtraction.borrow_no_decrement",
+      "max_overlap_count": 2,
+      "n_overlap_rules_ge2": 1
+    },
+    "subtraction.stops_borrow_at_zero": {
+      "category": "subtraction",
+      "n_triggering_items": 5,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "subtraction.diff_0_n_equals_n": 1
+      },
+      "max_overlap_rule": "subtraction.diff_0_n_equals_n",
+      "max_overlap_count": 1,
+      "n_overlap_rules_ge2": 0
+    },
+    "fractions.add_numerators_denominators": {
+      "category": "fractions",
+      "n_triggering_items": 4,
+      "identical_vectors": [
+        "fractions.common_denominator_numerator"
+      ],
+      "overlap_counts": {
+        "fractions.common_denominator_numerator": 4
+      },
+      "max_overlap_rule": "fractions.common_denominator_numerator",
+      "max_overlap_count": 4,
+      "n_overlap_rules_ge2": 1
+    },
+    "fractions.common_denominator_numerator": {
+      "category": "fractions",
+      "n_triggering_items": 4,
+      "identical_vectors": [
+        "fractions.add_numerators_denominators"
+      ],
+      "overlap_counts": {
+        "fractions.add_numerators_denominators": 4
+      },
+      "max_overlap_rule": "fractions.add_numerators_denominators",
+      "max_overlap_count": 4,
+      "n_overlap_rules_ge2": 1
+    },
+    "fractions.denominator_comparison_error": {
+      "category": "fractions",
+      "n_triggering_items": 4,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "fractions.natural_number_bias_numerator_only": 1
+      },
+      "max_overlap_rule": "fractions.natural_number_bias_numerator_only",
+      "max_overlap_count": 1,
+      "n_overlap_rules_ge2": 0
+    },
+    "fractions.ignore_denominators": {
+      "category": "fractions",
+      "n_triggering_items": 14,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "fractions.keep_common_denominator_for_multiplication": {
+      "category": "fractions",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "fractions.multiply_across_for_division": {
+      "category": "fractions",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "fractions.natural_number_bias_numerator_only": {
+      "category": "fractions",
+      "n_triggering_items": 4,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "fractions.denominator_comparison_error": 1
+      },
+      "max_overlap_rule": "fractions.denominator_comparison_error",
+      "max_overlap_count": 1,
+      "n_overlap_rules_ge2": 0
+    },
+    "fractions.subtract_across": {
+      "category": "fractions",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "decimals.ignore_decimal_point": {
+      "category": "decimals",
+      "n_triggering_items": 6,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "decimals.longer_is_larger": {
+      "category": "decimals",
+      "n_triggering_items": 4,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "decimals.right_align_decimals": {
+      "category": "decimals",
+      "n_triggering_items": 5,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "decimals.shorter_is_larger": {
+      "category": "decimals",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "decimals.whole_number_thinking": {
+      "category": "decimals",
+      "n_triggering_items": 0,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "negative_numbers.larger_absolute_value_always_wins": {
+      "category": "negative_numbers",
+      "n_triggering_items": 5,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "negative_numbers.multiplication_rule_for_addition": {
+      "category": "negative_numbers",
+      "n_triggering_items": 6,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "negative_numbers.two_negatives_always_positive": 6,
+        "negative_numbers.negative_swaps_operation": 2
+      },
+      "max_overlap_rule": "negative_numbers.two_negatives_always_positive",
+      "max_overlap_count": 6,
+      "n_overlap_rules_ge2": 2
+    },
+    "negative_numbers.negative_swaps_operation": {
+      "category": "negative_numbers",
+      "n_triggering_items": 6,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "negative_numbers.multiplication_rule_for_addition": 2,
+        "negative_numbers.two_negatives_always_positive": 2
+      },
+      "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+      "max_overlap_count": 2,
+      "n_overlap_rules_ge2": 2
+    },
+    "negative_numbers.negative_times_negative_negative": {
+      "category": "negative_numbers",
+      "n_triggering_items": 4,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "negative_numbers.two_negatives_always_positive": {
+      "category": "negative_numbers",
+      "n_triggering_items": 10,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "negative_numbers.multiplication_rule_for_addition": 6,
+        "negative_numbers.negative_swaps_operation": 2
+      },
+      "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+      "max_overlap_count": 6,
+      "n_overlap_rules_ge2": 2
+    },
+    "order_of_operations.addition_before_subtraction_always": {
+      "category": "order_of_operations",
+      "n_triggering_items": 4,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "order_of_operations.ignore_parentheses": {
+      "category": "order_of_operations",
+      "n_triggering_items": 5,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "order_of_operations.strict_left_to_right": 5
+      },
+      "max_overlap_rule": "order_of_operations.strict_left_to_right",
+      "max_overlap_count": 5,
+      "n_overlap_rules_ge2": 1
+    },
+    "order_of_operations.multiplication_before_division_always": {
+      "category": "order_of_operations",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "order_of_operations.pemdas_strictly_sequential": {
+      "category": "order_of_operations",
+      "n_triggering_items": 0,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "order_of_operations.strict_left_to_right": {
+      "category": "order_of_operations",
+      "n_triggering_items": 7,
+      "identical_vectors": [],
+      "overlap_counts": {
+        "order_of_operations.ignore_parentheses": 5
+      },
+      "max_overlap_rule": "order_of_operations.ignore_parentheses",
+      "max_overlap_count": 5,
+      "n_overlap_rules_ge2": 1
+    },
+    "percentages.add_percentages_directly": {
+      "category": "percentages",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "percentages.percent_equals_decimal": {
+      "category": "percentages",
+      "n_triggering_items": 7,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "percentages.percentage_as_index": {
+      "category": "percentages",
+      "n_triggering_items": 7,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    },
+    "percentages.reverse_percentage_error": {
+      "category": "percentages",
+      "n_triggering_items": 3,
+      "identical_vectors": [],
+      "overlap_counts": {},
+      "max_overlap_rule": null,
+      "max_overlap_count": 0,
+      "n_overlap_rules_ge2": 0
+    }
+  },
+  "violations": []
+}

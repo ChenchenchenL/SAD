@@ -1,0 +1,550 @@
+{
+  "manifest_version": "manuscript_evidence_v5_2026-10-20",
+  "generated_date": "2026-10-20",
+  "project_root": ".",
+  "purpose": "Establish the single authoritative data source, configuration, sample scope and hash for every main result in the frozen v5 paper; no new paid API calls, no parameter tuning, no modification of frozen data.",
+  "paper_scope": {
+    "main_thread": "category-conditioned, active evidence acquisition over an executable misconception library, and stability-aware stopping under class conditions",
+    "primary_contrast": "stable vs slip",
+    "mixed_role": "stress test / risk exposure only; excluded from the single-system main score",
+    "feedback_role": "downstream proxy evaluation of feedback text, judged by LLM judges (not a human gold standard)"
+  },
+  "policies": {
+    "bootstrap": "template_family cluster bootstrap, 36 families, with replacement and multiplicity, 2000 resamples (final_audit_v5.py)",
+    "feedback_weights": "stratified population weights recomputed per judge family (DeepSeek 54/2/34/16/10; GLM 25/2/16/7/10); overall metrics weighted to population",
+    "common_subset": "cross-judge comparison conducted only on the common 60-episode subset (235 pointwise records, 166 complete double-order pairwise comparisons)",
+    "denominator": "primary analysis uses protocol-valid 87 cases; original 90-case analysis reported in parallel, never hidden",
+    "forbidden": [
+      "reusing deprecated v4/old summaries for main numbers",
+      "mixing raw and final validator variants",
+      "treating per-order pairwise records as comparisons",
+      "excluding cases without disclosure"
+    ]
+  },
+  "frozen_v5_inputs": [
+    {
+      "id": "cases_test_v5",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/data/cases_test_v5.json",
+      "role": "original frozen test set, 90 cases / 30 true labels",
+      "sha256": "ffda0c428cea28f56889dd22e17790330dff05fa97fdb7823355f8ed7dbb9bba",
+      "note": "matches v5_freeze.json recorded hash"
+    },
+    {
+      "id": "cases_test_v5_exclusion_corrected",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/data/cases_test_v5_exclusion_corrected.json",
+      "role": "protocol-valid 87-case primary set (removes v5test:0013-0015)",
+      "sha256": "a47a41c385380d0306a4fc3a73a7ce0239db443d4f44bb888e90fe2bd53eb57e",
+      "note": "derived by applying the already-frozen exclusion rule; not a method/threshold change"
+    },
+    {
+      "id": "cases_dev_v5",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/data/cases_dev_v5.json",
+      "role": "dev set, threshold sanity check only",
+      "sha256": "6e37088ca29797976b6c7f7f36e25857cc4eb192490991c339224d225aab2c2a",
+      "note": "matches v5_freeze.json recorded hash; dev/test template-family overlap is empty"
+    },
+    {
+      "id": "v5_templates",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/v5_templates.py",
+      "role": "authored structural templates for test/dev",
+      "sha256": "7245c8c8b4085744987ba08ec63bd71200808ad7755b8fc44ff8651fc5e4372e",
+      "note": "matches v5_freeze.json recorded hash"
+    },
+    {
+      "id": "v5_engine",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/v5_engine.py",
+      "role": "diagnosis/selection/stopping engine used to generate the episode files",
+      "sha256": "bf4149a91997f23033cc4a12a185c73cc5d8154c5c827a939d06180318411b58",
+      "frozen_recorded_sha256": "3773f092a792607aa5de44dea22a58d05b44041dfe55dc77cfb562e10c418f6d",
+      "note": "CONFLICT: current file hash differs from the v5_freeze.json record; file mtime (2026-10-20T08:12:55Z) is later than the freeze time (2026-10-20T07:35:30Z). See manifest.conflicts[0]."
+    },
+    {
+      "id": "build_v5_data",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/build_v5_data.py",
+      "role": "builds dev/test cases from authored templates",
+      "sha256": "06fe85907d98f0d64f6325e4c70b82aef396df21ae2348a9c2a4cd1162a0fae0",
+      "note": "matches v5_freeze.json recorded build_script hash"
+    },
+    {
+      "id": "v5_freeze",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/config/v5_freeze.json",
+      "role": "freeze record: case counts, family lists, exclusion rule, recorded hashes",
+      "sha256": "aadc35cfdbb7a96015c0814f07c2a473793dc99b66337b75a94c1e8bb91cc41b",
+      "note": "frozen_at 2026-10-20T07:35:30Z"
+    },
+    {
+      "id": "v5_exclusion_correction",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/config/v5_exclusion_correction.json",
+      "role": "records the post-freeze implementation correction of the exclusion rule",
+      "sha256": "b37cbee171088842d0ad1b9065cb568bbf98d083d91f9b867bbf4b2f584155a7",
+      "note": "affects v5test:0013-0015 only; methods/thresholds_changed=false"
+    }
+  ],
+  "main_results_sources": {
+    "R1_active_selection_gain": {
+      "claim": "Under a fixed budget of k=3 and the same stopping, maxent selection independently improves stable diagnosis and lowers slip false remediation.",
+      "authoritative_source": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/diagnosis_audit.json (contrasts: maxent_k3_minus_random_k3, maxent_k3_minus_fixed_k3)",
+      "raw_episodes": "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps05_corrected_episodes.json",
+      "cases": "experiments/2026-10-20_llm_v4_v5/v5/data/cases_test_v5_exclusion_corrected.json",
+      "config": {
+        "eps": 0.05,
+        "seeds": 5,
+        "max_obs": 7,
+        "library_mode": "category",
+        "selection": [
+          "maxent",
+          "random",
+          "fixed-order"
+        ],
+        "stopping": "fixed k=3"
+      },
+      "sample_scope": {
+        "cases": 87,
+        "true_labels": 29,
+        "template_families": 36,
+        "episodes_per_type": 435
+      },
+      "effect_sizes": {
+        "maxent_k3_minus_random_k3_stable_correct": "+11.0 pp [+5.5, +17.6]",
+        "maxent_k3_minus_random_k3_slip_error": "-40.9 pp [-52.6, -28.8]",
+        "maxent_k3_minus_fixed_k3_stable_correct": "+14.5 pp [+6.2, +24.4]",
+        "maxent_k3_minus_fixed_k3_slip_error": "-41.6 pp [-55.7, -27.3]"
+      }
+    },
+    "R2_stability_stopping_benefit": {
+      "claim": "Stability-aware stopping lowers slip false remediation versus fixed-3, under identical maxent selection and budget cap.",
+      "authoritative_source": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/diagnosis_audit.json (contrast: stability_mixed_maxent_minus_fixed3)",
+      "raw_episodes": "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps05_corrected_episodes.json",
+      "cases": "experiments/2026-10-20_llm_v4_v5/v5/data/cases_test_v5_exclusion_corrected.json",
+      "config": {
+        "eps": 0.05,
+        "seeds": 5,
+        "max_obs": 7,
+        "selection": "maxent",
+        "stopping": [
+          "stability_mixed",
+          "fixed3"
+        ]
+      },
+      "sample_scope": {
+        "cases": 87,
+        "true_labels": 29,
+        "template_families": 36,
+        "episodes_per_type": 435
+      },
+      "effect_sizes": {
+        "slip_error": "9.9% vs 47.8%; paired -37.9 pp [-49.7, -26.1]",
+        "stable_correct_stop": "95.4% vs 97.0%; diff -1.6 pp [-3.3, +0.0]",
+        "stable_correct": "95.6% vs 97.0%; diff -1.4 pp [-3.0, +0.2]",
+        "stable_wrong_single": "0.9% vs 1.6%; diff -0.7 pp [-2.0, +0.5]"
+      }
+    },
+    "R3_stability_stopping_cost": {
+      "claim": "The benefit of stability-aware stopping is not cost-free: more inquiries and a higher abstention rate on slip, and a small stable-side difference.",
+      "authoritative_source": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/diagnosis_audit.json (contrast: stability_mixed_maxent_minus_fixed3)",
+      "config": "same as R2",
+      "sample_scope": "same as R2",
+      "effect_sizes": {
+        "stable_abstain": "0.5% vs 0.0%; diff +0.5 pp [+0.0, +1.2]",
+        "slip_abstain": "32.6% vs 0.0%; diff +32.6 pp [+20.9, +45.1]",
+        "slip_explicit_none": "57.5% vs 52.2%; diff +5.3 pp [+1.2, +10.0]",
+        "stable_inquiries": "1.37 vs 3.00; diff -1.63 [-1.77, -1.47]",
+        "slip_inquiries": "3.70 vs 3.00; diff +0.70 [+0.27, +1.12]",
+        "mixed_inquiries": "2.29 vs 3.00; diff -0.71 [-0.90, -0.54]"
+      }
+    },
+    "R4_feedback_gain": {
+      "claim": "Pipeline feedback improves target-hit and overall ratings relative to fair typed one-shot and no-diagnosis; the direction holds across two LLM judge families and survives family clustering.",
+      "authoritative_source": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/feedback_audit.json (paired, design_weight_sensitivity)",
+      "raw": {
+        "deepseek_judge": "experiments/2026-10-20_llm_v4_v5/v5/out/judge_v5_deepseek_v4_1_flash.jsonl",
+        "glm_judge": "experiments/2026-10-20_llm_v4_v5/v5/out/judge_v5_glm_5_3_flash_v5j_fast_2026_10_20.jsonl",
+        "feedback": "experiments/2026-10-20_llm_v4_v5/v5/out/feedback_v5.jsonl"
+      },
+      "derived_summaries": [
+        "experiments/2026-10-20_llm_v4_v5/v5/out/feedback_v5_protocol_valid_summary.json",
+        "experiments/2026-10-20_llm_v4_v5/v5/out/feedback_v5_summary.json"
+      ],
+      "config": {
+        "conditions": [
+          "oracle",
+          "pipeline",
+          "one_shot",
+          "no_diagnosis"
+        ],
+        "deepseek_scope": "116 valid episodes, 464 valid records, 36 families",
+        "glm_scope": "60 requested episodes; 235/240 pointwise parsed; 166/180 complete pairwise; 31 families",
+        "common_subset": "60 episodes, 235 pointwise records, 166 complete double-order pairwise comparisons"
+      },
+      "sample_scope": {
+        "population_strata": {
+          "stable_correct": 85,
+          "slip_abstain": 29,
+          "slip_error": 10,
+          "slip_explicit_none": 48,
+          "stable_other": 2
+        },
+        "deepseek_weights": {
+          "stable_correct": 1.574,
+          "slip_explicit_none": 1.412,
+          "slip_abstain": 1.8125,
+          "slip_error": 1.0,
+          "stable_other": 1.0
+        },
+        "glm_weights": {
+          "stable_correct": 3.4,
+          "slip_explicit_none": 3.0,
+          "slip_abstain": 4.1429,
+          "slip_error": 1.0,
+          "stable_other": 1.0
+        }
+      },
+      "effect_sizes": {
+        "pipeline_minus_one_shot_target_hit_deepseek": "+24.2 pp [12.6, 35.7]",
+        "pipeline_minus_one_shot_target_hit_glm": "+28.8 pp [15.3, 43.2]",
+        "pipeline_minus_one_shot_overall_deepseek": "+0.705 [0.415, 0.979]",
+        "pipeline_minus_one_shot_overall_glm": "+0.714 [0.352, 1.051]",
+        "pipeline_minus_no_diagnosis_target_hit_deepseek": "+36.2 pp [21.7, 49.4]",
+        "pipeline_minus_no_diagnosis_target_hit_glm": "+40.0 pp [25.8, 53.3]",
+        "pipeline_minus_no_diagnosis_misleading_deepseek": "-37.2 pp [-49.5, -23.8]",
+        "pipeline_minus_no_diagnosis_misleading_glm": "-32.8 pp [-44.8, -20.2]",
+        "pipeline_minus_one_shot_misleading_deepseek": "-22.5 pp [-33.7, -10.9] (NOT cross-judge robust)",
+        "pipeline_minus_one_shot_misleading_glm": "-12.2 pp [-26.6, +0.8] (CI crosses 0)",
+        "pipeline_minus_oracle_target_hit_deepseek": "-12.1 pp [-21.1, -2.8] (descriptive only)",
+        "pipeline_minus_oracle_target_hit_glm": "-9.3 pp [-22.9, +3.8] (CI crosses 0)"
+      }
+    },
+    "R5_mixed_stress_test": {
+      "claim": "Mixed-strategy students remain unsolved; held-out safety lowers false remediation but does not identify the misconception pair.",
+      "authoritative_source": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/diagnosis_audit.json (table mixed; contrast stability_mixed_heldout_maxent_minus_stability_mixed_maxent)",
+      "raw_episodes": "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps05_corrected_episodes.json",
+      "config": "same as R2 (mixed column)",
+      "sample_scope": "87 cases; 435 mixed episodes per method",
+      "effect_sizes": {
+        "stability_mixed_mixed_error": "62.3% [58.0, 66.4]",
+        "stability_mixed_mixed_detected": "20.2%",
+        "stability_mixed_mixed_exact_pair": "1.8% [0.2, 4.2]",
+        "heldout_mixed_error": "19.3% [14.9, 23.9]",
+        "heldout_mixed_detected": "41.4%",
+        "heldout_mixed_exact_pair": "0.2% [0.0, 0.7]",
+        "heldout_minus_stability_mixed_mixed_error": "-43.0 pp [-48.5, -37.4]",
+        "heldout_minus_stability_mixed_stable_correct": "-9.4 pp [-12.1, -7.0]",
+        "heldout_minus_stability_mixed_mixed_inquiries": "+1.51 [1.33, 1.70]"
+      }
+    },
+    "R6_validator": {
+      "claim": "Validator flag-then-one-retry does NOT improve feedback quality (negative result).",
+      "authoritative_source": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/feedback_audit.json (retry, retry_quality)",
+      "config": "deterministic flag triggers at most one retry; leak flag is suspected, not confirmed",
+      "sample_scope": {
+        "retried": {
+          "full_480": 96,
+          "protocol_valid_464": 88,
+          "glm_subset_240": 54
+        }
+      },
+      "effect_sizes": {
+        "protocol_valid_math_incorrect": "41 -> 27",
+        "protocol_valid_suspected_leak": "57 -> 30",
+        "protocol_valid_unverifiable": "36 -> 49",
+        "deepseek_overall": "3.61 -> 3.47 (valid 88); 3.68 -> 3.50 (full 96)",
+        "glm_overall": "3.83 -> 3.74 (subset 54)"
+      }
+    },
+    "R7_J5_J10": {
+      "claim": "J5/J10 rankings depend on lambda, student-type ratio and abstention penalty; J alone cannot prove universal superiority (always-abstain J=1.00 is lowest).",
+      "authoritative_source": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/diagnosis_audit.json (j_sensitivity, j_penalty_exploratory)",
+      "config": "J = n_obs + lambda * false_remediation, includes initial observation; lambda in {5,10}; ratios 50:50 / 70:30 / 30:70 / 50:25:25",
+      "sample_scope": "87 cases, protocol-valid",
+      "effect_sizes": {
+        "always_abstain": "J5 = J10 = 1.00 (lowest of all methods)",
+        "lambda5_50_50": "one_shot_typed 3.79; stability_mixed 3.81; fixed3 5.24",
+        "lambda5_70_30": "one_shot_typed 3.16; stability_mixed 3.25; fixed3 4.77",
+        "lambda5_30_70": "one_shot_typed 4.42; stability_mixed 4.36; fixed3 5.70",
+        "lambda10_50_50": "one_shot_typed 6.57; stability_mixed 4.08; fixed3 6.47",
+        "lambda10_70_30": "one_shot_typed 5.31; stability_mixed 3.43; fixed3 5.55",
+        "lambda10_30_70": "one_shot_typed 7.84; stability_mixed 4.72; fixed3 7.40",
+        "lambda10_50_25_25": "one_shot_typed 6.40; stability_mixed 5.03; fixed3 7.47",
+        "exploratory_abstain_penalty_lambda5_50_50": "one_shot_typed 3.79/3.85/3.91/4.10 (c=0/1/2/5); stability_mixed 3.81/3.82/3.83/3.85"
+      }
+    }
+  },
+  "frozen_analysis_outputs": [
+    {
+      "id": "diagnosis_audit",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/diagnosis_audit.json",
+      "sha256": "24b2e54fe2a44f5f068c47b0c6f634007c0f9e824c5995c3edc8cab158d5c66b",
+      "role": "authoritative family-bootstrap diagnosis numbers"
+    },
+    {
+      "id": "feedback_audit",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/feedback_audit.json",
+      "sha256": "d3e0cc36cedc3a1b0d1e5d199ad23eb9e1ea9b4f1512f5151a580c6c6c2b11e2",
+      "role": "authoritative feedback numbers"
+    },
+    {
+      "id": "final_tables",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/final_audit/final_tables.md",
+      "sha256": "3d222ce1175ab30ec7636707ae1b492a66e0ecdecaa3368354b16e89d5fa4c1d",
+      "role": "rendered table deliverable source"
+    },
+    {
+      "id": "final_audit_v5",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/final_audit_v5.py",
+      "sha256": "0bf1e5af3ed07698cb7816a6604ca2c72a4491e9e89b231d6ac2291e0ed5a3ed",
+      "role": "family-bootstrap audit script",
+      "note": "mtime 2026-10-20T09:37:22Z, after freeze; produces diagnosis_audit.json"
+    },
+    {
+      "id": "feedback_audit_v5",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/feedback_audit_v5.py",
+      "sha256": "fa89937e7d1ce9fd3a2e9af16d61f86983c4a0c48fc39514e4ddac8870650ff0",
+      "role": "feedback audit script"
+    },
+    {
+      "id": "render_final_tables",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/render_final_tables.py",
+      "sha256": "13c38c8df01ca6a2885c884931a17bc436334faae10a8d3fc7b749e04eacf995",
+      "role": "table renderer"
+    },
+    {
+      "id": "assemble_results_v5",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/assemble_results_v5.py",
+      "sha256": "2e02046b8ef4b43769b3e399a03666556ff4fce18a2e4b97a5b912c7cd8ab927",
+      "role": "results document assembler"
+    },
+    {
+      "id": "regression_checks",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/regression_checks.py",
+      "sha256": "adf80f543d873f01143f2faf421e68ae21ef0b6438d9ea58a700df98d56853df",
+      "role": "information-boundary regression checks",
+      "note": "run before verification: python v5/regression_checks.py"
+    },
+    {
+      "id": "run_v5_diagnosis",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/run_v5_diagnosis.py",
+      "sha256": "e046fd8cf2c35b4afd208eeaf434a1995773e38866f72b904b8425607b60d36e",
+      "role": "episode generator driver"
+    },
+    {
+      "id": "feedback_v5_py",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/feedback_v5.py",
+      "sha256": "4d92480e603f4bdc61aec549a6ac1a8bd331e4216067dc6b7e1106b79e3e8d70",
+      "role": "feedback generation"
+    },
+    {
+      "id": "judge_v5_py",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/judge_v5.py",
+      "sha256": "fa0d1e5f1e102b6758bae229cbb80c0b8d3db6c8f3708fc00da65086fd01b816",
+      "role": "LLM judge driver"
+    },
+    {
+      "id": "summarize_v5",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/summarize_v5.py",
+      "sha256": "05fb3c08f56bf20fb3d7269c5d285151d9cb488b6bcae01e26e92a7539f6fb19",
+      "role": "summary generator"
+    },
+    {
+      "id": "analyze_feedback_valid",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/analyze_feedback_valid.py",
+      "sha256": "226ceb6f7f2bb79aab2832015e7762b8e992cf95f7489b88a9b4489e34050d1c",
+      "role": "valid feedback analyzer"
+    },
+    {
+      "id": "audit_v5_data",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/audit_v5_data.py",
+      "sha256": "bb66ddded50f9a8cc8c98b1d9f57d1ce737e2a5976e1d61b8518306f803d66c2",
+      "role": "data correctness audit"
+    },
+    {
+      "id": "llm_prior_v5",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/llm_prior_v5.py",
+      "sha256": "b15230ee7714c613cff55440c5dcb259387b419bf1ac69965ba069daef462377",
+      "role": "prior generation"
+    }
+  ],
+  "supporting_frozen_artifacts": [
+    {
+      "id": "episodes_original_90",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps05_episodes.json",
+      "sha256": "13aea1a0693434374cfbaf5a53c54c1ec878e26b978e6c5adaeefff5239a7ac7",
+      "role": "original 90-case episode output (retained)"
+    },
+    {
+      "id": "episodes_corrected_87",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps05_corrected_episodes.json",
+      "sha256": "a6c721b9f26e80a735184c3642a2e11e9700470a4f974fd86e8a95ce5dd5b942",
+      "role": "primary 87-case episode output"
+    },
+    {
+      "id": "eps0_corrected",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps0.0_corrected_summary.json",
+      "sha256": "29c403c68f20148e01d0dc20c53fcf8c11c32775da65f9a0d581c746689247ea",
+      "role": "noise sensitivity eps=0"
+    },
+    {
+      "id": "eps10_corrected",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps0.10_corrected_summary.json",
+      "sha256": "f18b971b41fed96a86a89b31b9ffe1d1d9c0fd8330c65a2601e3caf58269691b",
+      "role": "noise sensitivity eps=0.10"
+    },
+    {
+      "id": "globalprior_category_corrected",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_globalprior_category_corrected_summary.json",
+      "sha256": "f252f3e95717a2ef384991e257e23003fa5c931ca53a75d731160530b9aca34f",
+      "role": "full-library prior, category candidates (exploratory)"
+    },
+    {
+      "id": "globalprior_globalmodel_corrected",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_globalprior_globalmodel_corrected_summary.json",
+      "sha256": "a681b9aabfd724dcaeefc057588c5560f9f316d1e987f3e8df2070459ed4f337",
+      "role": "full-library prior, all-candidate screening (exploratory)"
+    },
+    {
+      "id": "nodomainprior_global",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_nodomainprior_global_summary.json",
+      "sha256": "c1e843c312c8183dbe2a5e5e1e077d58ce19e518f7d2a12505d248ccadc6a6e5",
+      "role": "domain-free all-102 candidate screening (exploratory, 96.3% abstain)"
+    },
+    {
+      "id": "nodomainprior_category",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/test_nodomainprior_category_summary.json",
+      "sha256": "d4151f388e42a0d6327f82e9df1254bc32973cee2ed4ed856ecb6ba4f72edbd0",
+      "role": "domain-free prior + category candidates (exploratory)"
+    },
+    {
+      "id": "priors_category_corrected",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/priors_test_category_corrected_summary.json",
+      "sha256": "d8f25effcea20070107e68e9305d36ff35968e7bfb9e713c84e3d31d0a9f4139",
+      "role": "category-conditioned prior recall (87)"
+    },
+    {
+      "id": "priors_category",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/priors_test_category_summary.json",
+      "sha256": "81901aea95cc7055d046f9eee0ab8fb093ca17d22f16d851685bd0dd6c6fc1c5",
+      "role": "category-conditioned prior recall (original 90)"
+    },
+    {
+      "id": "priors_fulllibrary_corrected",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/priors_test_full_corrected_summary.json",
+      "sha256": "665aabcff00369d17a121050007046534f7ba53f6366a5ec6ee66313cccbada0",
+      "role": "full-library prompt prior recall (87)"
+    },
+    {
+      "id": "priors_categoryfree_nodomain",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/priors_test_full_nodomain_summary.json",
+      "sha256": "82723eda191bdc9a6409ee007dcf0215daefe6fd5f86bba9c43a5365b44d91ea",
+      "role": "category-free full prompt prior recall (87)"
+    },
+    {
+      "id": "feedback_v5_jsonl",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/feedback_v5.jsonl",
+      "sha256": "11b648ee2d8241231abef80efac66c470313c11bbcdd44bfca1d349182c07960",
+      "role": "frozen feedback records (raw + final)"
+    },
+    {
+      "id": "feedback_valid_summary",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/feedback_v5_protocol_valid_summary.json",
+      "sha256": "69d93761aab138d5f203d0666ff6175a0347010fd65cbe1374cfbea57e666158",
+      "role": "protocol-valid feedback summary"
+    },
+    {
+      "id": "feedback_full_summary",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/feedback_v5_summary.json",
+      "sha256": "abdfbbda6cb8f1f5dd42de17b07e8f035432e95b996057d73187d017f8a523a0",
+      "role": "full feedback summary"
+    },
+    {
+      "id": "judge_deepseek",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/judge_v5_deepseek_v4_1_flash.jsonl",
+      "sha256": "0ac98aed511066d2b251e9cedc953b986f26d7cc1cd05ca4b23b150086b67362",
+      "role": "DeepSeek judge records (final)"
+    },
+    {
+      "id": "judge_glm",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/judge_v5_glm_5_3_flash_v5j_fast_2026_10_20.jsonl",
+      "sha256": "9a5de36a0269b9e19ac34faa557f160e65c7bb8d0c04fde84c88e9d14c9f0b46",
+      "role": "GLM judge subset records"
+    },
+    {
+      "id": "judge_glm_sample60",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/judge_glm_sample60_summary.json",
+      "sha256": "13c9214a671096a02385c34e0494acdd5e255d56079c3a37f7272b9d95103fc3",
+      "role": "GLM stratified 60-episode sample (seed=20261025)"
+    },
+    {
+      "id": "v5_data_audit",
+      "path": "experiments/2026-10-20_llm_v4_v5/v5/out/v5_data_audit.json",
+      "sha256": "91b22118ed58017b76fb3d85422d2069f30217291fdc759ffb886b39dc4c48a2",
+      "role": "data correctness audit (correct audit 0 mismatches; 11 library_unsupported error items)"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "conflict_engine_hash",
+      "severity": "high",
+      "status": "UNRESOLVED - require author re-verification",
+      "item": "v5_engine.py",
+      "documented_value": "v5_freeze.json records sha256 = 3773f092a792607aa5de44dea22a58d05b44041dfe55dc77cfb562e10c418f6d",
+      "observed_value": "actual file sha256 = bf4149a91997f23033cc4a12a185c73cc5d8154c5c827a939d06180318411b58",
+      "evidence": "file mtime 2026-10-20T08:12:55Z is later than freeze time 2026-10-20T07:35:30Z; the episode files were generated at 08:24Z / 08:33Z, i.e. after this edit",
+      "impact": "The frozen hash does not certify the engine that actually produced the episodes. This affects reproducibility of the episode generation, not the family-bootstrap statistics themselves (final_audit_v5.py recomputes from the frozen episode files).",
+      "resolution_required": "Author should confirm whether the post-freeze engine edit was a non-behavioural change (then document it) or a behavioural change (then the freeze record and/or episode regeneration must be re-disclosed). This document does not choose the more convenient value.",
+      "do_not": "Do not silently adopt the freeze-recorded hash; the current file hash must be reported."
+    },
+    {
+      "id": "conflict_glm_duplicate_keys_naming",
+      "severity": "low",
+      "status": "RESOLVED",
+      "item": "GLM duplicate judge keys",
+      "documented_value": "results_v5.md and next_decision_v5.md state 23 final record keys have duplicate scores",
+      "observed_value": "feedback_audit.json meta: n_glm_duplicate_record_keys = 27 (all keys, raw+final); glm_duplicate_sensitivity.n_final_duplicate_keys = 23 (final keys only)",
+      "evidence": "the two counts use different definitions",
+      "impact": "none",
+      "resolution": "The document's '23' matches glm_duplicate_sensitivity.n_final_duplicate_keys (final-only). Both numbers are correct under their own definitions; the manifest records both and the paper must state which definition it uses."
+    },
+    {
+      "id": "deprecated_summary_contrasts",
+      "severity": "medium",
+      "status": "RESOLVED",
+      "item": "test_category_eps05_corrected_summary.json contrasts",
+      "documented_value": "Contrast CIs in the corrected summary use the older set()-based (no-replacement) family resampling, e.g. stability_mixed_minus_fixed3/slip = -37.9 pp [-47.3, -28.9]",
+      "observed_value": "authoritative family-bootstrap CIs in diagnosis_audit.json, e.g. stability_mixed_maxent_minus_fixed3/slip = -37.9 pp [-49.7, -26.1]",
+      "impact": "Using the summary contrasts would understate CI width",
+      "resolution": "Main-text CIs MUST come from diagnosis_audit.json (family bootstrap with replacement and multiplicity). The corrected summary is retained for the legacy/parallel reporting of the old resampling caliber only."
+    }
+  ],
+  "deprecated_do_not_use_for_main_results": [
+    "experiments/2026-10-20_llm_v4_v5/protocol_v4.json and v4 summaries (seeds mismatch; hidden-label leakage; stop/selection confounding)",
+    "experiments/2026-10-20_llm_v4_v5/v5/out/test_category_eps05_corrected_summary.json contrasts (old set()-based bootstrap; use diagnosis_audit.json instead)",
+    "old GLM judge summary counts n=63/61/59/63 (inconsistent with the raw judge file; use 60/58/57/60)",
+    "cross-judge pointwise n=294 (mixed raw+final variants; use 235 final-only)",
+    "pairwise n=360 per-order (use 166 complete comparisons / 332 per-order)"
+  ],
+  "cost_estimation": {
+    "basis": "token usage x recorded unit prices; not measured billing",
+    "stages_usd": {
+      "feedback_generation_480": 0.06784078,
+      "deepseek_judge_1296_calls": 0.20205206,
+      "glm_judge_681_calls": 0.19642168,
+      "dev_category_prior": 0.005,
+      "test_category_prior": 0.0272,
+      "test_full_library_prior": 0.2548,
+      "category_free_full_prior": 0.245,
+      "total": 0.9983
+    },
+    "note": "Costs are estimates derived from token usage and existing unit prices; they are not teaching cost, observation cost, or J5/J10. No new paid calls were made in this audit."
+  },
+  "reproduce": {
+    "regression_checks": "python v5/regression_checks.py",
+    "family_bootstrap_audit": "python v5/final_audit_v5.py",
+    "feedback_audit": "python v5/feedback_audit_v5.py",
+    "render_tables": "python v5/render_final_tables.py"
+  },
+  "_relocation": {
+    "generated_at": "2026-10-21T04:12:24.309728+00:00",
+    "original_path": "manuscript/source_manifest.json",
+    "original_sha256": "1056c39c12c1b073a7ed05e0b913811cc2d2290d89b622a88dac6adbfc1f3d1c",
+    "note": "Only path strings were rewritten after the 2026-10-21 directory migration. All frozen hashes, numbers and claims are unchanged."
+  }
+}

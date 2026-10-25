@@ -1,0 +1,3541 @@
+{
+ "experiment": "independent_templates_v6b",
+ "timestamp": "20261022T015122Z",
+ "protocol": {
+  "experiment": "independent_templates_v6b",
+  "dataset_version": "v6b",
+  "frozen_at": "2026-10-22",
+  "purpose": "Corrected second-item-bank replication of the four-arm comparison (full SM / E-only / simplified SM without pair-mixed outputs / fixed-budget maxent k=3). Fixes F1/F2 data errors; text/family names are disjoint from v5/v4 but some structures overlap. Sensitivity/replication only; no threshold changes.",
+  "n_true_labels": 30,
+  "cases_per_label": 3,
+  "expected_cases": 90,
+  "seeds": 5,
+  "eps": 0.05,
+  "max_obs": 7,
+  "bootstrap": 2000,
+  "bootstrap_seed": 20261028,
+  "arms": {
+   "full_sm": "frozen v5 stability_mixed (posterior + E + LR + pair_guard + extra-none + pair/mixed terminals)",
+   "e_only": "posterior + E gate only; no LR, no pair guard, no pair/mixed terminals, no extra-none",
+   "simplified_sm": "full single gate + explicit none + extra none; pair/mixed terminals disabled",
+   "fixed3": "maxent selection, exactly 3 additional inquiries, posterior terminal without pairs"
+  },
+  "replication_criteria": {
+   "R1_full_sm_vs_fixed3": {
+    "slip_false_diff_max": -0.2,
+    "slip_false_ci_upper_below_zero": true,
+    "stable_correct_stop_diff_min": -0.05,
+    "stable_correct_diff_min": -0.05,
+    "note": "fixed3 has no adaptive correct-stop (N/A); stable_correct is the substantive stable-accuracy comparison."
+   },
+   "R2_e_only_vs_fixed3": {
+    "slip_false_diff_max": -0.2,
+    "stable_correct_stop_diff_min": -0.05,
+    "stable_correct_diff_min": -0.05,
+    "note": "fixed3 has no adaptive correct-stop (N/A); stable_correct is the substantive stable-accuracy comparison."
+   },
+   "R3_full_sm_vs_e_only": {
+    "slip_inquiries_diff_max": 0.0,
+    "abs_stable_correct_stop_diff_max": 0.05
+   },
+   "R4_simplified_sm_vs_full_sm": {
+    "slip_false_diff_max": 0.0,
+    "slip_inquiries_diff_max": 0.5
+   }
+  },
+  "prior_gate": {
+   "note": "Report category-conditioned prior top-1/top-10 recall on v6. If top-10 recall < 0.90, interpret arm results as prior-limited and do not tune prompts on v6 outcomes.",
+   "top10_min_for_primary_interpretation": 0.9
+  },
+  "claim_boundary": "Replication on a corrected second programmatically authored item bank. Text and family names do not overlap with v5 test+dev, but several structures do (reported in v6b_data_audit.json). This is a second-bank / partial-structural-extension check, not a strict unseen-structure holdout, external holdout, or risk certification.",
+  "no_threshold_changes": true
+ },
+ "checks": {
+  "v5_full_sm_vs_frozen": {
+   "n_frozen": 1305,
+   "n_got": 1305,
+   "n_common": 1305,
+   "n_mismatch": 0,
+   "examples": [],
+   "pass": true
+  },
+  "v5_arms_vs_published_ablation": {
+   "worst_abs_diff": 0.0,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "pass": true
+  },
+  "v6_episode_counts": {
+   "expected": 5400,
+   "got": 5400,
+   "per_arm_type": {
+    "full_sm/stable": 450,
+    "full_sm/slip": 450,
+    "full_sm/mixed": 450,
+    "e_only/stable": 450,
+    "e_only/slip": 450,
+    "e_only/mixed": 450,
+    "simplified_sm/stable": 450,
+    "simplified_sm/slip": 450,
+    "simplified_sm/mixed": 450,
+    "fixed3/stable": 450,
+    "fixed3/slip": 450,
+    "fixed3/mixed": 450
+   },
+   "pass": true
+  }
+ },
+ "data": {
+  "v6b": {
+   "n_cases": 90,
+   "n_families": 32,
+   "n_labels": 30,
+   "n_episodes": 5400,
+   "audit": {
+    "correct_audit": {
+     "n_issues": 0,
+     "issues": []
+    },
+    "text_audit": {
+     "n_issues": 0,
+     "issues": []
+    },
+    "independent_bug_audit": {
+     "n_issues": 0,
+     "issues": []
+    },
+    "library_audit": {
+     "statuses": {
+      "library_match": 164,
+      "library_out_of_scope": 18
+     },
+     "n_mismatches": 0,
+     "mismatches": [],
+     "out_of_scope_structures": {
+      "frac_add_three/ignore_denominators": "library accepts two fractions; three-fraction extension verified independently",
+      "frac_mul_three/ignore_denominators": "library's ignore-denominators rule reads only the first two fractions; three-fraction extension verified independently",
+      "frac_compare_four/denominator_comparison_error": "library supports at most three fractions; four-way comparison verified independently",
+      "frac_compare_four/natural_number_bias_numerator_only": "library supports at most three fractions; four-way comparison verified independently",
+      "pct_find_whole/percent_equals_decimal": "library's percent_equals_decimal covers percent-of-value, not find-whole; independent formula verified",
+      "pct_compare_change/reverse_percentage_error": "library's reverse_percentage_error covers 'p% as much' comparison statements, not the larger/smaller asymmetry used here; independent formula verified"
+     }
+    },
+    "case_audit": {
+     "n_issues": 0,
+     "issues": [],
+     "true_label_verification": {
+      "library": 77,
+      "independent_only": 13,
+      "none": 0
+     }
+    },
+    "overlap_with_v4_v5": {
+     "text": {
+      "n": 0,
+      "items": []
+     },
+     "family": {
+      "n": 0,
+      "items": []
+     }
+    },
+    "structural_overlap_with_v5": {
+     "definition": "category + operation + arity + normalized text skeleton + category-specific structure (subtraction borrow profile; fraction arity/common denominator; decimal places; OO operator sequence/parentheses; percentage template). Coarse diagnostic, not a proof of uniqueness.",
+     "n_v5_items": 94,
+     "n_v6_items": 96,
+     "n_v6_items_with_matching_v5_signature": 18,
+     "n_v6_families_with_matching_v5_signature": 6,
+     "families": [
+      "neg_add_two_new",
+      "neg_minus_neg_new",
+      "neg_sub_pos_new",
+      "oo_add_sub_four",
+      "oo_muldiv_chain",
+      "sub3_zero_tail"
+     ],
+     "n_v6_cases_with_matching_v5_signature": 23,
+     "examples": [
+      {
+       "item": "Calculate: 800 - 476",
+       "family": "sub3_zero_tail"
+      },
+      {
+       "item": "Calculate: 600 - 283",
+       "family": "sub3_zero_tail"
+      },
+      {
+       "item": "Calculate: 900 - 547",
+       "family": "sub3_zero_tail"
+      },
+      {
+       "item": "Calculate: -6 + (-4)",
+       "family": "neg_add_two_new"
+      },
+      {
+       "item": "Calculate: -8 + (-5)",
+       "family": "neg_add_two_new"
+      },
+      {
+       "item": "Calculate: -7 + (-3)",
+       "family": "neg_add_two_new"
+      },
+      {
+       "item": "Calculate: -4 - 6",
+       "family": "neg_sub_pos_new"
+      },
+      {
+       "item": "Calculate: -3 - 7",
+       "family": "neg_sub_pos_new"
+      },
+      {
+       "item": "Calculate: -5 - 9",
+       "family": "neg_sub_pos_new"
+      },
+      {
+       "item": "Calculate: -6 - (-9)",
+       "family": "neg_minus_neg_new"
+      },
+      {
+       "item": "Calculate: -4 - (-11)",
+       "family": "neg_minus_neg_new"
+      },
+      {
+       "item": "Calculate: -8 - (-13)",
+       "family": "neg_minus_neg_new"
+      },
+      {
+       "item": "Calculate: 84 / 7 * 3",
+       "family": "oo_muldiv_chain"
+      },
+      {
+       "item": "Calculate: 72 / 6 * 4",
+       "family": "oo_muldiv_chain"
+      },
+      {
+       "item": "Calculate: 96 / 8 * 2",
+       "family": "oo_muldiv_chain"
+      },
+      {
+       "item": "Calculate: 40 - 12 + 7 - 5",
+       "family": "oo_add_sub_four"
+      },
+      {
+       "item": "Calculate: 35 - 9 + 6 - 4",
+       "family": "oo_add_sub_four"
+      },
+      {
+       "item": "Calculate: 50 - 18 + 9 - 7",
+       "family": "oo_add_sub_four"
+      }
+     ]
+    }
+   }
+  },
+  "v5": {
+   "n_cases": 87,
+   "n_families": 36
+  }
+ },
+ "priors": {
+  "v6b": {
+   "n_cases_with_prior": 90,
+   "top1_category": 0.6333333333333333,
+   "top10_category": 0.9777777777777777
+  },
+  "v5": {
+   "n_cases_with_prior": 87,
+   "top1_category": 0.632183908045977,
+   "top10_category": 0.9885057471264368
+  }
+ },
+ "aggregates": {
+  "v6b": {
+   "full_sm": {
+    "stable": {
+     "correct": {
+      "mean": 0.9288888888888889,
+      "ci_low": 0.9025609756097562,
+      "ci_high": 0.9509464070654355,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.9244444444444443,
+      "ci_low": 0.8999999999999999,
+      "ci_high": 0.9448275862068966,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.9688888888888889,
+      "ci_low": 0.9480492794876356,
+      "ci_high": 0.9854204252577319,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.013333333333333336,
+      "ci_low": 0.0024382897443432265,
+      "ci_high": 0.027592754255783468,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.017777777777777778,
+      "ci_low": 0.006521739130434784,
+      "ci_high": 0.031818181818181815,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.9288888888888889,
+      "ci_low": 0.9025609756097562,
+      "ci_high": 0.9509464070654355,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 1.451111111111111,
+      "ci_low": 1.3085019539730787,
+      "ci_high": 1.6206024096385538,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 2.451111111111111,
+      "ci_low": 2.3085019539730784,
+      "ci_high": 2.6206024096385536,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 2.451111111111111,
+      "ci_low": 2.3085019539730784,
+      "ci_high": 2.6206024096385536,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.9155555555555556,
+      "ci_low": 0.88,
+      "ci_high": 0.9462404389757233,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.5022222222222221,
+      "ci_low": 0.35628284072249594,
+      "ci_high": 0.6500121359223301,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.08444444444444445,
+      "ci_low": 0.05375956102427669,
+      "ci_high": 0.12,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.08444444444444445,
+      "ci_low": 0.05375956102427669,
+      "ci_high": 0.12,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.4111111111111111,
+      "ci_low": 0.26739073226544624,
+      "ci_high": 0.5548739919354837,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.5044444444444445,
+      "ci_low": 0.3571347402597403,
+      "ci_high": 0.6515684115704132,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.03111111111111111,
+      "ci_low": 0.01263157894736842,
+      "ci_high": 0.054550239234449745,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.03111111111111111,
+      "ci_low": 0.01263157894736842,
+      "ci_high": 0.054550239234449745,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 4.0488888888888885,
+      "ci_low": 3.561296936758894,
+      "ci_high": 4.531091954022989,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 5.471111111111111,
+      "ci_low": 4.946328760162602,
+      "ci_high": 5.975331866095217,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 5.893333333333333,
+      "ci_low": 5.283102813960427,
+      "ci_high": 6.49212183908046,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.011111111111111112,
+      "ci_low": 0.0020408163265306124,
+      "ci_high": 0.023529411764705882,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.008888888888888889,
+      "ci_low": 0.00202020202020202,
+      "ci_high": 0.01758589511754067,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.6022222222222222,
+      "ci_low": 0.5409074903969271,
+      "ci_high": 0.65,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.7888888888888889,
+      "ci_low": 0.726312656641604,
+      "ci_high": 0.8385659712018805,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.07777777777777779,
+      "ci_low": 0.042718446601941754,
+      "ci_high": 0.11529411764705881,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.13333333333333333,
+      "ci_low": 0.08958333333333335,
+      "ci_high": 0.18948043184885288,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.6022222222222222,
+      "ci_low": 0.5409074903969271,
+      "ci_high": 0.65,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.6022222222222222,
+      "ci_low": 0.5409074903969271,
+      "ci_high": 0.65,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 2.451111111111111,
+      "ci_low": 2.24678829787234,
+      "ci_high": 2.6906972972972976,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 6.4622222222222225,
+      "ci_low": 6.190231394621638,
+      "ci_high": 6.7068148928375155,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 9.473333333333333,
+      "ci_low": 8.937725225225226,
+      "ci_high": 9.911358898833125,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    }
+   },
+   "e_only": {
+    "stable": {
+     "correct": {
+      "mean": 0.9644444444444444,
+      "ci_low": 0.9431503759398496,
+      "ci_high": 0.9820224719101124,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.951111111111111,
+      "ci_low": 0.929405637254902,
+      "ci_high": 0.9681818181818183,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.9644444444444444,
+      "ci_low": 0.9431503759398496,
+      "ci_high": 0.9820224719101124,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.035555555555555556,
+      "ci_low": 0.017977528089887642,
+      "ci_high": 0.05684962406015035,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.9644444444444444,
+      "ci_low": 0.9431503759398496,
+      "ci_high": 0.9820224719101124,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 1.5755555555555556,
+      "ci_low": 1.4257656859269758,
+      "ci_high": 1.751663961038961,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 2.575555555555556,
+      "ci_low": 2.4257656859269763,
+      "ci_high": 2.751663961038961,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 2.575555555555556,
+      "ci_low": 2.4257656859269763,
+      "ci_high": 2.751663961038961,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.9666666666666667,
+      "ci_low": 0.9431737012987014,
+      "ci_high": 0.9851063829787233,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.042222222222222223,
+      "ci_low": 0.009521008403361345,
+      "ci_high": 0.08387295898048584,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.03333333333333333,
+      "ci_low": 0.014893617021276596,
+      "ci_high": 0.056826298701298655,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.03333333333333333,
+      "ci_low": 0.014893617021276596,
+      "ci_high": 0.056826298701298655,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.8088888888888889,
+      "ci_low": 0.6716872695727608,
+      "ci_high": 0.9246767211283341,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.15777777777777777,
+      "ci_low": 0.047308807538963396,
+      "ci_high": 0.2873634250290585,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.03333333333333333,
+      "ci_low": 0.014893617021276596,
+      "ci_high": 0.056826298701298655,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.03333333333333333,
+      "ci_low": 0.014893617021276596,
+      "ci_high": 0.056826298701298655,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 5.808888888888888,
+      "ci_low": 5.686560649265189,
+      "ci_high": 5.9080475302889095,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 6.975555555555555,
+      "ci_low": 6.922761793826442,
+      "ci_high": 7.025321842176138,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 7.142222222222221,
+      "ci_low": 7.027336384439359,
+      "ci_high": 7.279999999999999,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.6666666666666666,
+      "ci_low": 0.6086756292906179,
+      "ci_high": 0.71340206185567,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.6666666666666666,
+      "ci_low": 0.6086756292906179,
+      "ci_high": 0.71340206185567,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.32222222222222224,
+      "ci_low": 0.2756655042138913,
+      "ci_high": 0.379314765694076,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.011111111111111112,
+      "ci_low": 0.0020833333333333333,
+      "ci_high": 0.023407384230287844,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.6666666666666666,
+      "ci_low": 0.6086756292906179,
+      "ci_high": 0.71340206185567,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.6666666666666666,
+      "ci_low": 0.6086756292906179,
+      "ci_high": 0.71340206185567,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 3.326666666666666,
+      "ci_low": 3.108695652173913,
+      "ci_high": 3.61067397260274,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 7.66,
+      "ci_low": 7.536536764705882,
+      "ci_high": 7.797532351628738,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 10.993333333333332,
+      "ci_low": 10.63525513819986,
+      "ci_high": 11.304376493072146,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    }
+   },
+   "simplified_sm": {
+    "stable": {
+     "correct": {
+      "mean": 0.948888888888889,
+      "ci_low": 0.921951219512195,
+      "ci_high": 0.9697705676419105,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.9355555555555556,
+      "ci_low": 0.9113924050632911,
+      "ci_high": 0.9564398468148702,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.948888888888889,
+      "ci_low": 0.921951219512195,
+      "ci_high": 0.9697705676419105,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.03333333333333333,
+      "ci_low": 0.016841613379242497,
+      "ci_high": 0.05432165861513688,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.017777777777777778,
+      "ci_low": 0.006521739130434784,
+      "ci_high": 0.031818181818181815,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.948888888888889,
+      "ci_low": 0.921951219512195,
+      "ci_high": 0.9697705676419105,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 1.5422222222222224,
+      "ci_low": 1.3978114826871857,
+      "ci_high": 1.710657150552114,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 2.542222222222222,
+      "ci_low": 2.3978114826871857,
+      "ci_high": 2.710657150552114,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 2.542222222222222,
+      "ci_low": 2.3978114826871857,
+      "ci_high": 2.710657150552114,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.9688888888888889,
+      "ci_low": 0.9454497607655501,
+      "ci_high": 0.9873684210526316,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.5088888888888888,
+      "ci_low": 0.3658452481076535,
+      "ci_high": 0.6533815789473683,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.03111111111111111,
+      "ci_low": 0.01263157894736842,
+      "ci_high": 0.054550239234449745,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.03111111111111111,
+      "ci_low": 0.01263157894736842,
+      "ci_high": 0.054550239234449745,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.45555555555555555,
+      "ci_low": 0.3064875616315554,
+      "ci_high": 0.6023824041811846,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.5133333333333334,
+      "ci_low": 0.3687447331460673,
+      "ci_high": 0.6602480976537728,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.03111111111111111,
+      "ci_low": 0.01263157894736842,
+      "ci_high": 0.054550239234449745,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.03111111111111111,
+      "ci_low": 0.01263157894736842,
+      "ci_high": 0.054550239234449745,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 4.173333333333334,
+      "ci_low": 3.664562156593407,
+      "ci_high": 4.669318181818181,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 5.328888888888889,
+      "ci_low": 4.825995161290322,
+      "ci_high": 5.813343137254902,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 5.484444444444445,
+      "ci_low": 4.964206386753401,
+      "ci_high": 5.978266713417485,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.6244444444444445,
+      "ci_low": 0.5673837369290039,
+      "ci_high": 0.6693110995310056,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.6244444444444445,
+      "ci_low": 0.5673837369290039,
+      "ci_high": 0.6693110995310056,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.24000000000000002,
+      "ci_low": 0.1953716103113492,
+      "ci_high": 0.2929714651545637,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.13555555555555554,
+      "ci_low": 0.09213483146067415,
+      "ci_high": 0.19201481481481475,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.6244444444444445,
+      "ci_low": 0.5673837369290039,
+      "ci_high": 0.6693110995310056,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.6244444444444445,
+      "ci_low": 0.5673837369290039,
+      "ci_high": 0.6693110995310056,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 2.975555555555555,
+      "ci_low": 2.760775694893342,
+      "ci_high": 3.229795310015898,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 7.097777777777779,
+      "ci_low": 6.8557605421686745,
+      "ci_high": 7.30891947565543,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 10.22,
+      "ci_low": 9.757127329192548,
+      "ci_high": 10.59611622962438,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    }
+   },
+   "fixed3": {
+    "stable": {
+     "correct": {
+      "mean": 0.9622222222222222,
+      "ci_low": 0.9408345819598442,
+      "ci_high": 0.9782608695652174,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.022222222222222223,
+      "ci_low": 0.008788819875776397,
+      "ci_high": 0.04042840713053478,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.9844444444444443,
+      "ci_low": 0.9708321629213483,
+      "ci_high": 0.9951821572002294,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.015555555555555555,
+      "ci_low": 0.004817842799770511,
+      "ci_high": 0.029167837078651684,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.9844444444444443,
+      "ci_low": 0.9708321629213483,
+      "ci_high": 0.9951821572002294,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.022222222222222223,
+      "ci_low": 0.008788819875776397,
+      "ci_high": 0.04042840713053478,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 3.0,
+      "ci_low": 3.0,
+      "ci_high": 3.0,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 4.111111111111111,
+      "ci_low": 4.043944099378882,
+      "ci_high": 4.202142035652674,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 4.222222222222222,
+      "ci_low": 4.0878881987577635,
+      "ci_high": 4.404284071305347,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.40888888888888886,
+      "ci_low": 0.26888709677419353,
+      "ci_high": 0.5555666666666667,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.5911111111111111,
+      "ci_low": 0.4444333333333333,
+      "ci_high": 0.7311129032258064,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.5911111111111111,
+      "ci_low": 0.4444333333333333,
+      "ci_high": 0.7311129032258064,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.40888888888888886,
+      "ci_low": 0.26888709677419353,
+      "ci_high": 0.5555666666666667,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.5911111111111111,
+      "ci_low": 0.4444333333333333,
+      "ci_high": 0.7311129032258064,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.5911111111111111,
+      "ci_low": 0.4444333333333333,
+      "ci_high": 0.7311129032258064,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 3.0,
+      "ci_low": 3.0,
+      "ci_high": 3.0,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 6.955555555555556,
+      "ci_low": 6.222166666666666,
+      "ci_high": 7.655564516129033,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 9.911111111111111,
+      "ci_low": 8.444333333333333,
+      "ci_high": 11.311129032258066,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "false": {
+      "mean": 0.8799999999999999,
+      "ci_low": 0.8320941686367219,
+      "ci_high": 0.9177807017543859,
+      "n_cases": 90
+     },
+     "diagnosed": {
+      "mean": 0.8799999999999999,
+      "ci_low": 0.8320941686367219,
+      "ci_high": 0.9177807017543859,
+      "n_cases": 90
+     },
+     "abstain": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 90
+     },
+     "none": {
+      "mean": 0.12000000000000001,
+      "ci_low": 0.08221929824561404,
+      "ci_high": 0.16790583136327814,
+      "n_cases": 90
+     },
+     "single": {
+      "mean": 0.8799999999999999,
+      "ci_low": 0.8320941686367219,
+      "ci_high": 0.9177807017543859,
+      "n_cases": 90
+     },
+     "wrong_single": {
+      "mean": 0.8799999999999999,
+      "ci_low": 0.8320941686367219,
+      "ci_high": 0.9177807017543859,
+      "n_cases": 90
+     },
+     "n_inquiries": {
+      "mean": 3.0,
+      "ci_low": 3.0,
+      "ci_high": 3.0,
+      "n_cases": 90
+     },
+     "J5": {
+      "mean": 8.4,
+      "ci_low": 8.160470843183608,
+      "ci_high": 8.58890350877193,
+      "n_cases": 90
+     },
+     "J10": {
+      "mean": 12.8,
+      "ci_low": 12.320941686367219,
+      "ci_high": 13.17780701754386,
+      "n_cases": 90
+     },
+     "n_cases": 90,
+     "n_episodes": 450
+    }
+   }
+  },
+  "v5": {
+   "full_sm": {
+    "stable": {
+     "correct": {
+      "mean": 0.9563218390804598,
+      "ci_low": 0.9341463414634146,
+      "ci_high": 0.9775343320848938,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.9540229885057471,
+      "ci_low": 0.931816844919786,
+      "ci_high": 0.9752808988764045,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.009195402298850575,
+      "ci_low": 0.0,
+      "ci_high": 0.021984126984126953,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.9816091954022987,
+      "ci_low": 0.9674418604651163,
+      "ci_high": 0.9933351648351649,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.004597701149425287,
+      "ci_low": 0.0,
+      "ci_high": 0.01282051282051282,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.013793103448275862,
+      "ci_low": 0.0024992283950617286,
+      "ci_high": 0.026376936316695337,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.9655172413793102,
+      "ci_low": 0.9469879518072288,
+      "ci_high": 0.9824223602484472,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.009195402298850575,
+      "ci_low": 0.0,
+      "ci_high": 0.021984126984126953,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 1.3724137931034481,
+      "ci_low": 1.2306056056056054,
+      "ci_high": 1.5407516339869283,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 2.4183908045977014,
+      "ci_low": 2.2607741398446173,
+      "ci_high": 2.6108122796709754,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 2.464367816091954,
+      "ci_low": 2.2799886363636364,
+      "ci_high": 2.693796646391583,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.9011494252873564,
+      "ci_low": 0.8717934782608696,
+      "ci_high": 0.929547558922559,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.5655172413793103,
+      "ci_low": 0.43409090909090914,
+      "ci_high": 0.6925045731707317,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.09885057471264368,
+      "ci_low": 0.07045244107744107,
+      "ci_high": 0.12820652173913044,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.09885057471264368,
+      "ci_low": 0.07045244107744107,
+      "ci_high": 0.12820652173913044,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.32643678160919537,
+      "ci_low": 0.20975029036004644,
+      "ci_high": 0.44600042571306925,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.5747126436781609,
+      "ci_low": 0.44367531580744285,
+      "ci_high": 0.7047744360902255,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.03908045977011495,
+      "ci_low": 0.01904761904761905,
+      "ci_high": 0.06068169361468892,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.03908045977011495,
+      "ci_low": 0.01904761904761905,
+      "ci_high": 0.06068169361468892,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 3.703448275862068,
+      "ci_low": 3.31419452887538,
+      "ci_high": 4.105413127413127,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 5.197701149425287,
+      "ci_low": 4.738982515427564,
+      "ci_high": 5.695022260273973,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 5.691954022988505,
+      "ci_low": 5.13846590909091,
+      "ci_high": 6.284412823708625,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.01839080459770115,
+      "ci_low": 0.0023529411764705885,
+      "ci_high": 0.04045010700909577,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.01839080459770115,
+      "ci_low": 0.0023529411764705885,
+      "ci_high": 0.04045010700909577,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.6229885057471265,
+      "ci_low": 0.5811764705882354,
+      "ci_high": 0.6659097152847153,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.825287356321839,
+      "ci_low": 0.7786594594594595,
+      "ci_high": 0.8682367288378765,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.04597701149425287,
+      "ci_low": 0.022680412371134023,
+      "ci_high": 0.0761904761904762,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.12873563218390804,
+      "ci_low": 0.08421052631578947,
+      "ci_high": 0.17883346065699002,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.6229885057471265,
+      "ci_low": 0.5811764705882354,
+      "ci_high": 0.6659097152847153,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.6229885057471265,
+      "ci_low": 0.5811764705882354,
+      "ci_high": 0.6659097152847153,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 2.2850574712643676,
+      "ci_low": 2.116023148148148,
+      "ci_high": 2.4695874505928854,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 6.4,
+      "ci_low": 6.195589285714285,
+      "ci_high": 6.582892455858748,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 9.514942528735633,
+      "ci_low": 9.146331983276717,
+      "ci_high": 9.881397502153316,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    }
+   },
+   "e_only": {
+    "stable": {
+     "correct": {
+      "mean": 0.9724137931034482,
+      "ci_low": 0.9506165577342048,
+      "ci_high": 0.9906976744186046,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.9701149425287355,
+      "ci_low": 0.948780487804878,
+      "ci_high": 0.9893333333333334,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.009195402298850575,
+      "ci_low": 0.0,
+      "ci_high": 0.021984126984126953,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.9816091954022987,
+      "ci_low": 0.9673901952085182,
+      "ci_high": 0.9950617283950617,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.01609195402298851,
+      "ci_low": 0.003959425354300136,
+      "ci_high": 0.03031016042780745,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.0022988505747126436,
+      "ci_low": 0.0,
+      "ci_high": 0.0072311196003526194,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.9816091954022987,
+      "ci_low": 0.9673901952085182,
+      "ci_high": 0.9950617283950617,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.009195402298850575,
+      "ci_low": 0.0,
+      "ci_high": 0.021984126984126953,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 1.4321839080459768,
+      "ci_low": 1.2703246753246753,
+      "ci_high": 1.6184248616432524,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 2.47816091954023,
+      "ci_low": 2.2954138608305277,
+      "ci_high": 2.6889227642276423,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 2.524137931034483,
+      "ci_low": 2.3170533182076007,
+      "ci_high": 2.7659849812265334,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.9540229885057471,
+      "ci_low": 0.9299974226804124,
+      "ci_high": 0.9765957446808511,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.03908045977011495,
+      "ci_low": 0.0,
+      "ci_high": 0.0960025974025974,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.04597701149425287,
+      "ci_low": 0.02340425531914894,
+      "ci_high": 0.0700025773195876,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.04597701149425287,
+      "ci_low": 0.02340425531914894,
+      "ci_high": 0.0700025773195876,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.7471264367816092,
+      "ci_low": 0.607140756302521,
+      "ci_high": 0.8688275434243177,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.20689655172413793,
+      "ci_low": 0.09565217391304348,
+      "ci_high": 0.3373772011121407,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.04597701149425287,
+      "ci_low": 0.02340425531914894,
+      "ci_high": 0.0700025773195876,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.04597701149425287,
+      "ci_low": 0.02340425531914894,
+      "ci_high": 0.0700025773195876,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 5.75632183908046,
+      "ci_low": 5.602166666666667,
+      "ci_high": 5.875007352941177,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 6.986206896551724,
+      "ci_low": 6.871785714285714,
+      "ci_high": 7.065220619888076,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 7.216091954022988,
+      "ci_low": 7.044943820224719,
+      "ci_high": 7.386524985215848,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.6689655172413795,
+      "ci_low": 0.623884837644469,
+      "ci_high": 0.713644291754757,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.6689655172413795,
+      "ci_low": 0.623884837644469,
+      "ci_high": 0.713644291754757,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.31034482758620696,
+      "ci_low": 0.2650513819985826,
+      "ci_high": 0.3569713080168776,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.02068965517241379,
+      "ci_low": 0.007405149051490516,
+      "ci_high": 0.03889069264069263,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.6689655172413795,
+      "ci_low": 0.623884837644469,
+      "ci_high": 0.713644291754757,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.6689655172413795,
+      "ci_low": 0.623884837644469,
+      "ci_high": 0.713644291754757,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 3.167816091954022,
+      "ci_low": 2.9194435064935065,
+      "ci_high": 3.420789152024446,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 7.51264367816092,
+      "ci_low": 7.368824675324675,
+      "ci_high": 7.660989681050657,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 10.857471264367817,
+      "ci_low": 10.559480688088284,
+      "ci_high": 11.124789003172161,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    }
+   },
+   "simplified_sm": {
+    "stable": {
+     "correct": {
+      "mean": 0.960919540229885,
+      "ci_low": 0.9389442724458205,
+      "ci_high": 0.9808510638297872,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.9586206896551723,
+      "ci_low": 0.936470588235294,
+      "ci_high": 0.9788266253869969,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.009195402298850575,
+      "ci_low": 0.0,
+      "ci_high": 0.021984126984126953,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.9701149425287355,
+      "ci_low": 0.9534844961240311,
+      "ci_high": 0.9857184873949582,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.013793103448275864,
+      "ci_low": 0.004347826086956522,
+      "ci_high": 0.025974025974025976,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.01609195402298851,
+      "ci_low": 0.004760504201680673,
+      "ci_high": 0.028866552119129432,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.9701149425287355,
+      "ci_low": 0.9534844961240311,
+      "ci_high": 0.9857184873949582,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.009195402298850575,
+      "ci_low": 0.0,
+      "ci_high": 0.021984126984126953,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 1.4160919540229886,
+      "ci_low": 1.2715795206971678,
+      "ci_high": 1.5859019607843137,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 2.4620689655172416,
+      "ci_low": 2.3000000000000003,
+      "ci_high": 2.6549450549450544,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 2.5080459770114945,
+      "ci_low": 2.318507362784471,
+      "ci_high": 2.736304347826087,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.960919540229885,
+      "ci_low": 0.939318306385311,
+      "ci_high": 0.980952380952381,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.5747126436781609,
+      "ci_low": 0.44417113893858085,
+      "ci_high": 0.7010537883169463,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.03908045977011495,
+      "ci_low": 0.01904761904761905,
+      "ci_high": 0.06068169361468892,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.03908045977011495,
+      "ci_low": 0.01904761904761905,
+      "ci_high": 0.06068169361468892,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.37241379310344824,
+      "ci_low": 0.25121562013492477,
+      "ci_high": 0.4968600770218228,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.5885057471264368,
+      "ci_low": 0.4604415836101883,
+      "ci_high": 0.7154750468603561,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.03908045977011495,
+      "ci_low": 0.01904761904761905,
+      "ci_high": 0.06068169361468892,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.03908045977011495,
+      "ci_low": 0.01904761904761905,
+      "ci_high": 0.06068169361468892,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 3.839080459770116,
+      "ci_low": 3.428044875682231,
+      "ci_high": 4.27253781512605,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 5.0344827586206895,
+      "ci_low": 4.604491341991342,
+      "ci_high": 5.508916666666667,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 5.2298850574712645,
+      "ci_low": 4.741038220551379,
+      "ci_high": 5.748873475609755,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.6344827586206897,
+      "ci_low": 0.5925925925925926,
+      "ci_high": 0.6771084337349397,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.6344827586206897,
+      "ci_low": 0.5925925925925926,
+      "ci_high": 0.6771084337349397,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.232183908045977,
+      "ci_low": 0.1896824961614389,
+      "ci_high": 0.28,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.13333333333333333,
+      "ci_low": 0.0883097784568373,
+      "ci_high": 0.18333823529411764,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.6344827586206897,
+      "ci_low": 0.5925925925925926,
+      "ci_high": 0.6771084337349397,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.6344827586206897,
+      "ci_low": 0.5925925925925926,
+      "ci_high": 0.6771084337349397,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 2.7885057471264365,
+      "ci_low": 2.5744362798859397,
+      "ci_high": 3.0135164377861012,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 6.960919540229886,
+      "ci_low": 6.773457701774841,
+      "ci_high": 7.135015804597701,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 10.133333333333335,
+      "ci_low": 9.811309430512017,
+      "ci_high": 10.453947906026556,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    }
+   },
+   "fixed3": {
+    "stable": {
+     "correct": {
+      "mean": 0.9701149425287356,
+      "ci_low": 0.949494417862839,
+      "ci_high": 0.9866666666666668,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.01609195402298851,
+      "ci_low": 0.0026649350649350654,
+      "ci_high": 0.03529411764705883,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.9862068965517241,
+      "ci_low": 0.9734939759036144,
+      "ci_high": 0.9958762886597937,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.013793103448275862,
+      "ci_low": 0.004123711340206186,
+      "ci_high": 0.026506024096385545,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.9862068965517241,
+      "ci_low": 0.9734939759036144,
+      "ci_high": 0.9958762886597937,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.01609195402298851,
+      "ci_low": 0.0026649350649350654,
+      "ci_high": 0.03529411764705883,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 3.0,
+      "ci_low": 3.0,
+      "ci_high": 3.0,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 4.080459770114943,
+      "ci_low": 4.013324675324676,
+      "ci_high": 4.176470588235294,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 4.160919540229885,
+      "ci_low": 4.02664935064935,
+      "ci_high": 4.352941176470588,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "slip": {
+     "correct": {
+      "mean": 0.5218390804597701,
+      "ci_low": 0.39292533936651586,
+      "ci_high": 0.6489508611955419,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.4781609195402299,
+      "ci_low": 0.351049138804458,
+      "ci_high": 0.607074660633484,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.4781609195402299,
+      "ci_low": 0.351049138804458,
+      "ci_high": 0.607074660633484,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.5218390804597701,
+      "ci_low": 0.39292533936651586,
+      "ci_high": 0.6489508611955419,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.4781609195402299,
+      "ci_low": 0.351049138804458,
+      "ci_high": 0.607074660633484,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.4781609195402299,
+      "ci_low": 0.351049138804458,
+      "ci_high": 0.607074660633484,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 3.0,
+      "ci_low": 3.0,
+      "ci_high": 3.0,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 6.390804597701149,
+      "ci_low": 5.75524569402229,
+      "ci_high": 7.03537330316742,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 8.781609195402298,
+      "ci_low": 7.51049138804458,
+      "ci_high": 10.07074660633484,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    },
+    "mixed": {
+     "correct": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "correct_stop": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "false": {
+      "mean": 0.8758620689655173,
+      "ci_low": 0.8272727272727273,
+      "ci_high": 0.9182855436081243,
+      "n_cases": 87
+     },
+     "diagnosed": {
+      "mean": 0.8758620689655173,
+      "ci_low": 0.8272727272727273,
+      "ci_high": 0.9182855436081243,
+      "n_cases": 87
+     },
+     "abstain": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_cases": 87
+     },
+     "none": {
+      "mean": 0.12413793103448277,
+      "ci_low": 0.08171445639187576,
+      "ci_high": 0.17272727272727273,
+      "n_cases": 87
+     },
+     "single": {
+      "mean": 0.8758620689655173,
+      "ci_low": 0.8272727272727273,
+      "ci_high": 0.9182855436081243,
+      "n_cases": 87
+     },
+     "wrong_single": {
+      "mean": 0.8758620689655173,
+      "ci_low": 0.8272727272727273,
+      "ci_high": 0.9182855436081243,
+      "n_cases": 87
+     },
+     "n_inquiries": {
+      "mean": 3.0,
+      "ci_low": 3.0,
+      "ci_high": 3.0,
+      "n_cases": 87
+     },
+     "J5": {
+      "mean": 8.379310344827585,
+      "ci_low": 8.136363636363637,
+      "ci_high": 8.591427718040622,
+      "n_cases": 87
+     },
+     "J10": {
+      "mean": 12.758620689655173,
+      "ci_low": 12.272727272727273,
+      "ci_high": 13.182855436081242,
+      "n_cases": 87
+     },
+     "n_cases": 87,
+     "n_episodes": 435
+    }
+   }
+  }
+ },
+ "contrasts": {
+  "v6b": {
+   "full_sm - fixed3/stable": {
+    "correct": {
+     "mean": -0.033333333333333326,
+     "ci_low": -0.052382108183079056,
+     "ci_high": -0.015730337078651683,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.9244444444444443,
+     "ci_low": 0.8999999999999999,
+     "ci_high": 0.9448275862068966,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.022222222222222223,
+     "ci_low": -0.04042840713053479,
+     "ci_high": -0.008788819875776411,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -1.548888888888889,
+     "ci_low": -1.6914980460269213,
+     "ci_high": -1.3793975903614462,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.0022222222222222222,
+     "ci_low": -0.013162280701754386,
+     "ci_high": 0.017309782608695642,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.013333333333333336,
+     "ci_low": 0.0024382897443432265,
+     "ci_high": 0.027592754255783468,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.6600000000000001,
+     "ci_low": -1.8040414347557203,
+     "ci_high": -1.4898199366176896,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -1.771111111111111,
+     "ci_low": -1.9536842105263157,
+     "ci_high": -1.5810746019992596,
+     "n_cases": 90
+    }
+   },
+   "full_sm - fixed3/slip": {
+    "correct": {
+     "mean": 0.5066666666666667,
+     "ci_low": 0.3591268075639599,
+     "ci_high": 0.6493841032043279,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.5022222222222221,
+     "ci_low": 0.35628284072249594,
+     "ci_high": 0.6500121359223301,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.5066666666666667,
+     "ci_low": -0.6493841032043279,
+     "ci_high": -0.35912680756396004,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": 1.048888888888889,
+     "ci_low": 0.5612969367588934,
+     "ci_high": 1.5310919540229884,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.09555555555555557,
+     "ci_low": 0.04042778558052435,
+     "ci_high": 0.160928809788654,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.4111111111111111,
+     "ci_low": 0.26739073226544624,
+     "ci_high": 0.5548739919354837,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.4844444444444445,
+     "ci_low": -1.8927594706798132,
+     "ci_high": -1.0555522088353415,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -4.017777777777778,
+     "ci_low": -5.056527960526315,
+     "ci_high": -2.913124812481248,
+     "n_cases": 90
+    }
+   },
+   "full_sm - fixed3/mixed": {
+    "correct": {
+     "mean": 0.011111111111111112,
+     "ci_low": 0.0020408163265306124,
+     "ci_high": 0.023529411764705882,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.008888888888888889,
+     "ci_low": 0.00202020202020202,
+     "ci_high": 0.01758589511754067,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.2777777777777778,
+     "ci_low": -0.3382460784313726,
+     "ci_high": -0.22442156862745113,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -0.5488888888888889,
+     "ci_low": -0.7532117021276595,
+     "ci_high": -0.3093027027027029,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.013333333333333336,
+     "ci_low": -0.01584784340503016,
+     "ci_high": 0.04468147684605757,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.07777777777777779,
+     "ci_low": 0.042718446601941754,
+     "ci_high": 0.11529411764705881,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.9377777777777778,
+     "ci_low": -2.1897872340425533,
+     "ci_high": -1.6618815331010452,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -3.326666666666666,
+     "ci_low": -3.845513833992095,
+     "ci_high": -2.831683864915572,
+     "n_cases": 90
+    }
+   },
+   "e_only - fixed3/stable": {
+    "correct": {
+     "mean": 0.002222222222222222,
+     "ci_low": -0.011653340948029695,
+     "ci_high": 0.015534519956850047,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.951111111111111,
+     "ci_low": 0.929405637254902,
+     "ci_high": 0.9681818181818183,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.022222222222222223,
+     "ci_low": -0.04042840713053479,
+     "ci_high": -0.008788819875776411,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -1.4244444444444444,
+     "ci_low": -1.5742343140730237,
+     "ci_high": -1.248336038961039,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": -0.015555555555555555,
+     "ci_low": -0.029167837078651688,
+     "ci_high": -0.004817842799770519,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.035555555555555556,
+     "ci_low": 0.017977528089887642,
+     "ci_high": 0.05684962406015035,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.5355555555555553,
+     "ci_low": -1.6776470588235297,
+     "ci_high": -1.3737872023809525,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -1.6466666666666665,
+     "ci_low": -1.820695669607057,
+     "ci_high": -1.4586839570720969,
+     "n_cases": 90
+    }
+   },
+   "e_only - fixed3/slip": {
+    "correct": {
+     "mean": 0.5577777777777778,
+     "ci_low": 0.4024943181818182,
+     "ci_high": 0.7011771793054571,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.042222222222222223,
+     "ci_low": 0.009521008403361345,
+     "ci_high": 0.08387295898048584,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.5577777777777778,
+     "ci_low": -0.7011771793054571,
+     "ci_high": -0.40249431818181824,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": 2.808888888888889,
+     "ci_low": 2.68656064926519,
+     "ci_high": 2.9080475302889095,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": -0.2511111111111111,
+     "ci_low": -0.3766522366522367,
+     "ci_high": -0.14837307152875184,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.8088888888888889,
+     "ci_low": 0.6716872695727608,
+     "ci_high": 0.9246767211283341,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": 0.02000000000000005,
+     "ci_low": -0.6566179633143581,
+     "ci_high": 0.746236559139785,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -2.7688888888888887,
+     "ci_low": -4.168163771712159,
+     "ci_high": -1.2866505376344088,
+     "n_cases": 90
+    }
+   },
+   "e_only - fixed3/mixed": {
+    "correct": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.21333333333333337,
+     "ci_low": -0.2779252454862211,
+     "ci_high": -0.1524895833333334,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": 0.3266666666666667,
+     "ci_low": 0.10869565217391304,
+     "ci_high": 0.6106739726027397,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": -0.1088888888888889,
+     "ci_low": -0.15423785027751458,
+     "ci_high": -0.07316942040388145,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.32222222222222224,
+     "ci_low": 0.2756655042138913,
+     "ci_high": 0.379314765694076,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -0.7400000000000002,
+     "ci_low": -0.9934448462929476,
+     "ci_high": -0.4169335825186895,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -1.8066666666666666,
+     "ci_low": -2.3164935064935066,
+     "ci_high": -1.2094334073251942,
+     "n_cases": 90
+    }
+   },
+   "simplified_sm - fixed3/stable": {
+    "correct": {
+     "mean": -0.01333333333333333,
+     "ci_low": -0.030189776217639307,
+     "ci_high": 0.0021745102723363554,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.9355555555555556,
+     "ci_low": 0.9113924050632911,
+     "ci_high": 0.9564398468148702,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.022222222222222223,
+     "ci_low": -0.04042840713053479,
+     "ci_high": -0.008788819875776411,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -1.4577777777777776,
+     "ci_low": -1.6021885173128143,
+     "ci_high": -1.289342849447886,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.0022222222222222222,
+     "ci_low": -0.013162280701754386,
+     "ci_high": 0.017309782608695642,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.03333333333333333,
+     "ci_low": 0.016841613379242497,
+     "ci_high": 0.05432165861513688,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.5688888888888888,
+     "ci_low": -1.7099999999999997,
+     "ci_high": -1.406342451874367,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -1.68,
+     "ci_low": -1.8619137466307278,
+     "ci_high": -1.4964151453684926,
+     "n_cases": 90
+    }
+   },
+   "simplified_sm - fixed3/slip": {
+    "correct": {
+     "mean": 0.5599999999999999,
+     "ci_low": 0.4049271743653767,
+     "ci_high": 0.7033025210084034,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.5088888888888888,
+     "ci_low": 0.3658452481076535,
+     "ci_high": 0.6533815789473683,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.5599999999999999,
+     "ci_low": -0.7033025210084034,
+     "ci_high": -0.40492717436537673,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": 1.1733333333333333,
+     "ci_low": 0.6645621565934066,
+     "ci_high": 1.6693181818181813,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.10444444444444442,
+     "ci_low": 0.04736700622524052,
+     "ci_high": 0.1720442610652663,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.45555555555555555,
+     "ci_low": 0.3064875616315554,
+     "ci_high": 0.6023824041811846,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.6266666666666667,
+     "ci_low": -2.028928065201984,
+     "ci_high": -1.2072077672391697,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -4.426666666666667,
+     "ci_low": -5.456304317353519,
+     "ci_high": -3.302325581395349,
+     "n_cases": 90
+    }
+   },
+   "simplified_sm - fixed3/mixed": {
+    "correct": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.25555555555555554,
+     "ci_low": -0.31219846308052124,
+     "ci_high": -0.20470588235294115,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -0.02444444444444441,
+     "ci_low": -0.23922430510665804,
+     "ci_high": 0.22979531001589798,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.015555555555555557,
+     "ci_low": -0.011767617938264419,
+     "ci_high": 0.04598612279226236,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.24000000000000002,
+     "ci_low": 0.1953716103113492,
+     "ci_high": 0.2929714651545637,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.3022222222222224,
+     "ci_low": -1.498851220457187,
+     "ci_high": -1.0917490692479526,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -2.58,
+     "ci_low": -2.99625,
+     "ci_high": -2.147111255692909,
+     "n_cases": 90
+    }
+   },
+   "full_sm - e_only/stable": {
+    "correct": {
+     "mean": -0.03555555555555555,
+     "ci_low": -0.05393562101427269,
+     "ci_high": -0.019565217391304346,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": -0.026666666666666665,
+     "ci_low": -0.04086021505376343,
+     "ci_high": -0.01411681855840928,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -0.12444444444444444,
+     "ci_low": -0.17693037974683543,
+     "ci_high": -0.07057884856070093,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.017777777777777778,
+     "ci_low": 0.006521739130434784,
+     "ci_high": 0.031818181818181815,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": -0.022222222222222223,
+     "ci_low": -0.03913155535634245,
+     "ci_high": -0.007920792079207921,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -0.12444444444444444,
+     "ci_low": -0.17693037974683543,
+     "ci_high": -0.07057884856070092,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -0.12444444444444444,
+     "ci_low": -0.17693037974683543,
+     "ci_high": -0.07057884856070092,
+     "n_cases": 90
+    }
+   },
+   "full_sm - e_only/slip": {
+    "correct": {
+     "mean": -0.05111111111111111,
+     "ci_low": -0.08043540729635183,
+     "ci_high": -0.02652999754118515,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.4600000000000001,
+     "ci_low": 0.3280898876404495,
+     "ci_high": 0.5976223916532905,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": 0.051111111111111114,
+     "ci_low": 0.026529997541185152,
+     "ci_high": 0.08043540729635183,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -1.76,
+     "ci_low": -2.2356362692343996,
+     "ci_high": -1.319916666666667,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.3466666666666667,
+     "ci_low": 0.22625823451910407,
+     "ci_high": 0.482830746489283,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": -0.39777777777777773,
+     "ci_low": -0.5271254280821918,
+     "ci_high": -0.28192497261774374,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.5044444444444445,
+     "ci_low": -2.022271062271062,
+     "ci_high": -1.016349521203831,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -1.248888888888889,
+     "ci_low": -1.8483533834586465,
+     "ci_high": -0.6749640804597702,
+     "n_cases": 90
+    }
+   },
+   "full_sm - e_only/mixed": {
+    "correct": {
+     "mean": 0.011111111111111112,
+     "ci_low": 0.0020408163265306124,
+     "ci_high": 0.023529411764705882,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.008888888888888889,
+     "ci_low": 0.00202020202020202,
+     "ci_high": 0.01758589511754067,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.06444444444444444,
+     "ci_low": -0.0936183678965796,
+     "ci_high": -0.04,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": -0.8755555555555555,
+     "ci_low": -1.0767700258397932,
+     "ci_high": -0.7148871302542812,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.12222222222222222,
+     "ci_low": 0.07842935112189206,
+     "ci_high": 0.17750694444444443,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": -0.24444444444444444,
+     "ci_low": -0.29876617581436865,
+     "ci_high": -0.2,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -1.1977777777777778,
+     "ci_low": -1.4750385802469137,
+     "ci_high": -0.973195247674126,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -1.52,
+     "ci_low": -1.9149637023593467,
+     "ci_high": -1.1999528301886795,
+     "n_cases": 90
+    }
+   },
+   "simplified_sm - full_sm/stable": {
+    "correct": {
+     "mean": 0.019999999999999997,
+     "ci_low": 0.009195402298850575,
+     "ci_high": 0.030952380952380946,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.011111111111111112,
+     "ci_low": 0.002630724538619275,
+     "ci_high": 0.02077922077922078,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": 0.0911111111111111,
+     "ci_low": 0.05591147786946737,
+     "ci_high": 0.12553315190499753,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.020000000000000004,
+     "ci_low": 0.007226764199655767,
+     "ci_high": 0.03619480519480517,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": 0.0911111111111111,
+     "ci_low": 0.05591147786946736,
+     "ci_high": 0.12553315190499753,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": 0.0911111111111111,
+     "ci_low": 0.05591147786946736,
+     "ci_high": 0.12553315190499753,
+     "n_cases": 90
+    }
+   },
+   "simplified_sm - full_sm/slip": {
+    "correct": {
+     "mean": 0.05333333333333332,
+     "ci_low": 0.029997126436781603,
+     "ci_high": 0.08235933503836312,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": 0.006666666666666666,
+     "ci_low": 0.0,
+     "ci_high": 0.017204301075268817,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": -0.053333333333333344,
+     "ci_low": -0.08235933503836318,
+     "ci_high": -0.029997126436781624,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": 0.1244444444444444,
+     "ci_low": 0.06808400965123929,
+     "ci_high": 0.1861293859649121,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.008888888888888889,
+     "ci_low": 0.0,
+     "ci_high": 0.01971985760718154,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.044444444444444446,
+     "ci_low": 0.023805683563748077,
+     "ci_high": 0.07209302325581396,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": -0.14222222222222228,
+     "ci_low": -0.23680324543610556,
+     "ci_high": -0.07339296636085633,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": -0.40888888888888886,
+     "ci_low": -0.6463414634146342,
+     "ci_high": -0.22339386157984842,
+     "n_cases": 90
+    }
+   },
+   "simplified_sm - full_sm/mixed": {
+    "correct": {
+     "mean": -0.011111111111111112,
+     "ci_low": -0.023529411764705882,
+     "ci_high": -0.0020408163265306124,
+     "n_cases": 90
+    },
+    "correct_stop": {
+     "mean": -0.008888888888888889,
+     "ci_low": -0.017585895117540686,
+     "ci_high": -0.00202020202020202,
+     "n_cases": 90
+    },
+    "false": {
+     "mean": 0.02222222222222222,
+     "ci_low": 0.00791885070860027,
+     "ci_high": 0.04146341463414634,
+     "n_cases": 90
+    },
+    "n_inquiries": {
+     "mean": 0.5244444444444445,
+     "ci_low": 0.39293014705882356,
+     "ci_high": 0.6752773406766325,
+     "n_cases": 90
+    },
+    "none": {
+     "mean": 0.0022222222222222222,
+     "ci_low": 0.0,
+     "ci_high": 0.006978796169630632,
+     "n_cases": 90
+    },
+    "abstain": {
+     "mean": 0.16222222222222224,
+     "ci_low": 0.1260730804810361,
+     "ci_high": 0.20256410256410257,
+     "n_cases": 90
+    },
+    "J5": {
+     "mean": 0.6355555555555555,
+     "ci_low": 0.4624930555555555,
+     "ci_high": 0.8459558338826632,
+     "n_cases": 90
+    },
+    "J10": {
+     "mean": 0.7466666666666667,
+     "ci_low": 0.5126217038539553,
+     "ci_high": 1.028580827067669,
+     "n_cases": 90
+    }
+   }
+  },
+  "v5": {
+   "full_sm - fixed3/stable": {
+    "correct": {
+     "mean": -0.013793103448275858,
+     "ci_low": -0.032100893997445715,
+     "ci_high": 0.004444444444444442,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.9540229885057471,
+     "ci_low": 0.931816844919786,
+     "ci_high": 0.9752808988764045,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.006896551724137932,
+     "ci_low": -0.019753086419753086,
+     "ci_high": 0.004705882352941177,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -1.6275862068965516,
+     "ci_low": -1.7693943943943946,
+     "ci_high": -1.459248366013072,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.0,
+     "ci_low": -0.009090909090909092,
+     "ci_high": 0.009195402298850575,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.004597701149425287,
+     "ci_low": 0.0,
+     "ci_high": 0.01282051282051282,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.6620689655172414,
+     "ci_low": -1.8151905613648873,
+     "ci_high": -1.494950581395349,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -1.6965517241379309,
+     "ci_low": -1.8821151315789475,
+     "ci_high": -1.4999719101123596,
+     "n_cases": 87
+    }
+   },
+   "full_sm - fixed3/slip": {
+    "correct": {
+     "mean": 0.3793103448275862,
+     "ci_low": 0.2644657258064516,
+     "ci_high": 0.49655366137156143,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.5655172413793103,
+     "ci_low": 0.43409090909090914,
+     "ci_high": 0.6925045731707317,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.3793103448275862,
+     "ci_low": -0.4965536613715615,
+     "ci_high": -0.2644657258064519,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": 0.7034482758620689,
+     "ci_low": 0.31419452887538,
+     "ci_high": 1.1054131274131274,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.05287356321839081,
+     "ci_low": 0.014629117425194873,
+     "ci_high": 0.10105440567711413,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.32643678160919537,
+     "ci_low": 0.20975029036004644,
+     "ci_high": 0.44600042571306925,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.1931034482758618,
+     "ci_low": -1.4881211180124223,
+     "ci_high": -0.8689464285714291,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -3.089655172413793,
+     "ci_low": -3.9001344086021508,
+     "ci_high": -2.2567582619339053,
+     "n_cases": 87
+    }
+   },
+   "full_sm - fixed3/mixed": {
+    "correct": {
+     "mean": 0.01839080459770115,
+     "ci_low": 0.0023529411764705885,
+     "ci_high": 0.04045010700909577,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.01839080459770115,
+     "ci_low": 0.0023529411764705885,
+     "ci_high": 0.04045010700909577,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.25287356321839083,
+     "ci_low": -0.296629213483146,
+     "ci_high": -0.21066595744680852,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -0.7149425287356321,
+     "ci_low": -0.8839768518518517,
+     "ci_high": -0.5304125494071148,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.004597701149425287,
+     "ci_low": -0.017311893203883495,
+     "ci_high": 0.025,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.04597701149425287,
+     "ci_low": 0.022680412371134023,
+     "ci_high": 0.0761904761904762,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.9793103448275864,
+     "ci_low": -2.1819197860962567,
+     "ci_high": -1.7707721730815205,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -3.243678160919541,
+     "ci_low": -3.6444666666666667,
+     "ci_high": -2.8642500000000006,
+     "n_cases": 87
+    }
+   },
+   "e_only - fixed3/stable": {
+    "correct": {
+     "mean": 0.002298850574712642,
+     "ci_low": -0.011771793054571223,
+     "ci_high": 0.019047619047619042,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.9701149425287355,
+     "ci_low": 0.948780487804878,
+     "ci_high": 0.9893333333333334,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.006896551724137932,
+     "ci_low": -0.019753086419753086,
+     "ci_high": 0.004705882352941177,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -1.5678160919540232,
+     "ci_low": -1.7296753246753245,
+     "ci_high": -1.3815751383567478,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": -0.011494252873563218,
+     "ci_low": -0.02353328173374613,
+     "ci_high": -0.002221611721611725,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.01609195402298851,
+     "ci_low": 0.003959425354300136,
+     "ci_high": 0.03031016042780745,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.6022988505747127,
+     "ci_low": -1.768437330439501,
+     "ci_high": -1.4158402813965607,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -1.6367816091954024,
+     "ci_low": -1.8276030734632684,
+     "ci_high": -1.4309432773109243,
+     "n_cases": 87
+    }
+   },
+   "e_only - fixed3/slip": {
+    "correct": {
+     "mean": 0.432183908045977,
+     "ci_low": 0.30487514518002323,
+     "ci_high": 0.561368006993007,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.03908045977011495,
+     "ci_low": 0.0,
+     "ci_high": 0.0960025974025974,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.432183908045977,
+     "ci_low": -0.561368006993007,
+     "ci_high": -0.30487514518002323,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": 2.75632183908046,
+     "ci_low": 2.6021666666666667,
+     "ci_high": 2.8750073529411764,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": -0.3149425287356322,
+     "ci_low": -0.4341333732057417,
+     "ci_high": -0.19755528455284554,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.7471264367816092,
+     "ci_low": 0.607140756302521,
+     "ci_high": 0.8688275434243177,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": 0.5954022988505747,
+     "ci_low": -0.05001262626262624,
+     "ci_high": 1.2214624773960217,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -1.5655172413793106,
+     "ci_low": -2.846875,
+     "ci_high": -0.326252773065381,
+     "n_cases": 87
+    }
+   },
+   "e_only - fixed3/mixed": {
+    "correct": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.20689655172413793,
+     "ci_low": -0.2634146341463414,
+     "ci_high": -0.15476190476190477,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": 0.167816091954023,
+     "ci_low": -0.08055649350649349,
+     "ci_high": 0.42078915202444617,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": -0.10344827586206896,
+     "ci_low": -0.14473684210526316,
+     "ci_high": -0.06666666666666667,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.31034482758620696,
+     "ci_low": 0.2650513819985826,
+     "ci_high": 0.3569713080168776,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -0.8666666666666666,
+     "ci_low": -1.1570056925996204,
+     "ci_high": -0.5489322781525688,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -1.9011494252873564,
+     "ci_low": -2.4270064205457467,
+     "ci_high": -1.375,
+     "n_cases": 87
+    }
+   },
+   "simplified_sm - fixed3/stable": {
+    "correct": {
+     "mean": -0.009195402298850575,
+     "ci_low": -0.024691358024691353,
+     "ci_high": 0.006741573033707863,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.9586206896551723,
+     "ci_low": 0.936470588235294,
+     "ci_high": 0.9788266253869969,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.006896551724137932,
+     "ci_low": -0.019753086419753086,
+     "ci_high": 0.004705882352941177,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -1.5839080459770114,
+     "ci_low": -1.7284204793028322,
+     "ci_high": -1.4140980392156863,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.0022988505747126436,
+     "ci_low": -0.005333333333333334,
+     "ci_high": 0.010311286651492826,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.013793103448275864,
+     "ci_low": 0.004347826086956522,
+     "ci_high": 0.025974025974025976,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.618390804597701,
+     "ci_low": -1.7761177722994175,
+     "ci_high": -1.4500000000000002,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -1.6528735632183906,
+     "ci_low": -1.84516862170088,
+     "ci_high": -1.4551667298219022,
+     "n_cases": 87
+    }
+   },
+   "simplified_sm - fixed3/slip": {
+    "correct": {
+     "mean": 0.43908045977011495,
+     "ci_low": 0.3156599732262383,
+     "ci_high": 0.5647091144149967,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.5747126436781609,
+     "ci_low": 0.44417113893858085,
+     "ci_high": 0.7010537883169463,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.43908045977011495,
+     "ci_low": -0.5647091144149967,
+     "ci_high": -0.31565997322623834,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": 0.8390804597701149,
+     "ci_low": 0.4280448756822317,
+     "ci_high": 1.2725378151260505,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.06666666666666667,
+     "ci_low": 0.02596753246753247,
+     "ci_high": 0.1125,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.37241379310344824,
+     "ci_low": 0.25121562013492477,
+     "ci_high": 0.4968600770218228,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.35632183908046,
+     "ci_low": -1.6559302704463996,
+     "ci_high": -1.0233669204358862,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -3.5517241379310347,
+     "ci_low": -4.445343097913322,
+     "ci_high": -2.670196577243293,
+     "n_cases": 87
+    }
+   },
+   "simplified_sm - fixed3/mixed": {
+    "correct": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.2413793103448276,
+     "ci_low": -0.28889492753623186,
+     "ci_high": -0.1974649789029536,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -0.21149425287356322,
+     "ci_low": -0.4255637201140601,
+     "ci_high": 0.013516437786100545,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.009195402298850576,
+     "ci_low": -0.015194741966893868,
+     "ci_high": 0.031112554112554106,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.232183908045977,
+     "ci_low": 0.1896824961614389,
+     "ci_high": 0.28,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.418390804597701,
+     "ci_low": -1.602274048625793,
+     "ci_high": -1.2113636363636362,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -2.6252873563218393,
+     "ci_low": -2.982486772486772,
+     "ci_high": -2.2726560788608987,
+     "n_cases": 87
+    }
+   },
+   "full_sm - e_only/stable": {
+    "correct": {
+     "mean": -0.016091954022988502,
+     "ci_low": -0.03132530120481927,
+     "ci_high": -0.004494382022471909,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": -0.016091954022988502,
+     "ci_low": -0.030773195876288656,
+     "ci_high": -0.004544177732379986,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -0.05977011494252873,
+     "ci_low": -0.1054107197084725,
+     "ci_high": -0.010415990259740255,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.011494252873563218,
+     "ci_low": 0.0,
+     "ci_high": 0.025,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": -0.011494252873563218,
+     "ci_low": -0.025882352941176474,
+     "ci_high": 0.002354358610914238,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -0.05977011494252873,
+     "ci_low": -0.1054107197084725,
+     "ci_high": -0.010415990259740259,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -0.05977011494252873,
+     "ci_low": -0.1054107197084725,
+     "ci_high": -0.010415990259740259,
+     "n_cases": 87
+    }
+   },
+   "full_sm - e_only/slip": {
+    "correct": {
+     "mean": -0.052873563218390804,
+     "ci_low": -0.07951807228915662,
+     "ci_high": -0.02857142857142857,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.5264367816091954,
+     "ci_low": 0.40240822111977326,
+     "ci_high": 0.653502514142049,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": 0.052873563218390804,
+     "ci_low": 0.028571428571428574,
+     "ci_high": 0.07951807228915662,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -2.0528735632183905,
+     "ci_low": -2.466106601731602,
+     "ci_high": -1.6080552584670231,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.367816091954023,
+     "ci_low": 0.23418859649122808,
+     "ci_high": 0.49903465982028195,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": -0.4206896551724138,
+     "ci_low": -0.554433256616801,
+     "ci_high": -0.2891566265060241,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.7885057471264363,
+     "ci_low": -2.2571904761904764,
+     "ci_high": -1.2978090062111804,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -1.5241379310344825,
+     "ci_low": -2.0747923681257014,
+     "ci_high": -0.9749353448275866,
+     "n_cases": 87
+    }
+   },
+   "full_sm - e_only/mixed": {
+    "correct": {
+     "mean": 0.01839080459770115,
+     "ci_low": 0.0023529411764705885,
+     "ci_high": 0.04045010700909577,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.01839080459770115,
+     "ci_low": 0.0023529411764705885,
+     "ci_high": 0.04045010700909577,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.04597701149425289,
+     "ci_low": -0.06363886113886116,
+     "ci_high": -0.028198924731182833,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": -0.8827586206896552,
+     "ci_low": -1.0689829523440526,
+     "ci_high": -0.7092697674418607,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.10804597701149424,
+     "ci_low": 0.06666666666666667,
+     "ci_high": 0.15681818181818183,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": -0.2643678160919541,
+     "ci_low": -0.3146067415730337,
+     "ci_high": -0.2171411149825784,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -1.1126436781609195,
+     "ci_low": -1.3414823848238484,
+     "ci_high": -0.9010955056179776,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -1.342528735632184,
+     "ci_low": -1.6380494128412388,
+     "ci_high": -1.076511982570806,
+     "n_cases": 87
+    }
+   },
+   "simplified_sm - full_sm/stable": {
+    "correct": {
+     "mean": 0.004597701149425286,
+     "ci_low": 0.0,
+     "ci_high": 0.011494252873563216,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.004597701149425286,
+     "ci_low": 0.0,
+     "ci_high": 0.011494252873563216,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": 0.043678160919540236,
+     "ci_low": 0.010809357744841616,
+     "ci_high": 0.08102437880918889,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.0022988505747126436,
+     "ci_low": 0.0,
+     "ci_high": 0.0072311196003526194,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.009195402298850575,
+     "ci_low": 0.0021047149122807017,
+     "ci_high": 0.018181818181818184,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": 0.04367816091954023,
+     "ci_low": 0.01080935774484162,
+     "ci_high": 0.08102437880918886,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": 0.04367816091954023,
+     "ci_low": 0.01080935774484162,
+     "ci_high": 0.08102437880918886,
+     "n_cases": 87
+    }
+   },
+   "simplified_sm - full_sm/slip": {
+    "correct": {
+     "mean": 0.059770114942528714,
+     "ci_low": 0.03845959595959596,
+     "ci_high": 0.08333333333333331,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": 0.009195402298850575,
+     "ci_low": 0.0,
+     "ci_high": 0.023306681896059365,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": -0.05977011494252873,
+     "ci_low": -0.08333333333333333,
+     "ci_high": -0.03845959595959597,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": 0.135632183908046,
+     "ci_low": 0.07777083333333333,
+     "ci_high": 0.1980499999999997,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.013793103448275862,
+     "ci_low": 0.0,
+     "ci_high": 0.03059276018099545,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.04597701149425287,
+     "ci_low": 0.02790697674418605,
+     "ci_high": 0.0666860465116278,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": -0.16321839080459769,
+     "ci_low": -0.24350241545893717,
+     "ci_high": -0.0975609756097561,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": -0.4620689655172413,
+     "ci_low": -0.6556991463055637,
+     "ci_high": -0.2931908595784987,
+     "n_cases": 87
+    }
+   },
+   "simplified_sm - full_sm/mixed": {
+    "correct": {
+     "mean": -0.01839080459770115,
+     "ci_low": -0.04045010700909578,
+     "ci_high": -0.0023529411764705885,
+     "n_cases": 87
+    },
+    "correct_stop": {
+     "mean": -0.01839080459770115,
+     "ci_low": -0.04045010700909578,
+     "ci_high": -0.0023529411764705885,
+     "n_cases": 87
+    },
+    "false": {
+     "mean": 0.011494252873563218,
+     "ci_low": 0.002150537634408603,
+     "ci_high": 0.023809523809523808,
+     "n_cases": 87
+    },
+    "n_inquiries": {
+     "mean": 0.503448275862069,
+     "ci_low": 0.39325842696629215,
+     "ci_high": 0.6293432432432433,
+     "n_cases": 87
+    },
+    "none": {
+     "mean": 0.004597701149425287,
+     "ci_low": 0.0,
+     "ci_high": 0.011494252873563218,
+     "n_cases": 87
+    },
+    "abstain": {
+     "mean": 0.18620689655172418,
+     "ci_low": 0.14878048780487804,
+     "ci_high": 0.2282058823529412,
+     "n_cases": 87
+    },
+    "J5": {
+     "mean": 0.5609195402298852,
+     "ci_low": 0.4329553571428571,
+     "ci_high": 0.7065140956604371,
+     "n_cases": 87
+    },
+    "J10": {
+     "mean": 0.6183908045977012,
+     "ci_low": 0.4588163558106169,
+     "ci_high": 0.8046004056795133,
+     "n_cases": 87
+    }
+   }
+  }
+ },
+ "replication": {
+  "R1_full_sm_vs_fixed3": {
+   "slip_false": {
+    "mean": -0.5066666666666667,
+    "ci_low": -0.6493841032043279,
+    "ci_high": -0.35912680756396004,
+    "n_cases": 90
+   },
+   "stable_correct_stop": {
+    "mean": 0.9244444444444443,
+    "ci_low": 0.8999999999999999,
+    "ci_high": 0.9448275862068966,
+    "n_cases": 90
+   },
+   "stable_correct": {
+    "mean": -0.033333333333333326,
+    "ci_low": -0.052382108183079056,
+    "ci_high": -0.015730337078651683,
+    "n_cases": 90
+   },
+   "pass": true,
+   "pass_substantive": true
+  },
+  "R2_e_only_vs_fixed3": {
+   "slip_false": {
+    "mean": -0.5577777777777778,
+    "ci_low": -0.7011771793054571,
+    "ci_high": -0.40249431818181824,
+    "n_cases": 90
+   },
+   "stable_correct_stop": {
+    "mean": 0.951111111111111,
+    "ci_low": 0.929405637254902,
+    "ci_high": 0.9681818181818183,
+    "n_cases": 90
+   },
+   "stable_correct": {
+    "mean": 0.002222222222222222,
+    "ci_low": -0.011653340948029695,
+    "ci_high": 0.015534519956850047,
+    "n_cases": 90
+   },
+   "pass": true,
+   "pass_substantive": true
+  },
+  "R3_full_sm_vs_e_only": {
+   "slip_inquiries": {
+    "mean": -1.76,
+    "ci_low": -2.2356362692343996,
+    "ci_high": -1.319916666666667,
+    "n_cases": 90
+   },
+   "stable_correct_stop": {
+    "mean": -0.026666666666666665,
+    "ci_low": -0.04086021505376343,
+    "ci_high": -0.01411681855840928,
+    "n_cases": 90
+   },
+   "pass": true
+  },
+  "R4_simplified_sm_vs_full_sm": {
+   "slip_false": {
+    "mean": -0.053333333333333344,
+    "ci_low": -0.08235933503836318,
+    "ci_high": -0.029997126436781624,
+    "n_cases": 90
+   },
+   "slip_inquiries": {
+    "mean": 0.1244444444444444,
+    "ci_low": 0.06808400965123929,
+    "ci_high": 0.1861293859649121,
+    "n_cases": 90
+   },
+   "pass": true
+  },
+  "all_pass": true,
+  "all_pass_substantive": true
+ },
+ "skipped": {
+  "v6": {},
+  "v5": {}
+ }
+}

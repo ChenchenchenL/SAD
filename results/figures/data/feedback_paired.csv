@@ -1,0 +1,37 @@
+scope,scope_label,comparison,comparison_label,metric,n_pairs,mean,ci_low,ci_high
+deepseek_full,DeepSeek full (116 ep),one_shot,pipeline minus fair one-shot,true_target_hit,116,0.24227690757018006,0.12615734469053247,0.357225035096758
+deepseek_full,DeepSeek full (116 ep),one_shot,pipeline minus fair one-shot,overall,116,0.7053697756241705,0.41478670752990116,0.9785191557959173
+deepseek_full,DeepSeek full (116 ep),one_shot,pipeline minus fair one-shot,misleading,116,-0.22511691458192473,-0.3366102674617739,-0.10868054352059495
+deepseek_full,DeepSeek full (116 ep),no_diagnosis,pipeline minus no-diagnosis,true_target_hit,116,0.3616878584128415,0.21658431507301937,0.49446053946870994
+deepseek_full,DeepSeek full (116 ep),no_diagnosis,pipeline minus no-diagnosis,overall,116,0.9592489294568401,0.6301008885490227,1.269849388653892
+deepseek_full,DeepSeek full (116 ep),no_diagnosis,pipeline minus no-diagnosis,misleading,116,-0.37152229985225255,-0.49469953763845526,-0.23753872716614527
+deepseek_full,DeepSeek full (116 ep),oracle,pipeline minus oracle,true_target_hit,116,-0.12065678761926224,-0.2106579917976092,-0.02803269716117934
+deepseek_full,DeepSeek full (116 ep),oracle,pipeline minus oracle,overall,116,-0.27154624621240575,-0.461909022335083,-0.08034527140607
+deepseek_full,DeepSeek full (116 ep),oracle,pipeline minus oracle,misleading,116,0.123605476673428,0.045362660338320024,0.19963236247959126
+glm_subset,GLM subset (60 ep),one_shot,pipeline minus fair one-shot,true_target_hit,55,0.287559723942665,0.15324752105664263,0.4322916986667487
+glm_subset,GLM subset (60 ep),one_shot,pipeline minus fair one-shot,overall,55,0.7135020350380462,0.35214426660391707,1.050752610460529
+glm_subset,GLM subset (60 ep),one_shot,pipeline minus fair one-shot,misleading,55,-0.12192532295168995,-0.2659637157867964,0.008158792951484417
+glm_subset,GLM subset (60 ep),no_diagnosis,pipeline minus no-diagnosis,true_target_hit,58,0.399588053553038,0.2584366235285165,0.5328508490137065
+glm_subset,GLM subset (60 ep),no_diagnosis,pipeline minus no-diagnosis,overall,58,1.1227257123240644,0.7982461020010443,1.4250999340927428
+glm_subset,GLM subset (60 ep),no_diagnosis,pipeline minus no-diagnosis,misleading,58,-0.327840714040508,-0.4479429498009495,-0.20206817793179618
+glm_subset,GLM subset (60 ep),oracle,pipeline minus oracle,true_target_hit,58,-0.0933745279780295,-0.229391559911509,0.038079164205591653
+glm_subset,GLM subset (60 ep),oracle,pipeline minus oracle,overall,58,-0.23927222794370062,-0.5625512440758292,0.055469207665770834
+glm_subset,GLM subset (60 ep),oracle,pipeline minus oracle,misleading,58,0.12341228973566766,0.014207728076282176,0.24224957780914833
+common_deepseek,Common subset DeepSeek (60 ep),one_shot,pipeline minus fair one-shot,true_target_hit,60,0.21691297208538587,0.06591183003955135,0.36769558011200565
+common_deepseek,Common subset DeepSeek (60 ep),one_shot,pipeline minus fair one-shot,overall,60,0.6032840722495895,0.2945171529576688,0.9039336135411831
+common_deepseek,Common subset DeepSeek (60 ep),one_shot,pipeline minus fair one-shot,misleading,60,-0.14975369458128077,-0.27934500688746255,-0.02911839850014475
+common_deepseek,Common subset DeepSeek (60 ep),no_diagnosis,pipeline minus no-diagnosis,true_target_hit,60,0.377175697865353,0.21370739552120485,0.5363760431833133
+common_deepseek,Common subset DeepSeek (60 ep),no_diagnosis,pipeline minus no-diagnosis,overall,60,1.036781609195402,0.6809378106502255,1.3706579415642752
+common_deepseek,Common subset DeepSeek (60 ep),no_diagnosis,pipeline minus no-diagnosis,misleading,60,-0.3809523809523808,-0.5161515962440989,-0.24097354427073966
+common_deepseek,Common subset DeepSeek (60 ep),oracle,pipeline minus oracle,true_target_hit,60,-0.10311986863711001,-0.23268126604526188,0.023554547420691522
+common_deepseek,Common subset DeepSeek (60 ep),oracle,pipeline minus oracle,overall,60,-0.17142857142857137,-0.4731256151930984,0.14531089615256235
+common_deepseek,Common subset DeepSeek (60 ep),oracle,pipeline minus oracle,misleading,60,0.17142857142857137,0.06066205677560523,0.27622348730348406
+common_glm,Common subset GLM (60 ep),one_shot,pipeline minus fair one-shot,true_target_hit,55,0.287559723942665,0.15324752105664263,0.4322916986667487
+common_glm,Common subset GLM (60 ep),one_shot,pipeline minus fair one-shot,overall,55,0.7135020350380462,0.35214426660391707,1.050752610460529
+common_glm,Common subset GLM (60 ep),one_shot,pipeline minus fair one-shot,misleading,55,-0.12192532295168995,-0.2659637157867964,0.008158792951484417
+common_glm,Common subset GLM (60 ep),no_diagnosis,pipeline minus no-diagnosis,true_target_hit,58,0.399588053553038,0.2584366235285165,0.5328508490137065
+common_glm,Common subset GLM (60 ep),no_diagnosis,pipeline minus no-diagnosis,overall,58,1.1227257123240644,0.7982461020010443,1.4250999340927428
+common_glm,Common subset GLM (60 ep),no_diagnosis,pipeline minus no-diagnosis,misleading,58,-0.327840714040508,-0.4479429498009495,-0.20206817793179618
+common_glm,Common subset GLM (60 ep),oracle,pipeline minus oracle,true_target_hit,58,-0.0933745279780295,-0.229391559911509,0.038079164205591653
+common_glm,Common subset GLM (60 ep),oracle,pipeline minus oracle,overall,58,-0.23927222794370062,-0.5625512440758292,0.055469207665770834
+common_glm,Common subset GLM (60 ep),oracle,pipeline minus oracle,misleading,58,0.12341228973566766,0.014207728076282176,0.24224957780914833

@@ -1,0 +1,18 @@
+{
+  "experiment": "lomo_out_of_library",
+  "cases": "data/cases_test_v5_exclusion_corrected.json",
+  "priors": "data/priors_test_category.jsonl",
+  "bank_dir": "data",
+  "bank_prefix": "bank_v5_",
+  "seeds": 5,
+  "eps": 0.05,
+  "max_obs": 7,
+  "bootstrap": 2000,
+  "bootstrap_seed": 20261026,
+  "arms": [
+    "posterior_only",
+    "posterior_plus_E",
+    "stability_mixed_reference"
+  ],
+  "student_types": ["stable_ool", "slip_ool"]
+}

@@ -1,0 +1,28 @@
+SAD Non-Commercial Research License
+
+Copyright (c) 2026 Lei Chen and Xinnian Wang
+
+This license applies to the authors' original code, synthetic data, figures,
+and documentation in this reproduction package. Third-party components retain
+their own copyright and license terms, as listed in THIRD_PARTY_NOTICES.md.
+
+Permission is granted, free of charge, to use, copy, inspect, modify and
+redistribute the authors' original materials solely for non-commercial
+scientific research, including reproduction and academic verification, subject
+to all of the following conditions:
+
+1. Commercial use, incorporation into commercial products or services, and
+   use to generate revenue directly or indirectly are prohibited.
+2. Preserve this copyright notice and license, attribute the authors, and
+   cite the associated work or link to https://github.com/ChenchenchenL/SAD.
+3. Clearly identify modifications. Redistributed original or modified
+   materials must retain these non-commercial research restrictions.
+4. No permission is granted to remove, weaken or replace a third party's
+   license. Derivatives of MalruleLib remain subject to its original
+   non-commercial, attribution and share-alike terms, including its specific
+   restrictions concerning commercial or closed-source LLMs.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. THE AUTHORS ARE NOT LIABLE FOR CLAIMS OR DAMAGES ARISING
+FROM THEIR USE. All rights not expressly granted are reserved.

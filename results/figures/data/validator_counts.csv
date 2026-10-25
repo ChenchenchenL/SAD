@@ -1,0 +1,4 @@
+scope,n_records,n_retried,init_math_incorrect,final_math_incorrect,init_leak_suspected,final_leak_suspected,init_unverifiable,final_unverifiable
+full_480,480,96,49,30,57,30,36,54
+protocol_valid_464,464,88,41,27,57,30,36,49
+glm_episode_subset_240,240,54,26,16,35,20,27,34

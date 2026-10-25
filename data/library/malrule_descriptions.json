@@ -1,0 +1,716 @@
+[
+  {
+    "category": "absolute_value",
+    "dir": "absolute_value_distributes",
+    "module": "absolute_value.absolute_value_distributes",
+    "human_name": "Absolute-Value-Distributes",
+    "description": "Students incorrectly distribute absolute value over addition or subtraction, treating |a+b| as |a|+|b|. This is an overgeneralization of the distributive property, where students apply learned algebraic rules (like distribution) to functions where they do not apply. The absolute value bars are visually similar to parentheses, reinforcing this erroneous application."
+  },
+  {
+    "category": "absolute_value",
+    "dir": "absolute_value_makes_positive",
+    "module": "absolute_value.absolute_value_makes_positive",
+    "human_name": "Absolute-Value-Makes-Positive",
+    "description": "Students hold the mental picture that 'absolute values make negative signs positive' and apply this symbol-based process rather than understanding that absolute value represents distance from zero. When presented with |x| = -3, they incorrectly reverse the sign to get x = 3, failing to recognize that absolute value output is always non-negative and the equation has no solution."
+  },
+  {
+    "category": "absolute_value",
+    "dir": "inequality_direction_confusion",
+    "module": "absolute_value.inequality_direction_confusion",
+    "human_name": "Inequality-Direction-Confusion",
+    "description": "Students confuse the solution patterns for absolute value inequalities, applying the 'less than' pattern (three-part inequality) to 'greater than' problems and vice versa. Research shows this error affects 12-27% of students on specific problem types, stemming from failure to connect the inequality direction to geometric meaning (inside vs. outside an interval on the number line)."
+  },
+  {
+    "category": "algebra",
+    "dir": "cancel_across_equals",
+    "module": "algebra.cancel_across_equals",
+    "human_name": "Cancel-Across-Equals",
+    "description": "Students incorrectly 'cancel' matching variable terms from both sides of an equation as if they were canceling factors in a fraction, rather than properly subtracting the terms from both sides. This reflects confusion between the procedures for simplifying fractions and solving equations."
+  },
+  {
+    "category": "algebra",
+    "dir": "change_side_change_sign",
+    "module": "algebra.change_side_change_sign",
+    "human_name": "Change-Side-Change-Sign",
+    "description": "Students use the 'transition model' of algebraic manipulation, incorrectly believing that moving a term across the equals sign simply requires changing its sign. They do not understand that solving equations requires applying inverse operations to both sides to maintain equality. This reflects a fundamental misunderstanding of the equals sign as a relational symbol."
+  },
+  {
+    "category": "algebra",
+    "dir": "distribute_over_non_distributive",
+    "module": "algebra.distribute_over_non_distributive",
+    "human_name": "Distribute-Over-Non-Distributive Malrule",
+    "description": "Students incorrectly extend the distributive property to operations that do not distribute, such as exponentiation and square roots. This overgeneralization leads to errors like (a+b)² = a² + b² (missing the middle term) and √(a+b) = √a + √b (incorrectly distributing the square root)."
+  },
+  {
+    "category": "algebra",
+    "dir": "divide_one_term_only",
+    "module": "algebra.divide_one_term_only",
+    "human_name": "Divide-One-Term-Only",
+    "description": "Students incorrectly apply division to only one term (typically the variable term) instead of distributing the operation to all terms on that side of the equation. This reflects a fundamental misunderstanding of how operations apply to entire expressions and the distributive property."
+  },
+  {
+    "category": "algebra",
+    "dir": "forget_negative_division",
+    "module": "algebra.forget_negative_division",
+    "human_name": "Forget-Negative-Division",
+    "description": "Students neglect the crucial rule that multiplying or dividing an inequality by a negative coefficient reverses the direction of the inequality sign. They mistakenly equate the process of solving inequalities with equations, treating them as identical procedures."
+  },
+  {
+    "category": "algebra",
+    "dir": "variable_letter_has_value",
+    "module": "algebra.variable_letter_has_value",
+    "human_name": "Variable-Letter-Has-Value",
+    "description": "Students believe that algebraic letters have inherent fixed values, often based on the letter's position in the alphabet (e.g., x=10, a=1) or other associations. This is a manifestation of the broader 'letter-as-object' misconception where letters are not understood as representing variable quantities."
+  },
+  {
+    "category": "buggy_addition",
+    "dir": "add_all_digits",
+    "module": "buggy_addition.add_all_digits",
+    "human_name": "Add-All-Digits",
+    "description": "A systematic procedural bug where the student always sums up all the digits with no regard to columns or place value. Instead of aligning digits by place value (ones with ones, tens with tens, etc.) and adding column by column with carrying, the student simply adds every individual digit together to get a single sum. For example, in 17 + 5, the student computes 1 + 7 + 5 = 13 instead of correctly aligning and adding to get 22. This is documented in Brown & Burton (1978) as one of the fundamental addition bugs that shows complete misunderstanding of place value."
+  },
+  {
+    "category": "buggy_addition",
+    "dir": "carry_adds_to_same_column",
+    "module": "buggy_addition.carry_adds_to_same_column",
+    "human_name": "Carry-Adds-To-Same-Column",
+    "description": "A systematic procedural bug where, when a column sum exceeds 9, the student adds the units digit and carry digit together and writes that combined result in the current column. The carry is NOT propagated to the next column. For example, in 17 + 5, the ones column computes 7+5=12, then the student adds 1+2=3 and writes 3 in the ones column. The tens column then computes 1+0=1. Result: 13 instead of 22. This bug may arise from confusion about Method 2 (left-to-right addition) where carries are written under the same column."
+  },
+  {
+    "category": "buggy_addition",
+    "dir": "carry_not_reset",
+    "module": "buggy_addition.carry_not_reset",
+    "human_name": "Carry-Not-Reset",
+    "description": "A systematic procedural bug in addition where the student forgets to reset the carry register to zero after processing each column. Instead of resetting the carry after adding it to a column, the carry value accumulates across columns. For example, in 328 + 917, the student writes 5 (from 8+7=15), carries 1, then computes 2+1+1=4, but instead of resetting the carry to 0, keeps it at 1. In the next column, 3+9+1=13, so the final answer is 1345 instead of 1245. This bug was identified by Brown & Burton (1978) in their BUGGY diagnostic system for arithmetic procedures."
+  },
+  {
+    "category": "buggy_addition",
+    "dir": "left_justify",
+    "module": "buggy_addition.left_justify",
+    "human_name": "Left-Justify",
+    "description": "A systematic procedural bug where the student aligns numbers on the left side instead of the right side (place value alignment) when adding numbers of different digit lengths. This causes the shorter number to be effectively multiplied by a power of 10. For example, in 23 + 456, the student aligns 23 with the left side of 456, treating 23 as 230, yielding 686 instead of the correct answer 479. This is documented in Brown & Burton's 1978 paper on diagnostic models for procedural bugs in basic mathematical skills."
+  },
+  {
+    "category": "buggy_addition",
+    "dir": "single_digit_linked",
+    "module": "buggy_addition.single_digit_linked",
+    "human_name": "Single-Digit-Linked",
+    "description": "A systematic procedural bug where the student links (appends) single-digit operands onto the end of multi-digit operands instead of performing addition. The single-digit number is always appended to the multi-digit number, regardless of the order of operands in the problem. For example, in 8 + 12, the student appends 8 to 12, yielding 128 (NOT 812). This error indicates a fundamental confusion about place value and the operation of addition, where the student treats digits as characters to be concatenated rather than numbers to be combined."
+  },
+  {
+    "category": "buggy_addition",
+    "dir": "write_carry_forget_units",
+    "module": "buggy_addition.write_carry_forget_units",
+    "human_name": "Write-Carry-Forget-Units",
+    "description": "A systematic procedural bug where the student writes the carry digit and forgets to write the units digit in the answer when a column sum is 10 or more. For example, in 87 + 93, the student computes 7+3=10, writes 1 (the carry digit) instead of 0, then 8+9=17, writes 1 (the carry digit) instead of 7, yielding 11 instead of the correct answer 180. This bug was documented by Brown & Burton (1978) in their analysis of systematic procedural errors in arithmetic."
+  },
+  {
+    "category": "buggy_multiplication",
+    "dir": "column_mimics_addition",
+    "module": "buggy_multiplication.column_mimics_addition",
+    "human_name": "Column-Mimics-Addition",
+    "description": "A compound procedural bug where the student's multiplication algorithm mimics the column behavior of addition---multiplying column by column instead of digit by digit. The student processes corresponding digits in each column (like in addition), but multiplies them instead of adding. Additionally, the student applies the WRITE/CARRY/FORGET/UNITS bug: when a column product is 10 or greater, they write only the carry digit (tens place) and forget the units digit. For products less than 10, they write the result normally.\n\nExample: 68 x 46 = 24 (correct: 3128)\n  - Column 1 (ones): 8 x 6 = 48, writes 4 (the carry), forgets 8\n  - Column 2 (tens): 6 x 4 = 24, writes 2 (the carry), forgets 4\n  - Final answer: 24"
+  },
+  {
+    "category": "buggy_subtraction",
+    "dir": "borrow_into_1_equals_10",
+    "module": "buggy_subtraction.borrow_into_1_equals_10",
+    "human_name": "Borrow-Into-1-Equals-10",
+    "description": "A systematic procedural bug where when borrowing into a column whose ORIGINAL top digit is 1, the student gets 10 instead of 11. The student treats the borrowed 10 as replacing the existing digit rather than adding to it. This bug occurs in the ADD TEN procedure of the subtraction algorithm and only applies to digits that were originally 1 in the problem.\n\nExample: 321 - 89 = 231 (correct: 232)\n- In the ones column, the ORIGINAL digit is 1\n- When borrowing into this column, 1 + 10 should = 11\n- Student incorrectly gets 10 (ignoring the existing 1)\n- 10 - 9 = 1 instead of 11 - 9 = 2"
+  },
+  {
+    "category": "buggy_subtraction",
+    "dir": "borrow_writes_10",
+    "module": "buggy_subtraction.borrow_writes_10",
+    "human_name": "Borrow-Writes-10",
+    "description": "A systematic procedural bug where, when borrowing from a column whose top digit is 0, the student correctly borrows from the next column to the left but writes 10 instead of 9 in the zero column. This represents a confusion about what happens to the intermediate zero column during cascade borrowing - the student treats it as receiving 10 (like the final column) rather than 9 (10 minus the 1 that continues rightward)."
+  },
+  {
+    "category": "buggy_subtraction",
+    "dir": "diff_0_n_equals_0",
+    "module": "buggy_subtraction.diff_0_n_equals_0",
+    "human_name": "DIFF/0-N=0",
+    "description": "Whenever the top digit in a column is 0, the student writes 0 in the answer; i.e., 0-N=0. This bug occurs in the COMPLETE COLUMN procedure when students see a 0 in the minuend and simply write 0 without considering that borrowing is required. This is documented in Brown & Burton's (1978) BUGGY system. Example: 140 - 21 = 120 (correct: 119)"
+  },
+  {
+    "category": "buggy_subtraction",
+    "dir": "diff_n_0_equals_0",
+    "module": "buggy_subtraction.diff_n_0_equals_0",
+    "human_name": "DIFF/N-0=0",
+    "description": "A systematic procedural bug where the student writes 0 in the answer whenever the bottom digit (subtrahend) in a column is 0. The student incorrectly believes N-0=0 instead of the correct N-0=N. This bug is documented in Brown & Burton (1978) and occurs in the COMPLETE COLUMN procedure of the subtraction algorithm. For example, in 403-208, when processing the tens column after borrowing (9-0), the student writes 0 instead of 9, yielding 105 instead of 195."
+  },
+  {
+    "category": "buggy_subtraction",
+    "dir": "forget_borrow_over_blanks",
+    "module": "buggy_subtraction.forget_borrow_over_blanks",
+    "human_name": "Forget-Borrow-Over-Blanks",
+    "description": "A systematic procedural bug where the student forgets to borrow over blank columns when the minuend (top number) has fewer digits than the subtrahend (bottom number). The student incorrectly processes the 'blank' positions (implicit zeros) without properly propagating borrows. For example, in 85 - 127, the student may treat the hundreds column as simply 1-0 or 0-1 (using smaller-from-larger), yielding an incorrect positive result instead of recognizing that the operation produces a negative number or requires special handling. This bug is located in the COLUMN SEQUENCE procedure of Brown & Burton's procedural network."
+  },
+  {
+    "category": "buggy_subtraction",
+    "dir": "left_ten_ok",
+    "module": "buggy_subtraction.left_ten_ok",
+    "human_name": "Left-Ten-OK",
+    "description": "A variant of the BORROW/FROM/ZERO bug where the student changes 0 to 9 without further borrowing, UNLESS the 0 is part of '10' in the left part of the top number. When the leftmost digits form '10', the student recognizes this as a special case and borrows correctly. Otherwise, they apply the standard borrow-from-zero bug, writing 9 in place of 0 without decrementing the next column."
+  },
+  {
+    "category": "buggy_subtraction",
+    "dir": "move_over_zero_borrow",
+    "module": "buggy_subtraction.move_over_zero_borrow",
+    "human_name": "Move-Over-Zero-Borrow",
+    "description": "A systematic procedural bug where the student skips over a zero when borrowing, rather than cascading through it properly. The student borrows from the next non-zero digit to the left but fails to decrement the zero to 9. This leaves the zero unchanged, creating a 0-N situation in that column which requires another borrow, effectively double-borrowing from the leftmost non-zero digit.\n\nExample: 304 - 75 = 139 (correct: 229)\nThe student skips the 0 when borrowing for ones column, then has to borrow again when processing the tens column (0-7)."
+  },
+  {
+    "category": "decimals",
+    "dir": "ignore_decimal_point",
+    "module": "decimals.ignore_decimal_point",
+    "human_name": "Ignore-Decimal-Point",
+    "description": "Students ignore the decimal point and treat decimal numbers as whole numbers, applying whole number arithmetic procedures without regard to place value. This error stems from students computing by relying solely on syntax-based rules where semantic knowledge has no effect on performance (Hiebert & Wearne, 1985)."
+  },
+  {
+    "category": "decimals",
+    "dir": "longer_is_larger",
+    "module": "decimals.longer_is_larger",
+    "human_name": "Longer-Is-Larger",
+    "description": "When comparing decimal numbers, students incorrectly believe that more decimal digits means a larger number. For example, they think 0.45 is larger than 0.8 because 0.45 has more digits. This stems from overgeneralizing whole number comparison rules to decimals, a phenomenon extensively documented by Steinle & Stacey (1998, 2004) as one of the most prevalent decimal misconceptions."
+  },
+  {
+    "category": "decimals",
+    "dir": "right_align_decimals",
+    "module": "decimals.right_align_decimals",
+    "human_name": "Right-Align-Decimals",
+    "description": "Students align decimal numbers by the rightmost digit instead of by the decimal point when performing addition or subtraction. This error stems from overgeneralizing whole number alignment procedures where right-alignment is correct. Hiebert & Wearne (1985) found that students compute by relying on syntax-based rules without semantic understanding of place value."
+  },
+  {
+    "category": "decimals",
+    "dir": "shorter_is_larger",
+    "module": "decimals.shorter_is_larger",
+    "human_name": "Shorter-Is-Larger",
+    "description": "Students incorrectly believe that decimals with fewer decimal places are larger. For example, they think 0.3 is larger than 0.496. This misconception is linked to denominator-focused thinking, reciprocal thinking, or fraction knowledge interference (Steinle & Stacey, 1998; Resnick et al., 1989)."
+  },
+  {
+    "category": "decimals",
+    "dir": "whole_number_thinking",
+    "module": "decimals.whole_number_thinking",
+    "human_name": "Whole-Number-Thinking",
+    "description": "Students incorrectly treat decimals as if they demonstrate the properties of whole numbers. This fundamental misconception, termed the 'Whole Number rule' by Resnick et al. (1989), leads to errors such as thinking 0.25 is greater than 0.7 because 25 > 7, or computing 3.7 + 2.5 = 62 by treating the numbers as 37 + 25."
+  },
+  {
+    "category": "exponents",
+    "dir": "add_exponents_for_power_of_power",
+    "module": "exponents.add_exponents_for_power_of_power",
+    "human_name": "Add-Exponents-For-Power-Of-Power",
+    "description": "Student adds exponents instead of multiplying them when computing power of a power. For example, (a³)⁵ = a⁸ instead of a¹⁵. Research indicates this error originates from overgeneralizing the product rule for exponents to power-of-power situations."
+  },
+  {
+    "category": "exponents",
+    "dir": "distribute_exponent_over_addition",
+    "module": "exponents.distribute_exponent_over_addition",
+    "human_name": "Distribute-Exponent-Over-Addition",
+    "description": "Student incorrectly distributes exponents over addition: (a+b)^n = a^n + b^n. For example, (2+3)² = 2² + 3² = 13 instead of 5² = 25. This is identified in research as the 'assumption of distributivity of exponents' (Matz, 1982)."
+  },
+  {
+    "category": "exponents",
+    "dir": "forget_exponent_on_coefficient",
+    "module": "exponents.forget_exponent_on_coefficient",
+    "human_name": "Forget-Exponent-On-Coefficient",
+    "description": "Student forgets to raise coefficient to the outer power: (cx^m)^n = c·x^(mn). For example, (2x³)⁵ = 2x¹⁵ instead of 32x¹⁵. Research identifies this as part of the broader 'failure to consider parentheses when performing operations' (Egodawatte, 2011)."
+  },
+  {
+    "category": "exponents",
+    "dir": "multiply_base_by_exponent",
+    "module": "exponents.multiply_base_by_exponent",
+    "human_name": "Multiply-Base-By-Exponent",
+    "description": "Student treats exponentiation as multiplication: a^b = a × b. For example, 2³ = 2 × 3 = 6 instead of 2 × 2 × 2 = 8. Research by Ulusoy (2019) found this error originates from misunderstanding exponentiation as repeated multiplication."
+  },
+  {
+    "category": "exponents",
+    "dir": "multiply_exponents_when_multiplying_powers",
+    "module": "exponents.multiply_exponents_when_multiplying_powers",
+    "human_name": "Multiply-Exponents-When-Multiplying-Powers",
+    "description": "Student multiplies exponents when multiplying powers with the same base: x^m × x^n = x^(m×n). For example, x³ × x⁵ = x¹⁵ instead of x⁸. Research documents this as confusion between the product rule (add) and power rule (multiply)."
+  },
+  {
+    "category": "exponents",
+    "dir": "negative_exponent_makes_negative",
+    "module": "exponents.negative_exponent_makes_negative",
+    "human_name": "Negative-Exponent-Makes-Negative",
+    "description": "Student thinks negative exponent makes the result negative: x^-n = -x^n. For example, 2^-2 = -4 instead of 1/4. Research by Cangelosi et al. (2013) identified this as the 'sticky sign' error that persists through college."
+  },
+  {
+    "category": "exponents",
+    "dir": "zero_exponent_equals_zero",
+    "module": "exponents.zero_exponent_equals_zero",
+    "human_name": "Zero-Exponent-Equals-Zero",
+    "description": "Student thinks a^0 = 0 instead of a^0 = 1. For example, 5^0 = 0 instead of 5^0 = 1. Research by Ulusoy (2019) found only 30.9% of students correctly answered that a^0 = 1."
+  },
+  {
+    "category": "factoring",
+    "dir": "incomplete_factoring",
+    "module": "factoring.incomplete_factoring",
+    "human_name": "Incomplete-Factoring",
+    "description": "Students terminate the factoring process prematurely, stopping after one factoring step without recognizing that further factorization is possible. For example, writing 2x² - 8 = 2(x² - 4) instead of the complete factorization 2(x+2)(x-2). This reflects a procedural rather than conceptual understanding of what 'factor completely' means (Kieran, 1992; Vaiyavutjamai & Clements, 2006)."
+  },
+  {
+    "category": "factoring",
+    "dir": "sign_errors_in_factoring",
+    "module": "factoring.sign_errors_in_factoring",
+    "human_name": "Sign-Errors-In-Factoring",
+    "description": "Students make sign errors when factoring quadratics, selecting incorrect signs for the binomial factors. This is classified as a procedural error involving mishandling of signs (Tendere & Mutambara, 2020). Research indicates this is one of the most common errors in quadratic equation solving, with students finding the correct factor magnitudes but applying incorrect sign patterns."
+  },
+  {
+    "category": "factoring",
+    "dir": "sum_of_squares_factors",
+    "module": "factoring.sum_of_squares_factors",
+    "human_name": "Sum-Of-Squares-Factors",
+    "description": "Students incorrectly factor the sum of squares a² + b² as (a+b)², failing to recognize that sum of squares is irreducible over real numbers. This is documented as one of the most common algebraic misconceptions, arising from inappropriate generalization of the difference of squares pattern (Matz, 1982; Perso, 1991)."
+  },
+  {
+    "category": "fractions",
+    "dir": "add_numerators_denominators",
+    "module": "fractions.add_numerators_denominators",
+    "human_name": "Add-Numerators-Add-Denominators",
+    "description": "When adding fractions with different denominators, students incorrectly add numerators together and denominators together, treating the operation as component-wise addition. For example: 1/2 + 1/3 = 2/5 (incorrect). This error reflects a fundamental misunderstanding where students treat fractions as two independent whole numbers rather than a single quantity representing a ratio. Research shows this stems from 'whole number bias' - the overgeneralization of whole-number arithmetic properties to fractions (Ni & Zhou, 2005; Behr et al., 1984)."
+  },
+  {
+    "category": "fractions",
+    "dir": "common_denominator_numerator",
+    "module": "fractions.common_denominator_numerator",
+    "human_name": "Common-Denominator-Numerator",
+    "description": "Students add numerators and add denominators when adding fractions, believing that adding denominators creates a 'common denominator.' This is a variant of the whole number bias error (Ni & Zhou, 2005) where students show partial procedural knowledge (awareness that common denominators are needed) but lack conceptual understanding of how to find them. For example: 1/4 + 1/6 = 2/10 = 1/5 (incorrect; correct answer is 5/12)."
+  },
+  {
+    "category": "fractions",
+    "dir": "denominator_comparison_error",
+    "module": "fractions.denominator_comparison_error",
+    "human_name": "Denominator-Comparison-Error",
+    "description": "Students incorrectly compare fractions by focusing on the denominator value, believing that a larger denominator means a larger fraction. For example: 1/4 > 1/3 because 4 > 3 (incorrect). This error reflects 'whole number bias' (Ni & Zhou, 2005) - the overgeneralization of whole-number comparison rules where larger numbers always mean 'more.' Students fail to understand the inverse relationship: larger denominators mean smaller pieces."
+  },
+  {
+    "category": "fractions",
+    "dir": "ignore_denominators",
+    "module": "fractions.ignore_denominators",
+    "human_name": "Ignore-Denominators",
+    "description": "Students operate only on numerators, completely ignoring denominators, treating fraction operations as whole-number arithmetic on the 'top numbers' only. For example: 2/3 + 1/5 = 3 (just adds 2+1). This error reflects a fundamental failure to understand that a fraction is a single number with magnitude, not two separate numbers. Research shows this stems from students processing 'numerator and denominator as two separate whole numbers' (Pitkethly & Hunting, 1996; Nunes & Bryant, 1996)."
+  },
+  {
+    "category": "fractions",
+    "dir": "keep_common_denominator_for_multiplication",
+    "module": "fractions.keep_common_denominator_for_multiplication",
+    "human_name": "Keep-Common-Denominator-For-Multiplication",
+    "description": "Students incorrectly keep the common denominator when multiplying fractions with like denominators: (a/b)×(c/b) = (a×c)/b instead of (a×c)/(b×b). For example, (2/5)×(3/5) = 6/5 instead of the correct answer 6/25. This is an overgeneralization error where students apply the fraction addition rule (keep the common denominator) to multiplication. Newton et al. (2014) found students were particularly prone to this error on like-denominator problems."
+  },
+  {
+    "category": "fractions",
+    "dir": "multiply_across_for_division",
+    "module": "fractions.multiply_across_for_division",
+    "human_name": "Multiply-Across-For-Division (Failure to Invert)",
+    "description": "Student treats fraction division like multiplication, forgetting to invert (flip) the second fraction before multiplying. This error reflects a failure to apply the 'invert and multiply' algorithm correctly. For example, (2/3)÷(4/5) = (2×4)/(3×5) = 8/15 instead of the correct (2/3)×(5/4) = 10/12 = 5/6. Research shows this is a widespread difficulty for students as well as pre-service and in-service teachers (Ma, 1999; Tirosh, 2000)."
+  },
+  {
+    "category": "fractions",
+    "dir": "natural_number_bias_numerator_only",
+    "module": "fractions.natural_number_bias_numerator_only",
+    "human_name": "Natural-Number-Bias-Numerator-Only (Whole Number Bias)",
+    "description": "Students incorrectly compare fractions by comparing their numerators only, ignoring the denominators entirely. They believe that a larger numerator means a larger fraction. For example: 3/4 < 5/8 because 3 < 5 (incorrect). This is a manifestation of the 'natural number bias' or 'whole number bias'—the tendency to apply natural number properties inappropriately to rational numbers."
+  },
+  {
+    "category": "fractions",
+    "dir": "subtract_across",
+    "module": "fractions.subtract_across",
+    "human_name": "Subtract-Across (Independent Whole Number Error)",
+    "description": "When subtracting fractions with different denominators, students incorrectly subtract the numerators AND subtract the denominators: a/b - c/d = (a-c)/(b-d). For example: 3/4 - 1/2 = (3-1)/(4-2) = 2/2 = 1 (incorrect; correct answer is 1/4). Brown & Quinn (2006) documented this error in their analysis of algebra students' fraction errors, finding that students 'demonstrated the error of adding or subtracting numerators and denominators across' by extending whole number operations to fractions."
+  },
+  {
+    "category": "functions",
+    "dir": "function_distributive_property",
+    "module": "functions.function_distributive_property",
+    "human_name": "Illusion-of-Linearity-Additive",
+    "description": "Student incorrectly applies the additive property of linear functions to nonlinear functions: f(x+a) = f(x) + f(a). This error, termed the 'illusion of linearity' by De Bock et al. (2007), results from overgeneralization of the distributive law experienced extensively in arithmetic and early algebra (Matz, 1982)."
+  },
+  {
+    "category": "functions",
+    "dir": "function_notation_is_multiplication",
+    "module": "functions.function_notation_is_multiplication",
+    "human_name": "Function-Notation-As-Multiplication",
+    "description": "Student interprets f(x) as meaning f × x (multiplication) rather than function notation. This confusion arises because parentheses are used for both multiplication (e.g., 3(5) = 15) and function evaluation. Carlson (1995) found that students are unclear about what function names like f represent, often believing they are variables rather than process names."
+  },
+  {
+    "category": "functions",
+    "dir": "same_input_different_outputs_ok",
+    "module": "functions.same_input_different_outputs_ok",
+    "human_name": "Univalence-Requirement-Violation",
+    "description": "Students fail to understand the univalence requirement: that functions must map each input to exactly ONE output. This is a concept image/concept definition gap identified by Vinner & Dreyfus (1989) - students accept the formal definition but rely on personal experience when classifying relations, often accepting multi-valued relations as functions."
+  },
+  {
+    "category": "functions",
+    "dir": "scalar_multiplication_inside_or_outside_same",
+    "module": "functions.scalar_multiplication_inside_or_outside_same",
+    "human_name": "Illusion-of-Linearity-Multiplicative",
+    "description": "Student incorrectly applies the multiplicative (homogeneous) property of linear functions to nonlinear functions: f(cx) = c·f(x). This is a manifestation of the 'illusion of linearity' (De Bock et al., 2007), where students overgeneralize properties that hold only for linear functions f(x) = kx. Matz (1982) identified f(ka) = kf(a) as a common algebraic error."
+  },
+  {
+    "category": "geometry",
+    "dir": "count_net_perimeter_as_surface_area",
+    "module": "geometry.count_net_perimeter_as_surface_area",
+    "human_name": "Count-Net-Perimeter-As-Surface-Area",
+    "description": "Student incorrectly calculates the perimeter around the outside edge of a net (unfolded 3D shape) instead of calculating the total surface area. This reflects confusion between linear measurement (perimeter) and area measurement, as well as difficulty transitioning between 2D nets and 3D spatial understanding."
+  },
+  {
+    "category": "geometry",
+    "dir": "same_area_same_perimeter",
+    "module": "geometry.same_area_same_perimeter",
+    "human_name": "Same-Area-Same-Perimeter",
+    "description": "Student incorrectly believes that figures having the same area must also have the same perimeter. This is the inverse of the 'Same Perimeter = Same Area' misconception and reflects the same fundamental confusion that area (enclosed surface) and perimeter (boundary length) are somehow dependent measures."
+  },
+  {
+    "category": "geometry",
+    "dir": "same_perimeter_same_area",
+    "module": "geometry.same_perimeter_same_area",
+    "human_name": "Same-Perimeter-Same-Area",
+    "description": "Student incorrectly believes that figures having the same perimeter must also have the same area. This misconception reflects a failure to understand that perimeter (boundary length) and area (enclosed surface) are independent measures that can vary independently of each other."
+  },
+  {
+    "category": "geometry",
+    "dir": "volume_formula_for_surface_area",
+    "module": "geometry.volume_formula_for_surface_area",
+    "human_name": "Volume-Formula-For-Surface-Area",
+    "description": "Student incorrectly applies the volume formula (V=lwh) when asked to calculate surface area. This reflects confusion between two distinct 3D measurement concepts: volume (space inside) measured in cubic units, and surface area (total area of all faces) measured in square units."
+  },
+  {
+    "category": "graphing",
+    "dir": "ignore_coordinate_signs",
+    "module": "graphing.ignore_coordinate_signs",
+    "human_name": "Ignore-Coordinate-Signs",
+    "description": "Student ignores or misuses the signs of coordinates, treating negative values as positive (absolute values) when plotting points or identifying quadrants. Research shows students often fail to recognize that signs indicate direction on the coordinate plane."
+  },
+  {
+    "category": "linear_equations",
+    "dir": "confuse_slope_and_intercept_roles",
+    "module": "linear_equations.confuse_slope_and_intercept_roles",
+    "human_name": "Confuse-Slope-And-Intercept-Roles",
+    "description": "Student swaps the roles of slope (m) and y-intercept (b) in y = mx + b, either writing equations with parameters reversed or identifying the constant term as slope and the coefficient as y-intercept. This reflects confusion about the distinct structural roles of coefficient and constant in function notation."
+  },
+  {
+    "category": "linear_equations",
+    "dir": "slope_direction_confusion",
+    "module": "linear_equations.slope_direction_confusion",
+    "human_name": "Slope-Direction-Confusion",
+    "description": "Student confuses positive and negative slope directions, incorrectly stating that negative slopes represent increasing functions or positive slopes represent decreasing functions. This reflects a disconnect between the algebraic sign of slope and its geometric interpretation on a graph."
+  },
+  {
+    "category": "linear_equations",
+    "dir": "slope_is_delta_x_over_delta_y",
+    "module": "linear_equations.slope_is_delta_x_over_delta_y",
+    "human_name": "Slope-Is-Delta-X-Over-Delta-Y",
+    "description": "Student inverts the slope formula, calculating Δx/Δy instead of Δy/Δx. This error stems from rote memorization of 'rise over run' without understanding that rise (vertical/y-change) must be in the numerator and run (horizontal/x-change) in the denominator."
+  },
+  {
+    "category": "measurement",
+    "dir": "inverted_conversion_factor",
+    "module": "measurement.inverted_conversion_factor",
+    "human_name": "Inverted-Conversion-Factor",
+    "description": "Students set up the conversion factor incorrectly by placing units in the wrong position (numerator vs. denominator), resulting in multiplication when division is required or vice versa. This is documented as one of the most common errors in dimensional analysis, where students fail to ensure that units cancel appropriately."
+  },
+  {
+    "category": "measurement",
+    "dir": "wrong_conversion_factor",
+    "module": "measurement.wrong_conversion_factor",
+    "human_name": "Wrong-Conversion-Factor",
+    "description": "Students use incorrect conversion factors when converting between units, often substituting convenient round numbers (10, 100) or powers of ten for the actual conversion factors. This error reflects deficient knowledge of standard conversion relationships and may result from overgeneralization of metric system patterns to non-metric systems. Research shows this is particularly common when students have not memorized or do not have access to reference values."
+  },
+  {
+    "category": "multiplication_division",
+    "dir": "alignment_error_in_multi_digit",
+    "module": "multiplication_division.alignment_error_in_multi_digit",
+    "human_name": "Alignment-Error-In-Multi-Digit",
+    "description": "A systematic procedural bug where students correctly compute partial products but fail to align them properly according to place value. When multiplying by the tens digit, students do not shift the partial product one place to the left, treating the tens digit as if it were in the ones place. For example, in 23 × 14, they compute 23×4=92 and 23×1=23, then add 92+23=115 instead of 92+230=322. This error was documented in Brown & Burton's (1978) BUGGY diagnostic system as a common procedural bug in multi-digit arithmetic algorithms."
+  },
+  {
+    "category": "multiplication_division",
+    "dir": "divide_larger_by_smaller_always",
+    "module": "multiplication_division.divide_larger_by_smaller_always",
+    "human_name": "Divide-Larger-By-Smaller-Always",
+    "description": "A persistent misconception where students believe division must always involve a larger dividend divided by a smaller divisor. When presented with problems where the dividend is smaller than the divisor (e.g., 4 ÷ 6), students either reverse the operands or claim the problem is impossible. Fischbein et al. (1985) identified this as stemming from 'primitive intuitive models' where division is associated with sharing larger quantities among smaller groups."
+  },
+  {
+    "category": "multiplication_division",
+    "dir": "division_makes_smaller",
+    "module": "multiplication_division.division_makes_smaller",
+    "human_name": "Division-Makes-Smaller",
+    "description": "A widespread misconception where students believe division always produces a result smaller than the dividend. Fischbein et al. (1985) identified this as a 'primitive intuitive model' stemming from early division experiences with whole numbers. When dividing by decimals or fractions less than 1 (which mathematically produces a larger result), students reject the correct answer as impossible and switch to multiplication. For example, students find 4 ÷ 0.5 = 8 counterintuitive and switch to 4 × 0.5 = 2 instead."
+  },
+  {
+    "category": "multiplication_division",
+    "dir": "forget_to_add_carried_number",
+    "module": "multiplication_division.forget_to_add_carried_number",
+    "human_name": "Forget-To-Add-Carried-Number",
+    "description": "A systematic procedural bug where students correctly multiply each digit but forget to add the carried (regrouped) value to the next place value. This was identified in Brown & Burton's (1978) BUGGY diagnostic system as one of the most common procedural bugs in arithmetic algorithms. For example, in 23 × 4, the student computes 3×4=12 (write 2, carry 1), then 2×4=8, but forgets to add the carried 1, yielding 82 instead of 92."
+  },
+  {
+    "category": "multiplication_division",
+    "dir": "multiplication_makes_bigger",
+    "module": "multiplication_division.multiplication_makes_bigger",
+    "human_name": "Multiplication-Makes-Bigger",
+    "description": "A widespread misconception where students believe multiplication always produces a result larger than both factors. Fischbein et al. (1985) identified this as stemming from the 'primitive intuitive model' of multiplication as repeated addition, where results are always larger with whole numbers. When multiplying by decimals or fractions less than 1 (e.g., 0.5 × 0.2 = 0.1), students reject the correct answer as impossible because the product is smaller than both factors. They may substitute addition or refuse to accept the mathematically correct result."
+  },
+  {
+    "category": "negative_numbers",
+    "dir": "larger_absolute_value_always_wins",
+    "module": "negative_numbers.larger_absolute_value_always_wins",
+    "human_name": "Larger-Absolute-Value-Always-Wins (Overgeneralized Magnitude Rule)",
+    "description": "Students incorrectly determine the sign of the result by always using the sign of the number with the larger absolute value, regardless of the operation. This represents an overgeneralization from addition of integers with different signs (where the rule works) to all integer operations. Makonye & Fakude (2016) classify this as a 'strategic error' where students apply a partially-correct strategy inappropriately. For subtraction like 3 - (-8), students incorrectly reason: '|8| > |3|, so use -8's sign' → -11 (wrong! correct answer is +11)."
+  },
+  {
+    "category": "negative_numbers",
+    "dir": "multiplication_rule_for_addition",
+    "module": "negative_numbers.multiplication_rule_for_addition",
+    "human_name": "Multiplication-Rule-For-Addition (Operation-Rule Confusion)",
+    "description": "Students incorrectly apply multiplication sign rules (like 'two negatives make a positive') to addition and subtraction operations. Makonye & Fakude (2016) found this is a 'specific case of surface understanding where students just remember rules such as negative and negative becomes positive and apply it indiscriminately.' Example: -3 + (-5) = +8 because students think negative + negative = positive, confusing the multiplication rule with addition. This represents what Graeber & Johnson (1991) classified as 'overgeneralization' - one of the four main types of mathematical misconceptions."
+  },
+  {
+    "category": "negative_numbers",
+    "dir": "negative_swaps_operation",
+    "module": "negative_numbers.negative_swaps_operation",
+    "human_name": "Negative-Swaps-Operation (Sign-Operation Confusion)",
+    "description": "Students confuse the negative sign's role as a number property with the operation being performed, leading to incorrect operation swapping. Vlassis (2004) identifies this as a failure to distinguish between the 'operative sign' (the operation: +, -) and the 'unary, predicative sign' (the negative property of a number). Students incorrectly believe that encountering a negative sign somehow changes the operation they should perform, rather than understanding it as a property of the operand."
+  },
+  {
+    "category": "negative_numbers",
+    "dir": "negative_times_negative_negative",
+    "module": "negative_numbers.negative_times_negative_negative",
+    "human_name": "Negative-Times-Negative-Negative (Reversed Sign Rule)",
+    "description": "Students incorrectly believe that multiplying two negative numbers gives a negative result, reversing the correct sign rule. Altiparmak & Özdoğan (2010) identified this as one of the difficulties 'students face with regard to arithmetic operations' with negative numbers. Students may conflate the multiplication rule with the addition rule (where two negatives do produce a more negative result), or they may reason that 'negative is a property that accumulates' rather than understanding multiplication as directional transformation."
+  },
+  {
+    "category": "negative_numbers",
+    "dir": "two_negatives_always_positive",
+    "module": "negative_numbers.two_negatives_always_positive",
+    "human_name": "Two-Negatives-Always-Positive (Overgeneralization of Multiplication Rule)",
+    "description": "Students incorrectly apply the multiplication rule 'two negatives make a positive' to subtraction and addition operations. This represents what Makonye & Fakude (2016) term 'surface understanding' where students remember rules like 'negative and negative becomes positive' and apply them indiscriminately across operations. For example, students compute -5 - 6 = 11 because they see the negative sign in -5 and the subtraction operation as 'two negatives' that should combine to make a positive result. Vlassis (2004) identifies this as stemming from students' failure to distinguish between the 'operative sign' (subtraction) and the 'unary, predicative sign' (negativity of a number)."
+  },
+  {
+    "category": "order_of_operations",
+    "dir": "addition_before_subtraction_always",
+    "module": "order_of_operations.addition_before_subtraction_always",
+    "human_name": "Addition-Before-Subtraction-Always",
+    "description": "Students incorrectly believe that addition must ALWAYS be performed before subtraction. They interpret PEMDAS literally on a letter-by-letter basis, following the order of 'A' and 'S' to incorrectly believe that addition must be performed before subtraction (Eaves et al., 2025). Example: 10 - 3 + 2 becomes 10 - 5 = 5 instead of 9."
+  },
+  {
+    "category": "order_of_operations",
+    "dir": "ignore_parentheses",
+    "module": "order_of_operations.ignore_parentheses",
+    "human_name": "Ignore-Parentheses",
+    "description": "Students ignore parentheses and evaluate left-to-right or apply PEMDAS without respecting grouping symbols. Research shows students 'stated that only operations in brackets need to be performed first' without understanding that parentheses override all other precedence rules (Tabak, 2019)."
+  },
+  {
+    "category": "order_of_operations",
+    "dir": "multiplication_before_division_always",
+    "module": "order_of_operations.multiplication_before_division_always",
+    "human_name": "Multiplication-Before-Division-Always",
+    "description": "Students incorrectly believe that multiplication must ALWAYS be performed before division. They interpret PEMDAS literally on a letter-by-letter basis, following the order of 'M' and 'D' to incorrectly believe that multiplication must be performed before division (Eaves et al., 2025). Example: 6 ÷ 2 × 3 becomes 6 ÷ 6 = 1 instead of 9."
+  },
+  {
+    "category": "order_of_operations",
+    "dir": "pemdas_strictly_sequential",
+    "module": "order_of_operations.pemdas_strictly_sequential",
+    "human_name": "PEMDAS-Strictly-Sequential",
+    "description": "Students treat PEMDAS as a strict six-step sequence rather than understanding it as four priority levels. Research shows 'for many students, PEMDAS implies that the order of operations consists of six steps, one for each letter of the acronym' when 'in fact, the order of operations consists of four steps' (Glidden, 2008)."
+  },
+  {
+    "category": "order_of_operations",
+    "dir": "strict_left_to_right",
+    "module": "order_of_operations.strict_left_to_right",
+    "human_name": "Strict-Left-To-Right",
+    "description": "Students evaluate arithmetic expressions strictly from left to right, ignoring operator precedence rules (PEMDAS/BODMAS). They perform operations in the order they appear, treating all operators as having equal priority. Research shows students 'found the result of the arithmetic expression by performing operations from left to right without paying attention to the order of operations' (Tabak, 2019)."
+  },
+  {
+    "category": "percentages",
+    "dir": "add_percentages_directly",
+    "module": "percentages.add_percentages_directly",
+    "human_name": "Additive Reasoning with Percentages",
+    "description": "Students incorrectly apply additive reasoning to percentage problems that require multiplicative thinking. They add or subtract percentages directly without recognizing that each percentage applies to a different base value. This reflects a fundamental gap in the transition from additive to multiplicative reasoning, which is one of the major barriers to mathematical development (Van Dooren, De Bock, & Verschaffel, 2010)."
+  },
+  {
+    "category": "percentages",
+    "dir": "percent_equals_decimal",
+    "module": "percentages.percent_equals_decimal",
+    "human_name": "Percent-Decimal Notation Confusion",
+    "description": "Students treat percent, decimal, and whole number notations as interchangeable, failing to recognize that percent means 'per hundred' and requires division by 100 to convert to decimal form. This reflects a broader difficulty with rational number notation where students do not understand that different symbolic representations indicate the same underlying quantity through different numerical expressions."
+  },
+  {
+    "category": "percentages",
+    "dir": "percentage_as_index",
+    "module": "percentages.percentage_as_index",
+    "human_name": "Percentage as Absolute Value (Ignoring Base)",
+    "description": "Students treat the percentage number as an absolute value or index, ignoring the base/whole that the percentage applies to. They confuse the percentage value (e.g., 30) with the result of the percentage calculation (30% of Y). This reflects a failure to understand that 'percent' means 'per hundred' and requires multiplication by the base value divided by 100."
+  },
+  {
+    "category": "percentages",
+    "dir": "reverse_percentage_error",
+    "module": "percentages.reverse_percentage_error",
+    "human_name": "Percentage Reversal Asymmetry Error",
+    "description": "Students incorrectly believe that percentage relationships are symmetric or reversible. They assume that if a value increased by X%, it can return to the original by decreasing X%, or that if A is X% of B, then B is X% of A. This misconception stems from overgeneralizing the commutative property of addition and multiplication to percentage relationships, which are inherently asymmetric because each percentage is calculated relative to a different base value."
+  },
+  {
+    "category": "radicals",
+    "dir": "add_under_common_root",
+    "module": "radicals.add_under_common_root",
+    "human_name": "Add-Under-Common-Root",
+    "description": "Students incorrectly combine separate radicals under a single root, believing √a + √b = √(a+b). This is a manifestation of the 'illusion of linearity' - the overgeneralization of the distributive property to non-linear operations. Research shows this error results from 'students' overgeneralisation of the distributive law' (Matz, 1982; De Bock et al., 2007)."
+  },
+  {
+    "category": "radicals",
+    "dir": "distribute_square_root_over_addition",
+    "module": "radicals.distribute_square_root_over_addition",
+    "human_name": "Distribute-Square-Root-Over-Addition",
+    "description": "Students incorrectly distribute the square root over addition, believing √(a²+b²) = √(a²) + √(b²) = a + b. This is a classic manifestation of the 'illusion of linearity' (De Bock et al., 2007) - students overgeneralize the distributive property from linear operations to non-linear ones. Matz (1982) identified this as resulting from 'students' overgeneralisation of the distributive law.'"
+  },
+  {
+    "category": "radicals",
+    "dir": "negative_outside_same_as_inside",
+    "module": "radicals.negative_outside_same_as_inside",
+    "human_name": "Negative-Outside-Same-As-Inside",
+    "description": "Students confuse -√n with √-n, failing to recognize that the domain of the radical function is restricted to nonnegative real numbers. They incorrectly believe that -√4 has no real solution because they treat the negative sign outside the radical as if it were inside. Research shows students are 'not aware that the domain of radical function is nonnegative real numbers' (Özkan, 2011), leading them to misinterpret valid expressions as undefined."
+  },
+  {
+    "category": "radicals",
+    "dir": "square_root_equals_plus_minus",
+    "module": "radicals.square_root_equals_plus_minus",
+    "human_name": "Square-Root-Equals-Plus-Minus",
+    "description": "Students incorrectly believe that the radical symbol √n yields both positive and negative values (±√n), confusing the principal square root with the solutions to equations of the form x² = n. This is one of the most common and persistent misconceptions in algebra, documented across multiple levels and educational contexts."
+  },
+  {
+    "category": "ratios_proportions",
+    "dir": "additive_instead_of_multiplicative",
+    "module": "ratios_proportions.additive_instead_of_multiplicative",
+    "human_name": "Additive Strategy Error (Constant Difference)",
+    "description": "Student applies additive reasoning instead of multiplicative reasoning when working with proportions. The student computes the difference between values and adds this constant to find missing values, rather than using the multiplicative scale factor."
+  },
+  {
+    "category": "ratios_proportions",
+    "dir": "each_fraction_digit_is_ratio",
+    "module": "ratios_proportions.each_fraction_digit_is_ratio",
+    "human_name": "Whole Number Bias in Fraction Components",
+    "description": "Student treats the numerator and denominator as independent whole numbers rather than as components of a single rational number. When simplifying multi-digit fractions, the student processes each digit position separately as if it were an independent ratio."
+  },
+  {
+    "category": "ratios_proportions",
+    "dir": "ratio_as_division_only",
+    "module": "ratios_proportions.ratio_as_division_only",
+    "human_name": "Ratio Interpreted as Division Only",
+    "description": "Student interprets ratio solely as division (a quotient), failing to understand that a ratio represents a multiplicative comparison between two quantities. The student converts ratios to decimals but cannot apply the multiplicative relationship to solve proportion problems."
+  },
+  {
+    "category": "ratios_proportions",
+    "dir": "swap_ratios_or_units",
+    "module": "ratios_proportions.swap_ratios_or_units",
+    "human_name": "Proportion Setup Error (Inverted Ratio Positions)",
+    "description": "Student incorrectly sets up proportion equations by placing values in wrong positions, inverting the relationship between quantities. This includes confusing direct and inverse proportions, and misaligning corresponding terms in the equation."
+  },
+  {
+    "category": "rounding",
+    "dir": "decimal_places_same_as_sig_figs",
+    "module": "rounding.decimal_places_same_as_sig_figs",
+    "human_name": "Decimal-Places-Same-As-Sig-Figs",
+    "description": "Students confuse decimal places with significant figures. When asked to round to N significant figures, they instead round to N decimal places. This confusion is documented in education research as being widespread, even occurring at university level among lecturers (Chemistry Stack Exchange community reports). For example, rounding 0.00456 to 3 significant figures should give 0.00456 (all three non-zero digits are significant), but students incorrectly round to 3 decimal places, giving 0.005."
+  },
+  {
+    "category": "scientific_notation",
+    "dir": "add_coefficients_when_multiplying",
+    "module": "scientific_notation.add_coefficients_when_multiplying",
+    "human_name": "Add-Coefficients-When-Multiplying",
+    "description": "When multiplying numbers in scientific notation, students correctly add the exponents but incorrectly add the coefficients instead of multiplying them. For example, (4×10³)×(8×10⁵) should be (4×8)×10⁽³⁺⁵⁾ = 32×10⁸ = 3.2×10⁹, but the student calculates (4+8)×10⁽³⁺⁵⁾ = 12×10⁸ = 1.2×10⁹ (incorrect)."
+  },
+  {
+    "category": "scientific_notation",
+    "dir": "count_all_zeros_for_exponent",
+    "module": "scientific_notation.count_all_zeros_for_exponent",
+    "human_name": "Count-All-Zeros-For-Exponent",
+    "description": "Students count ALL zeros in a number when determining the exponent for scientific notation, without considering their placement. They don't distinguish between leading zeros, trailing zeros, and zeros between significant digits. Instead of counting decimal places moved, they simply count zeros and use that as the exponent magnitude."
+  },
+  {
+    "category": "scientific_notation",
+    "dir": "wrong_exponent_sign",
+    "module": "scientific_notation.wrong_exponent_sign",
+    "human_name": "Wrong-Exponent-Sign",
+    "description": "Students use the wrong sign for the exponent when converting numbers to scientific notation. This reflects a persistent error pattern where students incorrectly interpret negative signs in exponential expressions. Research shows that errors involving the negative sign are among the most common and persistent in algebraic problem solving, often surpassing errors with fractions or basic arithmetic (Booth et al., 2014; Cangelosi et al., 2013)."
+  },
+  {
+    "category": "statistics",
+    "dir": "ignore_outliers_effect",
+    "module": "statistics.ignore_outliers_effect",
+    "human_name": "Ignore-Outliers-Effect",
+    "description": "Students don't recognize how outliers affect the mean. Research shows students are 'not only confused about the median and the mean but also unable to use and interpret information' about when each is appropriate (Zawojewski & Shaughnessy, 2000). When asked if the mean represents a data set with outliers, they say 'yes' without understanding that outliers pull the mean away from typical values. They fail to identify that median is more appropriate for skewed data."
+  },
+  {
+    "category": "statistics",
+    "dir": "mean_without_understanding",
+    "module": "statistics.mean_without_understanding",
+    "human_name": "Mean-Without-Understanding",
+    "description": "Students calculate mean procedurally (add all values, divide by count) without understanding what it represents. Research shows many students know how to compute means but do not know how to apply or interpret them (Konold & Pollatsek, 2002). They correctly compute the mean but: (1) claim it's always representative even with outliers, (2) always say mean is the 'best' measure regardless of distribution, (3) don't recognize when mean is misleading, and (4) can't explain what the mean tells them about the data."
+  },
+  {
+    "category": "statistics",
+    "dir": "mode_must_exist",
+    "module": "statistics.mode_must_exist",
+    "human_name": "Mode-Must-Exist",
+    "description": "Students believe every data set must have a mode and struggle to distinguish between mode and frequency. When no value repeats (all values are unique), they don't recognize 'no mode' as a valid answer. Instead, they force an incorrect answer by picking the largest, smallest, or middle value, confusing mode with other statistical measures like maximum, minimum, or median."
+  },
+  {
+    "category": "subtraction",
+    "dir": "always_borrow_left",
+    "module": "subtraction.always_borrow_left",
+    "human_name": "Always-Borrow-Left",
+    "description": "Students always borrow from the left column in subtraction, even when the top digit is greater than or equal to the bottom digit and borrowing is not needed. This represents an overgeneralization of the borrowing procedure, documented in the BUGGY diagnostic system (Brown & Burton, 1978) and further analyzed in VanLehn's (1990) repair theory research."
+  },
+  {
+    "category": "subtraction",
+    "dir": "borrow_from_bottom",
+    "module": "subtraction.borrow_from_bottom",
+    "human_name": "Borrow-From-Bottom",
+    "description": "When borrowing is needed, students incorrectly decrement the subtrahend (bottom number) instead of the minuend (top number). They add 10 to the top digit correctly but reduce the wrong number's tens digit. This error, documented in Brown & Burton's (1978) BUGGY system, shows a fundamental misunderstanding of which number is being decomposed during regrouping."
+  },
+  {
+    "category": "subtraction",
+    "dir": "borrow_no_decrement",
+    "module": "subtraction.borrow_no_decrement",
+    "human_name": "Borrow-No-Decrement",
+    "description": "When borrowing is required, students correctly add 10 to the current column's digit but forget to decrement the digit in the column they borrowed from. This is one of the most frequently documented subtraction bugs, first catalogued in Brown & Burton's (1978) BUGGY system and extensively analyzed in VanLehn's (1990) Mind Bugs. For example, in 62 - 37, the student makes the ones column 12 - 7 = 5, but leaves the tens as 6 - 3 = 3, giving 35 instead of the correct answer 25."
+  },
+  {
+    "category": "subtraction",
+    "dir": "decompose_by_place_value_label",
+    "module": "subtraction.decompose_by_place_value_label",
+    "human_name": "Decompose-By-Place-Value-Label (Face Value Error)",
+    "description": "When interpreting place value decompositions, the student treats the numeric labels as face values to be concatenated rather than as multiplicative values to be added. For example, '2 hundreds 13 tens 1 ones' is written as 2,131 instead of correctly calculating 200 + 130 + 1 = 331. This error reflects what Ross (1989) identified as 'face value' understanding - students interpret digits at their literal face value without understanding their positional significance. The student perceives the decomposition as a labeling task rather than a mathematical composition of values."
+  },
+  {
+    "category": "subtraction",
+    "dir": "diff_0_n_equals_n",
+    "module": "subtraction.diff_0_n_equals_n",
+    "human_name": "Diff-0-N=N (Smaller-From-Larger Variant)",
+    "description": "When the minuend digit is 0 and the subtrahend digit is N (where N > 0), the student writes N as the result instead of borrowing. This is a specific manifestation of the 'Smaller-From-Larger' bug documented in Brown & Burton's (1978) BUGGY system, where students subtract the smaller digit from the larger regardless of position. When encountering 0 - N, the student treats this as equivalent to N - 0 = N, avoiding the need to borrow."
+  },
+  {
+    "category": "subtraction",
+    "dir": "no_column_limit",
+    "module": "subtraction.no_column_limit",
+    "human_name": "No-Column-Limit",
+    "description": "When adding multi-digit numbers, students write the entire column sum directly in that column without regrouping, failing to understand the base-10 constraint that each place value position can only hold a single digit (0-9). For example, in 48+17, students compute 8+7=15 and write '15' in the ones column, producing concatenated results like '415' instead of the correct answer 65. This error, documented by the Colorado Department of Education, indicates a fundamental misunderstanding of place value."
+  },
+  {
+    "category": "subtraction",
+    "dir": "smaller_from_larger",
+    "module": "subtraction.smaller_from_larger",
+    "human_name": "Smaller-From-Larger",
+    "description": "A systematic procedural bug where the student always subtracts the smaller digit from the larger digit in each column, regardless of position (minuend or subtrahend). This error avoids borrowing by reversing the subtraction when the top digit is smaller than the bottom digit. For example, in 62 - 37, the student computes 7-2=5 in the ones column (instead of borrowing) and 6-3=3 in the tens column, yielding 35 instead of the correct answer 25. This is one of the most extensively documented subtraction bugs in cognitive science research, identified through the BUGGY and DEBUGGY diagnostic systems."
+  },
+  {
+    "category": "subtraction",
+    "dir": "stops_borrow_at_zero",
+    "module": "subtraction.stops_borrow_at_zero",
+    "human_name": "Stops-Borrow-At-Zero",
+    "description": "A systematic procedural bug where the student stops the borrowing (regrouping) process entirely when encountering a zero in the column to the left, rather than cascading the borrow further left to find a non-zero digit. This bug is part of a family of zero-related borrowing errors documented in VanLehn's 'Mind Bugs' (1990) and the BUGGY/DEBUGGY diagnostic systems. When students reach an impasse at zero, they may write the absolute difference or simply give up on that column."
+  }
+]

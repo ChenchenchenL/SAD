@@ -1,0 +1,23 @@
+{
+  "cases": "docs/runs/g0_llm_2026-10-20/v5/data/cases_test_v5_exclusion_corrected.json",
+  "priors": "docs/runs/g0_llm_2026-10-20/v5/out/priors_test_full_nodomain.jsonl",
+  "library_mode": "full_nodomain",
+  "model": "deepseek-v4.1-flash",
+  "prompt_version": "v5_prior_2026-10-20",
+  "n_ok": 87,
+  "top10_global_recall": 0.9770114942528736,
+  "top1_global": 0.5862068965517241,
+  "top10_category_recall": 0.9770114942528736,
+  "top1_category_rank": 0.5862068965517241,
+  "type_counts": {
+    "stable": 41,
+    "unsure": 27,
+    "mixed": 18,
+    "unclear": 1
+  },
+  "usage": {
+    "input_tokens": 852360,
+    "output_tokens": 14984
+  },
+  "estimated_cost_usd": 0.24495408000000005
+}

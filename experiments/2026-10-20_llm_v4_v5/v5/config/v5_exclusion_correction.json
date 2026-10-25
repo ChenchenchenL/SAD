@@ -1,0 +1,17 @@
+{
+  "version": "v5_exclusion_rule_audit_correction_2026-10-20",
+  "status": "post-freeze implementation correction; not a method/threshold change",
+  "protocol_rule": "A true label must not be assigned to a hypothesis whose prediction vector is globally identical to another candidate hypothesis.",
+  "freeze_bug": "The implementation excluded only fractions.common_denominator_numerator, while its globally identical partner fractions.add_numerators_denominators remained a true label.",
+  "affected_case_ids": [
+    "v5test:0013",
+    "v5test:0014",
+    "v5test:0015"
+  ],
+  "corrected_n_cases": 87,
+  "corrected_cases": "cases_test_v5_exclusion_corrected.json",
+  "original_v5_outputs": "retained unchanged as test_category_eps05_* and feedback_v5.jsonl",
+  "corrected_primary_experiment": "test_category_eps05_corrected_summary.json",
+  "feedback_treatment": "the three original stable_abstain failure episodes are excluded from the protocol-valid weighted feedback analysis and reported separately",
+  "methods_thresholds_changed": false
+}

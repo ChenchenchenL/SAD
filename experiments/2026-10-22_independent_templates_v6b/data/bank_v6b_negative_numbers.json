@@ -1,0 +1,800 @@
+{
+ "category": "negative_numbers",
+ "settings": {
+  "builder": "v6b_corrected_independent_authored_templates",
+  "source": "v6 corrected for F1/F2; text/family disjoint from v5/v4, partial structural overlap"
+ },
+ "hypotheses": [
+  {
+   "id": "negative_numbers.larger_absolute_value_always_wins"
+  },
+  {
+   "id": "negative_numbers.multiplication_rule_for_addition"
+  },
+  {
+   "id": "negative_numbers.negative_swaps_operation"
+  },
+  {
+   "id": "negative_numbers.negative_times_negative_negative"
+  },
+  {
+   "id": "negative_numbers.two_negatives_always_positive"
+  }
+ ],
+ "items": [
+  {
+   "text": "Calculate: -6 + (-4)",
+   "category": "negative_numbers",
+   "family": "neg_add_two_new",
+   "split": "test",
+   "operation": "negative_addition",
+   "correct": "-10",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "-10",
+    "negative_numbers.multiplication_rule_for_addition": "10",
+    "negative_numbers.negative_swaps_operation": "-10",
+    "negative_numbers.negative_times_negative_negative": "-10",
+    "negative_numbers.two_negatives_always_positive": "10"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": true,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": true,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "answers": [
+    "-10",
+    "10"
+   ],
+   "meta": {
+    "operation": "negative_addition",
+    "problem_type": "neg_plus_neg",
+    "operator": "+",
+    "operation_type": "add_negative",
+    "template": "neg_add_two_new",
+    "a": -6,
+    "b": -4,
+    "expression": "-6 + (-4)",
+    "operands": [
+     -6,
+     -4
+    ],
+    "v6_template_family": "neg_add_two_new",
+    "audit_kind": "neg_add_two_new"
+   },
+   "audit_expr": "-6 + (-4)",
+   "item_id": "v6i:0051"
+  },
+  {
+   "text": "Calculate: -8 + (-5)",
+   "category": "negative_numbers",
+   "family": "neg_add_two_new",
+   "split": "test",
+   "operation": "negative_addition",
+   "correct": "-13",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "-13",
+    "negative_numbers.multiplication_rule_for_addition": "13",
+    "negative_numbers.negative_swaps_operation": "-13",
+    "negative_numbers.negative_times_negative_negative": "-13",
+    "negative_numbers.two_negatives_always_positive": "13"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": true,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": true,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "answers": [
+    "-13",
+    "13"
+   ],
+   "meta": {
+    "operation": "negative_addition",
+    "problem_type": "neg_plus_neg",
+    "operator": "+",
+    "operation_type": "add_negative",
+    "template": "neg_add_two_new",
+    "a": -8,
+    "b": -5,
+    "expression": "-8 + (-5)",
+    "operands": [
+     -8,
+     -5
+    ],
+    "v6_template_family": "neg_add_two_new",
+    "audit_kind": "neg_add_two_new"
+   },
+   "audit_expr": "-8 + (-5)",
+   "item_id": "v6i:0052"
+  },
+  {
+   "text": "Calculate: -7 + (-3)",
+   "category": "negative_numbers",
+   "family": "neg_add_two_new",
+   "split": "test",
+   "operation": "negative_addition",
+   "correct": "-10",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "-10",
+    "negative_numbers.multiplication_rule_for_addition": "10",
+    "negative_numbers.negative_swaps_operation": "-10",
+    "negative_numbers.negative_times_negative_negative": "-10",
+    "negative_numbers.two_negatives_always_positive": "10"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": true,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": true,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "answers": [
+    "-10",
+    "10"
+   ],
+   "meta": {
+    "operation": "negative_addition",
+    "problem_type": "neg_plus_neg",
+    "operator": "+",
+    "operation_type": "add_negative",
+    "template": "neg_add_two_new",
+    "a": -7,
+    "b": -3,
+    "expression": "-7 + (-3)",
+    "operands": [
+     -7,
+     -3
+    ],
+    "v6_template_family": "neg_add_two_new",
+    "audit_kind": "neg_add_two_new"
+   },
+   "audit_expr": "-7 + (-3)",
+   "item_id": "v6i:0053"
+  },
+  {
+   "text": "Calculate: -4 - 6",
+   "category": "negative_numbers",
+   "family": "neg_sub_pos_new",
+   "split": "test",
+   "operation": "negative_subtraction",
+   "correct": "-10",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "2",
+    "negative_numbers.multiplication_rule_for_addition": "-10",
+    "negative_numbers.negative_swaps_operation": "-10",
+    "negative_numbers.negative_times_negative_negative": "-10",
+    "negative_numbers.two_negatives_always_positive": "-10"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-10",
+    "2"
+   ],
+   "meta": {
+    "operation": "negative_subtraction",
+    "problem_type": "neg_minus_pos",
+    "operator": "-",
+    "operation_type": "subtract_positive",
+    "template": "neg_sub_pos_new",
+    "a": -4,
+    "b": 6,
+    "expression": "-4 - 6",
+    "operands": [
+     -4,
+     6
+    ],
+    "v6_template_family": "neg_sub_pos_new",
+    "audit_kind": "neg_sub_pos_new"
+   },
+   "audit_expr": "-4 - 6",
+   "item_id": "v6i:0054"
+  },
+  {
+   "text": "Calculate: -3 - 7",
+   "category": "negative_numbers",
+   "family": "neg_sub_pos_new",
+   "split": "test",
+   "operation": "negative_subtraction",
+   "correct": "-10",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "4",
+    "negative_numbers.multiplication_rule_for_addition": "-10",
+    "negative_numbers.negative_swaps_operation": "-10",
+    "negative_numbers.negative_times_negative_negative": "-10",
+    "negative_numbers.two_negatives_always_positive": "-10"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-10",
+    "4"
+   ],
+   "meta": {
+    "operation": "negative_subtraction",
+    "problem_type": "neg_minus_pos",
+    "operator": "-",
+    "operation_type": "subtract_positive",
+    "template": "neg_sub_pos_new",
+    "a": -3,
+    "b": 7,
+    "expression": "-3 - 7",
+    "operands": [
+     -3,
+     7
+    ],
+    "v6_template_family": "neg_sub_pos_new",
+    "audit_kind": "neg_sub_pos_new"
+   },
+   "audit_expr": "-3 - 7",
+   "item_id": "v6i:0055"
+  },
+  {
+   "text": "Calculate: -5 - 9",
+   "category": "negative_numbers",
+   "family": "neg_sub_pos_new",
+   "split": "test",
+   "operation": "negative_subtraction",
+   "correct": "-14",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "4",
+    "negative_numbers.multiplication_rule_for_addition": "-14",
+    "negative_numbers.negative_swaps_operation": "-14",
+    "negative_numbers.negative_times_negative_negative": "-14",
+    "negative_numbers.two_negatives_always_positive": "-14"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-14",
+    "4"
+   ],
+   "meta": {
+    "operation": "negative_subtraction",
+    "problem_type": "neg_minus_pos",
+    "operator": "-",
+    "operation_type": "subtract_positive",
+    "template": "neg_sub_pos_new",
+    "a": -5,
+    "b": 9,
+    "expression": "-5 - 9",
+    "operands": [
+     -5,
+     9
+    ],
+    "v6_template_family": "neg_sub_pos_new",
+    "audit_kind": "neg_sub_pos_new"
+   },
+   "audit_expr": "-5 - 9",
+   "item_id": "v6i:0056"
+  },
+  {
+   "text": "Calculate: -6 - (-9)",
+   "category": "negative_numbers",
+   "family": "neg_minus_neg_new",
+   "split": "test",
+   "operation": "negative_subtraction",
+   "correct": "3",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "-3",
+    "negative_numbers.multiplication_rule_for_addition": "3",
+    "negative_numbers.negative_swaps_operation": "-15",
+    "negative_numbers.negative_times_negative_negative": "3",
+    "negative_numbers.two_negatives_always_positive": "15"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": true,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": true,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "answers": [
+    "-15",
+    "-3",
+    "15",
+    "3"
+   ],
+   "meta": {
+    "operation": "negative_subtraction",
+    "problem_type": "neg_minus_neg",
+    "operator": "-",
+    "operation_type": "subtract_negative",
+    "pattern": "negative_minus_negative",
+    "template": "neg_minus_neg_new",
+    "a": -6,
+    "b": -9,
+    "expression": "-6 - (-9)",
+    "operands": [
+     -6,
+     -9
+    ],
+    "v6_template_family": "neg_minus_neg_new",
+    "audit_kind": "neg_minus_neg_new"
+   },
+   "audit_expr": "-6 - (-9)",
+   "item_id": "v6i:0057"
+  },
+  {
+   "text": "Calculate: -4 - (-11)",
+   "category": "negative_numbers",
+   "family": "neg_minus_neg_new",
+   "split": "test",
+   "operation": "negative_subtraction",
+   "correct": "7",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "-7",
+    "negative_numbers.multiplication_rule_for_addition": "7",
+    "negative_numbers.negative_swaps_operation": "-15",
+    "negative_numbers.negative_times_negative_negative": "7",
+    "negative_numbers.two_negatives_always_positive": "15"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": true,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": true,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "answers": [
+    "-15",
+    "-7",
+    "15",
+    "7"
+   ],
+   "meta": {
+    "operation": "negative_subtraction",
+    "problem_type": "neg_minus_neg",
+    "operator": "-",
+    "operation_type": "subtract_negative",
+    "pattern": "negative_minus_negative",
+    "template": "neg_minus_neg_new",
+    "a": -4,
+    "b": -11,
+    "expression": "-4 - (-11)",
+    "operands": [
+     -4,
+     -11
+    ],
+    "v6_template_family": "neg_minus_neg_new",
+    "audit_kind": "neg_minus_neg_new"
+   },
+   "audit_expr": "-4 - (-11)",
+   "item_id": "v6i:0058"
+  },
+  {
+   "text": "Calculate: -8 - (-13)",
+   "category": "negative_numbers",
+   "family": "neg_minus_neg_new",
+   "split": "test",
+   "operation": "negative_subtraction",
+   "correct": "5",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "-5",
+    "negative_numbers.multiplication_rule_for_addition": "5",
+    "negative_numbers.negative_swaps_operation": "-21",
+    "negative_numbers.negative_times_negative_negative": "5",
+    "negative_numbers.two_negatives_always_positive": "21"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": true,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": true,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": true,
+    "negative_numbers.negative_times_negative_negative": false,
+    "negative_numbers.two_negatives_always_positive": true
+   },
+   "answers": [
+    "-21",
+    "-5",
+    "21",
+    "5"
+   ],
+   "meta": {
+    "operation": "negative_subtraction",
+    "problem_type": "neg_minus_neg",
+    "operator": "-",
+    "operation_type": "subtract_negative",
+    "pattern": "negative_minus_negative",
+    "template": "neg_minus_neg_new",
+    "a": -8,
+    "b": -13,
+    "expression": "-8 - (-13)",
+    "operands": [
+     -8,
+     -13
+    ],
+    "v6_template_family": "neg_minus_neg_new",
+    "audit_kind": "neg_minus_neg_new"
+   },
+   "audit_expr": "-8 - (-13)",
+   "item_id": "v6i:0059"
+  },
+  {
+   "text": "Calculate: (-2) * (-3) * 4",
+   "category": "negative_numbers",
+   "family": "neg_multi_step",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "24",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "24",
+    "negative_numbers.multiplication_rule_for_addition": "24",
+    "negative_numbers.negative_swaps_operation": "24",
+    "negative_numbers.negative_times_negative_negative": "-24",
+    "negative_numbers.two_negatives_always_positive": "24"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-24",
+    "24"
+   ],
+   "meta": {
+    "operation": "multiplication",
+    "template": "multi_step_multiplication",
+    "a": -2,
+    "b": -3,
+    "c": 4,
+    "pattern": "both_negative",
+    "expression": "(-2) * (-3) * 4",
+    "operands": [
+     -2,
+     -3,
+     4
+    ],
+    "v6_template_family": "neg_multi_step",
+    "audit_kind": "neg_multi_step"
+   },
+   "audit_expr": "(-2) * (-3) * 4",
+   "item_id": "v6i:0060"
+  },
+  {
+   "text": "Calculate: (-3) * (-5) * 2",
+   "category": "negative_numbers",
+   "family": "neg_multi_step",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "30",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "30",
+    "negative_numbers.multiplication_rule_for_addition": "30",
+    "negative_numbers.negative_swaps_operation": "30",
+    "negative_numbers.negative_times_negative_negative": "-30",
+    "negative_numbers.two_negatives_always_positive": "30"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-30",
+    "30"
+   ],
+   "meta": {
+    "operation": "multiplication",
+    "template": "multi_step_multiplication",
+    "a": -3,
+    "b": -5,
+    "c": 2,
+    "pattern": "both_negative",
+    "expression": "(-3) * (-5) * 2",
+    "operands": [
+     -3,
+     -5,
+     2
+    ],
+    "v6_template_family": "neg_multi_step",
+    "audit_kind": "neg_multi_step"
+   },
+   "audit_expr": "(-3) * (-5) * 2",
+   "item_id": "v6i:0061"
+  },
+  {
+   "text": "Calculate: (-4) * (-2) * 3",
+   "category": "negative_numbers",
+   "family": "neg_multi_step",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "24",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "24",
+    "negative_numbers.multiplication_rule_for_addition": "24",
+    "negative_numbers.negative_swaps_operation": "24",
+    "negative_numbers.negative_times_negative_negative": "-24",
+    "negative_numbers.two_negatives_always_positive": "24"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-24",
+    "24"
+   ],
+   "meta": {
+    "operation": "multiplication",
+    "template": "multi_step_multiplication",
+    "a": -4,
+    "b": -2,
+    "c": 3,
+    "pattern": "both_negative",
+    "expression": "(-4) * (-2) * 3",
+    "operands": [
+     -4,
+     -2,
+     3
+    ],
+    "v6_template_family": "neg_multi_step",
+    "audit_kind": "neg_multi_step"
+   },
+   "audit_expr": "(-4) * (-2) * 3",
+   "item_id": "v6i:0062"
+  },
+  {
+   "text": "Calculate: (-2) * (-3) + 5",
+   "category": "negative_numbers",
+   "family": "neg_mixed_ops",
+   "split": "test",
+   "operation": "mixed",
+   "correct": "11",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "11",
+    "negative_numbers.multiplication_rule_for_addition": "11",
+    "negative_numbers.negative_swaps_operation": "11",
+    "negative_numbers.negative_times_negative_negative": "-1",
+    "negative_numbers.two_negatives_always_positive": "11"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-1",
+    "11"
+   ],
+   "meta": {
+    "operation": "mixed",
+    "template": "mixed_operations",
+    "a": -2,
+    "b": -3,
+    "c": 5,
+    "pattern": "both_negative",
+    "expression": "(-2) * (-3) + 5",
+    "operands": [
+     -2,
+     -3,
+     5
+    ],
+    "v6_template_family": "neg_mixed_ops",
+    "audit_kind": "neg_mixed_ops"
+   },
+   "audit_expr": "(-2) * (-3) + 5",
+   "item_id": "v6i:0063"
+  },
+  {
+   "text": "Calculate: (-4) * (-2) + 7",
+   "category": "negative_numbers",
+   "family": "neg_mixed_ops",
+   "split": "test",
+   "operation": "mixed",
+   "correct": "15",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "15",
+    "negative_numbers.multiplication_rule_for_addition": "15",
+    "negative_numbers.negative_swaps_operation": "15",
+    "negative_numbers.negative_times_negative_negative": "-1",
+    "negative_numbers.two_negatives_always_positive": "15"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-1",
+    "15"
+   ],
+   "meta": {
+    "operation": "mixed",
+    "template": "mixed_operations",
+    "a": -4,
+    "b": -2,
+    "c": 7,
+    "pattern": "both_negative",
+    "expression": "(-4) * (-2) + 7",
+    "operands": [
+     -4,
+     -2,
+     7
+    ],
+    "v6_template_family": "neg_mixed_ops",
+    "audit_kind": "neg_mixed_ops"
+   },
+   "audit_expr": "(-4) * (-2) + 7",
+   "item_id": "v6i:0064"
+  },
+  {
+   "text": "Calculate: (-3) * (-5) + 4",
+   "category": "negative_numbers",
+   "family": "neg_mixed_ops",
+   "split": "test",
+   "operation": "mixed",
+   "correct": "19",
+   "predictions": {
+    "negative_numbers.larger_absolute_value_always_wins": "19",
+    "negative_numbers.multiplication_rule_for_addition": "19",
+    "negative_numbers.negative_swaps_operation": "19",
+    "negative_numbers.negative_times_negative_negative": "-11",
+    "negative_numbers.two_negatives_always_positive": "19"
+   },
+   "applicable": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "triggers": {
+    "negative_numbers.larger_absolute_value_always_wins": false,
+    "negative_numbers.multiplication_rule_for_addition": false,
+    "negative_numbers.negative_swaps_operation": false,
+    "negative_numbers.negative_times_negative_negative": true,
+    "negative_numbers.two_negatives_always_positive": false
+   },
+   "answers": [
+    "-11",
+    "19"
+   ],
+   "meta": {
+    "operation": "mixed",
+    "template": "mixed_operations",
+    "a": -3,
+    "b": -5,
+    "c": 4,
+    "pattern": "both_negative",
+    "expression": "(-3) * (-5) + 4",
+    "operands": [
+     -3,
+     -5,
+     4
+    ],
+    "v6_template_family": "neg_mixed_ops",
+    "audit_kind": "neg_mixed_ops"
+   },
+   "audit_expr": "(-3) * (-5) + 4",
+   "item_id": "v6i:0065"
+  }
+ ]
+}

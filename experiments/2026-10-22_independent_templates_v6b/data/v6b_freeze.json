@@ -1,0 +1,263 @@
+{
+  "version": "v6b_independent_templates_2026-10-22",
+  "frozen_at": "2026-10-22T01:43:27.872207+00:00",
+  "n_items": 96,
+  "n_cases": 90,
+  "n_unique_case_keys": 87,
+  "n_true_labels": 30,
+  "n_families": 32,
+  "families": [
+    "dec_add_3places",
+    "dec_compare_three",
+    "dec_div_dec",
+    "dec_mul_two_by_one",
+    "dec_sub_integer",
+    "frac_add_three",
+    "frac_compare_four",
+    "frac_div_whole",
+    "frac_mul_three",
+    "frac_sub_improper",
+    "frac_whole_div",
+    "neg_add_two_new",
+    "neg_minus_neg_new",
+    "neg_mixed_ops",
+    "neg_multi_step",
+    "neg_sub_pos_new",
+    "oo_add_sub_four",
+    "oo_div_paren_product",
+    "oo_mixed_four",
+    "oo_muldiv_chain",
+    "oo_paren_sub_mul",
+    "pct_compare_change",
+    "pct_dec_then_inc",
+    "pct_find_whole",
+    "pct_over_hundred",
+    "pct_two_increases",
+    "sub3_zero_tail",
+    "sub4_chain",
+    "sub4_no_borrow",
+    "sub4_ones_borrow",
+    "sub4_zero_bridge",
+    "sub5_zero_ones"
+  ],
+  "n_per_category": {
+    "decimals": 12,
+    "fractions": 21,
+    "negative_numbers": 15,
+    "order_of_operations": 12,
+    "percentages": 12,
+    "subtraction": 18
+  },
+  "n_per_true_id": {
+    "decimals.ignore_decimal_point": 3,
+    "decimals.longer_is_larger": 3,
+    "decimals.right_align_decimals": 3,
+    "decimals.shorter_is_larger": 3,
+    "fractions.add_numerators_denominators": 3,
+    "fractions.denominator_comparison_error": 3,
+    "fractions.ignore_denominators": 3,
+    "fractions.keep_common_denominator_for_multiplication": 3,
+    "fractions.multiply_across_for_division": 3,
+    "fractions.natural_number_bias_numerator_only": 3,
+    "fractions.subtract_across": 3,
+    "negative_numbers.larger_absolute_value_always_wins": 3,
+    "negative_numbers.multiplication_rule_for_addition": 3,
+    "negative_numbers.negative_swaps_operation": 3,
+    "negative_numbers.negative_times_negative_negative": 3,
+    "negative_numbers.two_negatives_always_positive": 3,
+    "order_of_operations.addition_before_subtraction_always": 3,
+    "order_of_operations.ignore_parentheses": 3,
+    "order_of_operations.multiplication_before_division_always": 3,
+    "order_of_operations.strict_left_to_right": 3,
+    "percentages.add_percentages_directly": 3,
+    "percentages.percent_equals_decimal": 3,
+    "percentages.percentage_as_index": 3,
+    "percentages.reverse_percentage_error": 3,
+    "subtraction.always_borrow_left": 3,
+    "subtraction.borrow_from_bottom": 3,
+    "subtraction.borrow_no_decrement": 3,
+    "subtraction.diff_0_n_equals_n": 3,
+    "subtraction.smaller_from_larger": 3,
+    "subtraction.stops_borrow_at_zero": 3
+  },
+  "label_selection_report": {
+    "subtraction.always_borrow_left": {
+      "n_eligible": 7,
+      "n_families": 3,
+      "n_picked": 3
+    },
+    "subtraction.borrow_from_bottom": {
+      "n_eligible": 15,
+      "n_families": 3,
+      "n_picked": 3
+    },
+    "subtraction.borrow_no_decrement": {
+      "n_eligible": 15,
+      "n_families": 3,
+      "n_picked": 3
+    },
+    "subtraction.diff_0_n_equals_n": {
+      "n_eligible": 9,
+      "n_families": 3,
+      "n_picked": 3
+    },
+    "subtraction.smaller_from_larger": {
+      "n_eligible": 15,
+      "n_families": 3,
+      "n_picked": 3
+    },
+    "subtraction.stops_borrow_at_zero": {
+      "n_eligible": 7,
+      "n_families": 3,
+      "n_picked": 3
+    },
+    "fractions.add_numerators_denominators": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "fractions.denominator_comparison_error": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "fractions.ignore_denominators": {
+      "n_eligible": 15,
+      "n_families": 3,
+      "n_picked": 3
+    },
+    "fractions.keep_common_denominator_for_multiplication": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "fractions.multiply_across_for_division": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "fractions.natural_number_bias_numerator_only": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "fractions.subtract_across": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "decimals.ignore_decimal_point": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "decimals.longer_is_larger": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "decimals.right_align_decimals": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "decimals.shorter_is_larger": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "negative_numbers.larger_absolute_value_always_wins": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "negative_numbers.multiplication_rule_for_addition": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "negative_numbers.negative_swaps_operation": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "negative_numbers.negative_times_negative_negative": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "negative_numbers.two_negatives_always_positive": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "order_of_operations.addition_before_subtraction_always": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "order_of_operations.ignore_parentheses": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "order_of_operations.multiplication_before_division_always": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "order_of_operations.strict_left_to_right": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    },
+    "percentages.add_percentages_directly": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "percentages.percent_equals_decimal": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "percentages.percentage_as_index": {
+      "n_eligible": 6,
+      "n_families": 2,
+      "n_picked": 3
+    },
+    "percentages.reverse_percentage_error": {
+      "n_eligible": 3,
+      "n_families": 1,
+      "n_picked": 3
+    }
+  },
+  "globally_indistinguishable_hypotheses": {
+    "subtraction": [
+      "subtraction.decompose_by_place_value_label",
+      "subtraction.no_column_limit"
+    ],
+    "fractions": [],
+    "decimals": [],
+    "negative_numbers": [],
+    "order_of_operations": [],
+    "percentages": []
+  },
+  "text_overlap_with_v4_or_v5": [],
+  "family_overlap_with_v5": [],
+  "ambiguity_distribution": {
+    "1": 83,
+    "2": 7
+  },
+  "sha256": {
+    "cases_test_v6b": "e2557eb5965c2122def40d04bc1d1f559c210b01fbe6396fd13d47910602ce8e",
+    "templates": "d1f8894924481cb96f55479cd992c17123a07600d296c91e477c41727311e904",
+    "build_script": "720c23ae06643ecb9b91de2231c3d2395efcd93fe577827d7bc023da3c14c80c",
+    "bank_v6b_subtraction": "7d1263d1b15824b4ef635fbf0b7d8d03e0e27353215395b13599771fd6af8263",
+    "bank_v6b_fractions": "622530695f5c65850697c476a42a93470f6e4b42a9589787c2b62f17736edd19",
+    "bank_v6b_decimals": "3c314304fcb07e570d1d0967214e92d0ee11842cfb65d1fef8f78e4e5bbf184c",
+    "bank_v6b_negative_numbers": "e425667d480aa40306c54a9c194de683eec4d6380c14f881adef59fc992d056f",
+    "bank_v6b_order_of_operations": "3823e0319573a3e910797de35a3ba80faab2473f1005d39e08c38fb49494b4d8",
+    "bank_v6b_percentages": "9c54cbc03d33645985c6f7037bca5c5c6c7061a94a6b9fbfc3abb3ce4c35446d"
+  }
+}

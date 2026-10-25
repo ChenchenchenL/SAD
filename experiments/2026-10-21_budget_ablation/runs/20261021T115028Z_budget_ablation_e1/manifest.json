@@ -1,0 +1,81 @@
+{
+  "generated_at_utc": "2026-10-21T11:50:28.902816+00:00",
+  "python": "3.12.8",
+  "executable": "D:\\Program Files\\python\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "experiment": "2026-10-21_budget_ablation",
+  "run_id": "20261021T115028Z_budget_ablation_e1",
+  "config": "experiments\\2026-10-21_budget_ablation\\config.json",
+  "inputs": [
+    {
+      "path": "experiments/2026-10-21_budget_ablation/config.json",
+      "size_bytes": 274,
+      "sha256": "fca85a1c9f8b7abd537837bc5a467202766e01f8fb85f27fc93c9a1124339384"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/cases_test_v5_exclusion_corrected.json",
+      "size_bytes": 44273,
+      "sha256": "a47a41c385380d0306a4fc3a73a7ce0239db443d4f44bb888e90fe2bd53eb57e"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/priors_test_category.jsonl",
+      "size_bytes": 215841,
+      "sha256": "8ffc3a02593adba624d18604d7a6c1feeb14a566aba0a1138f9ee9b080860130"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/bank_v5_subtraction.json",
+      "size_bytes": 24850,
+      "sha256": "dd9668866f350ad00e4f2422017eda77f8b69a6ac4e1f1dc2ca5996ff2d0f655"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/bank_v5_fractions.json",
+      "size_bytes": 36805,
+      "sha256": "665e80874df3e178ac23e28e3c90f4fdeed5d4b148f5017125e1ef0a553dfd88"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/bank_v5_decimals.json",
+      "size_bytes": 25343,
+      "sha256": "dec2b72ac36b20ecfc991f7ad1f737ea62f388f4657967901f0ce66fd04d5233"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/bank_v5_negative_numbers.json",
+      "size_bytes": 25669,
+      "sha256": "e4ab84c00ea4e03ec7b3be9063350269d47b06d43e453c502ae9c020d5ad8ff5"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/bank_v5_order_of_operations.json",
+      "size_bytes": 24837,
+      "sha256": "2fd81d24ccf15149c2d6beff53d1145e3abb73ebed3f3261fb167a52f3e8a8e3"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/data/bank_v5_percentages.json",
+      "size_bytes": 16295,
+      "sha256": "4813b5b178084a8f8d6aeb7d7e0616e5ab2c50cd051b2ff31a8c9eb305032d5d"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/src/g0_lib.py",
+      "size_bytes": 31557,
+      "sha256": "713bd2e67e2004194415f865bd8bedfe628fe6b28bf6029519e3a90c47ddadb4"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/src/v5_engine.py",
+      "size_bytes": 26479,
+      "sha256": "bf4149a91997f23033cc4a12a185c73cc5d8154c5c827a939d06180318411b58"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/src/applicability.py",
+      "size_bytes": 6417,
+      "sha256": "f7060493c6228de4b93f87ea23ce1f4d4767e5e7c705b72f4aa94117a36a98e8"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/src/ablation.py",
+      "size_bytes": 16365,
+      "sha256": "56641503cdc00deb2a5efde545ca80471b2fefc31904cb17de604a27ec19acc0"
+    },
+    {
+      "path": "experiments/2026-10-21_budget_ablation/run.py",
+      "size_bytes": 29899,
+      "sha256": "919d1e5cfbf05105a09e31283e78b85e32124e00fdc3ec14e40b8124a1692e00"
+    }
+  ]
+}

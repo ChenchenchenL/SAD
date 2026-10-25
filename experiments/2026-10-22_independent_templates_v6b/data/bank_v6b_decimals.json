@@ -1,0 +1,773 @@
+{
+ "category": "decimals",
+ "settings": {
+  "builder": "v6b_corrected_independent_authored_templates",
+  "source": "v6 corrected for F1/F2; text/family disjoint from v5/v4, partial structural overlap"
+ },
+ "hypotheses": [
+  {
+   "id": "decimals.ignore_decimal_point"
+  },
+  {
+   "id": "decimals.longer_is_larger"
+  },
+  {
+   "id": "decimals.right_align_decimals"
+  },
+  {
+   "id": "decimals.shorter_is_larger"
+  },
+  {
+   "id": "decimals.whole_number_thinking"
+  }
+ ],
+ "items": [
+  {
+   "text": "Calculate: 0.35 * 0.4",
+   "category": "decimals",
+   "family": "dec_mul_two_by_one",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "0.14",
+   "predictions": {
+    "decimals.ignore_decimal_point": "140",
+    "decimals.longer_is_larger": "0.14",
+    "decimals.right_align_decimals": "0.14",
+    "decimals.shorter_is_larger": "0.14",
+    "decimals.whole_number_thinking": "0.14"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.14",
+    "140"
+   ],
+   "meta": {
+    "template": "basic_multiplication",
+    "v6_template_family": "dec_mul_two_by_one",
+    "operands": [
+     "0.35",
+     "0.4"
+    ],
+    "num1": "0.35",
+    "num2": "0.4",
+    "operation": "multiplication",
+    "operation_symbol": "*",
+    "audit_kind": "dec_mul_two_by_one"
+   },
+   "audit_expr": "0.35*0.4",
+   "item_id": "v6i:0036"
+  },
+  {
+   "text": "Calculate: 0.28 * 1.5",
+   "category": "decimals",
+   "family": "dec_mul_two_by_one",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "0.42",
+   "predictions": {
+    "decimals.ignore_decimal_point": "420",
+    "decimals.longer_is_larger": "0.42",
+    "decimals.right_align_decimals": "0.42",
+    "decimals.shorter_is_larger": "0.42",
+    "decimals.whole_number_thinking": "0.42"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.42",
+    "420"
+   ],
+   "meta": {
+    "template": "basic_multiplication",
+    "v6_template_family": "dec_mul_two_by_one",
+    "operands": [
+     "0.28",
+     "1.5"
+    ],
+    "num1": "0.28",
+    "num2": "1.5",
+    "operation": "multiplication",
+    "operation_symbol": "*",
+    "audit_kind": "dec_mul_two_by_one"
+   },
+   "audit_expr": "0.28*1.5",
+   "item_id": "v6i:0037"
+  },
+  {
+   "text": "Calculate: 1.75 * 0.6",
+   "category": "decimals",
+   "family": "dec_mul_two_by_one",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "1.05",
+   "predictions": {
+    "decimals.ignore_decimal_point": "1050",
+    "decimals.longer_is_larger": "1.05",
+    "decimals.right_align_decimals": "1.05",
+    "decimals.shorter_is_larger": "1.05",
+    "decimals.whole_number_thinking": "1.05"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "1.05",
+    "1050"
+   ],
+   "meta": {
+    "template": "basic_multiplication",
+    "v6_template_family": "dec_mul_two_by_one",
+    "operands": [
+     "1.75",
+     "0.6"
+    ],
+    "num1": "1.75",
+    "num2": "0.6",
+    "operation": "multiplication",
+    "operation_symbol": "*",
+    "audit_kind": "dec_mul_two_by_one"
+   },
+   "audit_expr": "1.75*0.6",
+   "item_id": "v6i:0038"
+  },
+  {
+   "text": "Calculate: 0.36 / 0.4",
+   "category": "decimals",
+   "family": "dec_div_dec",
+   "split": "test",
+   "operation": "division",
+   "correct": "0.9",
+   "predictions": {
+    "decimals.ignore_decimal_point": "9",
+    "decimals.longer_is_larger": "0.9",
+    "decimals.right_align_decimals": "0.9",
+    "decimals.shorter_is_larger": "0.9",
+    "decimals.whole_number_thinking": "0.9"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.9",
+    "9"
+   ],
+   "meta": {
+    "template": "division",
+    "v6_template_family": "dec_div_dec",
+    "operands": [
+     "0.36",
+     "0.4"
+    ],
+    "num1": "0.36",
+    "num2": "0.4",
+    "operation": "division",
+    "operation_symbol": "/",
+    "num1_decimal_places": 2,
+    "num2_decimal_places": 1,
+    "audit_kind": "dec_div_dec"
+   },
+   "audit_expr": "0.36/0.4",
+   "item_id": "v6i:0039"
+  },
+  {
+   "text": "Calculate: 0.72 / 0.9",
+   "category": "decimals",
+   "family": "dec_div_dec",
+   "split": "test",
+   "operation": "division",
+   "correct": "0.8",
+   "predictions": {
+    "decimals.ignore_decimal_point": "8",
+    "decimals.longer_is_larger": "0.8",
+    "decimals.right_align_decimals": "0.8",
+    "decimals.shorter_is_larger": "0.8",
+    "decimals.whole_number_thinking": "0.8"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.8",
+    "8"
+   ],
+   "meta": {
+    "template": "division",
+    "v6_template_family": "dec_div_dec",
+    "operands": [
+     "0.72",
+     "0.9"
+    ],
+    "num1": "0.72",
+    "num2": "0.9",
+    "operation": "division",
+    "operation_symbol": "/",
+    "num1_decimal_places": 2,
+    "num2_decimal_places": 1,
+    "audit_kind": "dec_div_dec"
+   },
+   "audit_expr": "0.72/0.9",
+   "item_id": "v6i:0040"
+  },
+  {
+   "text": "Calculate: 0.144 / 0.12",
+   "category": "decimals",
+   "family": "dec_div_dec",
+   "split": "test",
+   "operation": "division",
+   "correct": "1.2",
+   "predictions": {
+    "decimals.ignore_decimal_point": "12",
+    "decimals.longer_is_larger": "1.2",
+    "decimals.right_align_decimals": "1.2",
+    "decimals.shorter_is_larger": "1.2",
+    "decimals.whole_number_thinking": "1.2"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "1.2",
+    "12"
+   ],
+   "meta": {
+    "template": "division",
+    "v6_template_family": "dec_div_dec",
+    "operands": [
+     "0.144",
+     "0.12"
+    ],
+    "num1": "0.144",
+    "num2": "0.12",
+    "operation": "division",
+    "operation_symbol": "/",
+    "num1_decimal_places": 3,
+    "num2_decimal_places": 2,
+    "audit_kind": "dec_div_dec"
+   },
+   "audit_expr": "0.144/0.12",
+   "item_id": "v6i:0041"
+  },
+  {
+   "text": "Calculate: 0.125 + 2.4",
+   "category": "decimals",
+   "family": "dec_add_3places",
+   "split": "test",
+   "operation": "addition",
+   "correct": "2.525",
+   "predictions": {
+    "decimals.ignore_decimal_point": "2.525",
+    "decimals.longer_is_larger": "2.525",
+    "decimals.right_align_decimals": "14.9",
+    "decimals.shorter_is_larger": "2.525",
+    "decimals.whole_number_thinking": "2.525"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "14.9",
+    "2.525"
+   ],
+   "meta": {
+    "template": "basic_addition",
+    "v6_template_family": "dec_add_3places",
+    "operands": [
+     "0.125",
+     "2.4"
+    ],
+    "num1": "0.125",
+    "num2": "2.4",
+    "operation": "addition",
+    "operation_symbol": "+",
+    "num1_decimal_places": 3,
+    "num2_decimal_places": 1,
+    "audit_kind": "dec_add_3places"
+   },
+   "audit_expr": "0.125+2.4",
+   "item_id": "v6i:0042"
+  },
+  {
+   "text": "Calculate: 3.06 + 1.875",
+   "category": "decimals",
+   "family": "dec_add_3places",
+   "split": "test",
+   "operation": "addition",
+   "correct": "4.935",
+   "predictions": {
+    "decimals.ignore_decimal_point": "4.935",
+    "decimals.longer_is_larger": "4.935",
+    "decimals.right_align_decimals": "21.81",
+    "decimals.shorter_is_larger": "4.935",
+    "decimals.whole_number_thinking": "4.935"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "21.81",
+    "4.935"
+   ],
+   "meta": {
+    "template": "basic_addition",
+    "v6_template_family": "dec_add_3places",
+    "operands": [
+     "3.06",
+     "1.875"
+    ],
+    "num1": "3.06",
+    "num2": "1.875",
+    "operation": "addition",
+    "operation_symbol": "+",
+    "num1_decimal_places": 2,
+    "num2_decimal_places": 3,
+    "audit_kind": "dec_add_3places"
+   },
+   "audit_expr": "3.06+1.875",
+   "item_id": "v6i:0043"
+  },
+  {
+   "text": "Calculate: 0.75 + 12.125",
+   "category": "decimals",
+   "family": "dec_add_3places",
+   "split": "test",
+   "operation": "addition",
+   "correct": "12.875",
+   "predictions": {
+    "decimals.ignore_decimal_point": "12.875",
+    "decimals.longer_is_larger": "12.875",
+    "decimals.right_align_decimals": "122",
+    "decimals.shorter_is_larger": "12.875",
+    "decimals.whole_number_thinking": "12.875"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "12.875",
+    "122"
+   ],
+   "meta": {
+    "template": "basic_addition",
+    "v6_template_family": "dec_add_3places",
+    "operands": [
+     "0.75",
+     "12.125"
+    ],
+    "num1": "0.75",
+    "num2": "12.125",
+    "operation": "addition",
+    "operation_symbol": "+",
+    "num1_decimal_places": 2,
+    "num2_decimal_places": 3,
+    "audit_kind": "dec_add_3places"
+   },
+   "audit_expr": "0.75+12.125",
+   "item_id": "v6i:0044"
+  },
+  {
+   "text": "Calculate: 5 - 0.75",
+   "category": "decimals",
+   "family": "dec_sub_integer",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "4.25",
+   "predictions": {
+    "decimals.ignore_decimal_point": "4.25",
+    "decimals.longer_is_larger": "4.25",
+    "decimals.right_align_decimals": "70",
+    "decimals.shorter_is_larger": "4.25",
+    "decimals.whole_number_thinking": "4.25"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "4.25",
+    "70"
+   ],
+   "meta": {
+    "template": "basic_subtraction",
+    "v6_template_family": "dec_sub_integer",
+    "operands": [
+     "5",
+     "0.75"
+    ],
+    "num1": "5",
+    "num2": "0.75",
+    "operation": "subtraction",
+    "operation_symbol": "-",
+    "num1_decimal_places": 0,
+    "num2_decimal_places": 2,
+    "audit_kind": "dec_sub_integer"
+   },
+   "audit_expr": "5-0.75",
+   "item_id": "v6i:0045"
+  },
+  {
+   "text": "Calculate: 12 - 4.6",
+   "category": "decimals",
+   "family": "dec_sub_integer",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "7.4",
+   "predictions": {
+    "decimals.ignore_decimal_point": "7.4",
+    "decimals.longer_is_larger": "7.4",
+    "decimals.right_align_decimals": "34",
+    "decimals.shorter_is_larger": "7.4",
+    "decimals.whole_number_thinking": "7.4"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "34",
+    "7.4"
+   ],
+   "meta": {
+    "template": "basic_subtraction",
+    "v6_template_family": "dec_sub_integer",
+    "operands": [
+     "12",
+     "4.6"
+    ],
+    "num1": "12",
+    "num2": "4.6",
+    "operation": "subtraction",
+    "operation_symbol": "-",
+    "num1_decimal_places": 0,
+    "num2_decimal_places": 1,
+    "audit_kind": "dec_sub_integer"
+   },
+   "audit_expr": "12-4.6",
+   "item_id": "v6i:0046"
+  },
+  {
+   "text": "Calculate: 8 - 2.125",
+   "category": "decimals",
+   "family": "dec_sub_integer",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "5.875",
+   "predictions": {
+    "decimals.ignore_decimal_point": "5.875",
+    "decimals.longer_is_larger": "5.875",
+    "decimals.right_align_decimals": "2117",
+    "decimals.shorter_is_larger": "5.875",
+    "decimals.whole_number_thinking": "5.875"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "2117",
+    "5.875"
+   ],
+   "meta": {
+    "template": "basic_subtraction",
+    "v6_template_family": "dec_sub_integer",
+    "operands": [
+     "8",
+     "2.125"
+    ],
+    "num1": "8",
+    "num2": "2.125",
+    "operation": "subtraction",
+    "operation_symbol": "-",
+    "num1_decimal_places": 0,
+    "num2_decimal_places": 3,
+    "audit_kind": "dec_sub_integer"
+   },
+   "audit_expr": "8-2.125",
+   "item_id": "v6i:0047"
+  },
+  {
+   "text": "Which is largest: 0.46, 0.4, or 0.375?",
+   "category": "decimals",
+   "family": "dec_compare_three",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.46",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.46",
+    "decimals.longer_is_larger": "0.375",
+    "decimals.right_align_decimals": "0.46",
+    "decimals.shorter_is_larger": "0.4",
+    "decimals.whole_number_thinking": "0.46"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.375",
+    "0.4",
+    "0.46"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v6_template_family": "dec_compare_three",
+    "operands": [
+     "0.46",
+     "0.4",
+     "0.375"
+    ],
+    "decimals": [
+     "0.46",
+     "0.4",
+     "0.375"
+    ],
+    "audit_kind": "dec_compare_three"
+   },
+   "audit_expr": "max(0.46,0.4,0.375)",
+   "item_id": "v6i:0048"
+  },
+  {
+   "text": "Which is largest: 0.72, 0.7, or 0.685?",
+   "category": "decimals",
+   "family": "dec_compare_three",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.72",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.72",
+    "decimals.longer_is_larger": "0.685",
+    "decimals.right_align_decimals": "0.72",
+    "decimals.shorter_is_larger": "0.7",
+    "decimals.whole_number_thinking": "0.72"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.685",
+    "0.7",
+    "0.72"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v6_template_family": "dec_compare_three",
+    "operands": [
+     "0.72",
+     "0.7",
+     "0.685"
+    ],
+    "decimals": [
+     "0.72",
+     "0.7",
+     "0.685"
+    ],
+    "audit_kind": "dec_compare_three"
+   },
+   "audit_expr": "max(0.72,0.7,0.685)",
+   "item_id": "v6i:0049"
+  },
+  {
+   "text": "Which is largest: 0.34, 0.3, or 0.285?",
+   "category": "decimals",
+   "family": "dec_compare_three",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.34",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.34",
+    "decimals.longer_is_larger": "0.285",
+    "decimals.right_align_decimals": "0.34",
+    "decimals.shorter_is_larger": "0.3",
+    "decimals.whole_number_thinking": "0.34"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.285",
+    "0.3",
+    "0.34"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v6_template_family": "dec_compare_three",
+    "operands": [
+     "0.34",
+     "0.3",
+     "0.285"
+    ],
+    "decimals": [
+     "0.34",
+     "0.3",
+     "0.285"
+    ],
+    "audit_kind": "dec_compare_three"
+   },
+   "audit_expr": "max(0.34,0.3,0.285)",
+   "item_id": "v6i:0050"
+  }
+ ]
+}

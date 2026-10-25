@@ -1,0 +1,11 @@
+{
+  "experiment": "budget_ablation",
+  "cases": "data/cases_test_v5_exclusion_corrected.json",
+  "priors": "data/priors_test_category.jsonl",
+  "bank_dir": "data",
+  "bank_prefix": "bank_v5_",
+  "seeds": 5,
+  "eps": 0.05,
+  "bootstrap": 2000,
+  "bootstrap_seed": 20261026
+}

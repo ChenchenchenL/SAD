@@ -1,0 +1,557 @@
+{
+ "category": "percentages",
+ "settings": {
+  "builder": "v5_authored_structural_templates",
+  "level": 5,
+  "source": "human-authored templates, not MalruleLib generators"
+ },
+ "hypotheses": [
+  {
+   "id": "percentages.add_percentages_directly"
+  },
+  {
+   "id": "percentages.percent_equals_decimal"
+  },
+  {
+   "id": "percentages.percentage_as_index"
+  },
+  {
+   "id": "percentages.reverse_percentage_error"
+  }
+ ],
+ "items": [
+  {
+   "text": "What is 20% of 70?",
+   "category": "percentages",
+   "family": "pct_of",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "14",
+   "predictions": {
+    "percentages.add_percentages_directly": "14",
+    "percentages.percent_equals_decimal": "1400",
+    "percentages.percentage_as_index": "20",
+    "percentages.reverse_percentage_error": "14"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "14",
+    "1400",
+    "20"
+   ],
+   "meta": {
+    "template": "pct_of",
+    "percent": 20,
+    "value": 70,
+    "conversion_type": "percent_in_calculation",
+    "percentage": 20,
+    "total": 70
+   },
+   "audit_expr": "20/100*70",
+   "item_id": "v5i:0081"
+  },
+  {
+   "text": "What is 15% of 80?",
+   "category": "percentages",
+   "family": "pct_of",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "12",
+   "predictions": {
+    "percentages.add_percentages_directly": "12",
+    "percentages.percent_equals_decimal": "1200",
+    "percentages.percentage_as_index": "15",
+    "percentages.reverse_percentage_error": "12"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "12",
+    "1200",
+    "15"
+   ],
+   "meta": {
+    "template": "pct_of",
+    "percent": 15,
+    "value": 80,
+    "conversion_type": "percent_in_calculation",
+    "percentage": 15,
+    "total": 80
+   },
+   "audit_expr": "15/100*80",
+   "item_id": "v5i:0082"
+  },
+  {
+   "text": "What is 25% of 64?",
+   "category": "percentages",
+   "family": "pct_of",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "16",
+   "predictions": {
+    "percentages.add_percentages_directly": "16",
+    "percentages.percent_equals_decimal": "1600",
+    "percentages.percentage_as_index": "25",
+    "percentages.reverse_percentage_error": "16"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "16",
+    "1600",
+    "25"
+   ],
+   "meta": {
+    "template": "pct_of",
+    "percent": 25,
+    "value": 64,
+    "conversion_type": "percent_in_calculation",
+    "percentage": 25,
+    "total": 64
+   },
+   "audit_expr": "25/100*64",
+   "item_id": "v5i:0083"
+  },
+  {
+   "text": "80 is increased by 25%. What is the result?",
+   "category": "percentages",
+   "family": "pct_change",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "100",
+   "predictions": {
+    "percentages.add_percentages_directly": "100",
+    "percentages.percent_equals_decimal": "2000",
+    "percentages.percentage_as_index": "105",
+    "percentages.reverse_percentage_error": "100"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "100",
+    "105",
+    "2000"
+   ],
+   "meta": {
+    "template": "percentage_increase",
+    "v5_template_family": "pct_change",
+    "formula_type": "percentage_increase",
+    "percent": 25,
+    "value": 80,
+    "conversion_type": "percent_in_calculation",
+    "percentage": 25,
+    "total": 80
+   },
+   "audit_expr": "80*(1+25/100)",
+   "item_id": "v5i:0084"
+  },
+  {
+   "text": "60 is decreased by 15%. What is the result?",
+   "category": "percentages",
+   "family": "pct_change",
+   "split": "test",
+   "operation": "percentage",
+   "correct": "51",
+   "predictions": {
+    "percentages.add_percentages_directly": "51",
+    "percentages.percent_equals_decimal": "900",
+    "percentages.percentage_as_index": "45",
+    "percentages.reverse_percentage_error": "51"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "45",
+    "51",
+    "900"
+   ],
+   "meta": {
+    "template": "percentage_decrease",
+    "v5_template_family": "pct_change",
+    "formula_type": "percentage_decrease",
+    "percent": 15,
+    "value": 60,
+    "conversion_type": "percent_in_calculation",
+    "percentage": 15,
+    "total": 60
+   },
+   "audit_expr": "60*(1-15/100)",
+   "item_id": "v5i:0085"
+  },
+  {
+   "text": "If 40 is 80% of 50, what percent is 50 of 40?",
+   "category": "percentages",
+   "family": "pct_reverse",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "125",
+   "predictions": {
+    "percentages.add_percentages_directly": "125",
+    "percentages.percent_equals_decimal": "125",
+    "percentages.percentage_as_index": "125",
+    "percentages.reverse_percentage_error": "80"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "answers": [
+    "125",
+    "80"
+   ],
+   "meta": {
+    "template": "basic_reverse_relationship",
+    "v5_template_family": "pct_reverse",
+    "percentage": 80,
+    "part": 40,
+    "total": 50,
+    "conversion_type": "percent_in_calculation"
+   },
+   "audit_expr": "10000/80",
+   "item_id": "v5i:0086"
+  },
+  {
+   "text": "If 20 is 40% of 50, what percent is 50 of 20?",
+   "category": "percentages",
+   "family": "pct_reverse",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "250",
+   "predictions": {
+    "percentages.add_percentages_directly": "250",
+    "percentages.percent_equals_decimal": "250",
+    "percentages.percentage_as_index": "250",
+    "percentages.reverse_percentage_error": "40"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "answers": [
+    "250",
+    "40"
+   ],
+   "meta": {
+    "template": "basic_reverse_relationship",
+    "v5_template_family": "pct_reverse",
+    "percentage": 40,
+    "part": 20,
+    "total": 50,
+    "conversion_type": "percent_in_calculation"
+   },
+   "audit_expr": "10000/40",
+   "item_id": "v5i:0087"
+  },
+  {
+   "text": "If 25 is 20% of 125, what percent is 125 of 25?",
+   "category": "percentages",
+   "family": "pct_reverse",
+   "split": "test",
+   "operation": "percentage_relationship",
+   "correct": "500",
+   "predictions": {
+    "percentages.add_percentages_directly": "500",
+    "percentages.percent_equals_decimal": "500",
+    "percentages.percentage_as_index": "500",
+    "percentages.reverse_percentage_error": "20"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": true
+   },
+   "answers": [
+    "20",
+    "500"
+   ],
+   "meta": {
+    "template": "basic_reverse_relationship",
+    "v5_template_family": "pct_reverse",
+    "percentage": 20,
+    "part": 25,
+    "total": 125,
+    "conversion_type": "percent_in_calculation"
+   },
+   "audit_expr": "10000/20",
+   "item_id": "v5i:0088"
+  },
+  {
+   "text": "200 is increased by 20% and then decreased by 10%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_sequential",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "216",
+   "predictions": {
+    "percentages.add_percentages_directly": "220",
+    "percentages.percent_equals_decimal": "216",
+    "percentages.percentage_as_index": "216",
+    "percentages.reverse_percentage_error": "216"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "216",
+    "220"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v5_template_family": "pct_sequential",
+    "initial_value": 200,
+    "percentage1": 20,
+    "percentage2": 10,
+    "problem_type": "increase_then_decrease"
+   },
+   "audit_expr": "200*(1+20/100)*(1-10/100)",
+   "item_id": "v5i:0089"
+  },
+  {
+   "text": "150 is increased by 10% and then decreased by 20%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_sequential",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "132",
+   "predictions": {
+    "percentages.add_percentages_directly": "135",
+    "percentages.percent_equals_decimal": "132",
+    "percentages.percentage_as_index": "132",
+    "percentages.reverse_percentage_error": "132"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "132",
+    "135"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v5_template_family": "pct_sequential",
+    "initial_value": 150,
+    "percentage1": 10,
+    "percentage2": 20,
+    "problem_type": "increase_then_decrease"
+   },
+   "audit_expr": "150*(1+10/100)*(1-20/100)",
+   "item_id": "v5i:0090"
+  },
+  {
+   "text": "80 is increased by 25% and then decreased by 20%. What is the final value?",
+   "category": "percentages",
+   "family": "pct_sequential",
+   "split": "test",
+   "operation": "percentage_sequential",
+   "correct": "80",
+   "predictions": {
+    "percentages.add_percentages_directly": "84",
+    "percentages.percent_equals_decimal": "80",
+    "percentages.percentage_as_index": "80",
+    "percentages.reverse_percentage_error": "80"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": true,
+    "percentages.percent_equals_decimal": false,
+    "percentages.percentage_as_index": false,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "80",
+    "84"
+   ],
+   "meta": {
+    "template": "sequential_percentage",
+    "v5_template_family": "pct_sequential",
+    "initial_value": 80,
+    "percentage1": 25,
+    "percentage2": 20,
+    "problem_type": "increase_then_decrease"
+   },
+   "audit_expr": "80*(1+25/100)*(1-20/100)",
+   "item_id": "v5i:0091"
+  },
+  {
+   "text": "What is 10% of 50?",
+   "category": "percentages",
+   "family": "pct_dev_of",
+   "split": "dev",
+   "operation": "percentage",
+   "correct": "5",
+   "predictions": {
+    "percentages.add_percentages_directly": "5",
+    "percentages.percent_equals_decimal": "500",
+    "percentages.percentage_as_index": "10",
+    "percentages.reverse_percentage_error": "5"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "10",
+    "5",
+    "500"
+   ],
+   "meta": {
+    "template": "pct_dev_of",
+    "percent": 10,
+    "value": 50,
+    "conversion_type": "percent_in_calculation",
+    "percentage": 10,
+    "total": 50
+   },
+   "audit_expr": "10/100*50",
+   "item_id": "v5i:0092"
+  },
+  {
+   "text": "40 is increased by 20%. What is the result?",
+   "category": "percentages",
+   "family": "pct_dev_change",
+   "split": "dev",
+   "operation": "percentage",
+   "correct": "48",
+   "predictions": {
+    "percentages.add_percentages_directly": "48",
+    "percentages.percent_equals_decimal": "800",
+    "percentages.percentage_as_index": "60",
+    "percentages.reverse_percentage_error": "48"
+   },
+   "applicable": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "triggers": {
+    "percentages.add_percentages_directly": false,
+    "percentages.percent_equals_decimal": true,
+    "percentages.percentage_as_index": true,
+    "percentages.reverse_percentage_error": false
+   },
+   "answers": [
+    "48",
+    "60",
+    "800"
+   ],
+   "meta": {
+    "template": "percentage_increase",
+    "v5_template_family": "pct_dev_change",
+    "formula_type": "percentage_increase",
+    "percent": 20,
+    "value": 40,
+    "conversion_type": "percent_in_calculation",
+    "percentage": 20,
+    "total": 40
+   },
+   "audit_expr": "40*(1+20/100)",
+   "item_id": "v5i:0093"
+  }
+ ]
+}

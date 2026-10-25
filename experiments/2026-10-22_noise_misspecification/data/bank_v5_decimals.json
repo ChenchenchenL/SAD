@@ -1,0 +1,935 @@
+{
+ "category": "decimals",
+ "settings": {
+  "builder": "v5_authored_structural_templates",
+  "level": 5,
+  "source": "human-authored templates, not MalruleLib generators"
+ },
+ "hypotheses": [
+  {
+   "id": "decimals.ignore_decimal_point"
+  },
+  {
+   "id": "decimals.longer_is_larger"
+  },
+  {
+   "id": "decimals.right_align_decimals"
+  },
+  {
+   "id": "decimals.shorter_is_larger"
+  },
+  {
+   "id": "decimals.whole_number_thinking"
+  }
+ ],
+ "items": [
+  {
+   "text": "Calculate: 2.4 * 1.5",
+   "category": "decimals",
+   "family": "dec_mul",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "3.6",
+   "predictions": {
+    "decimals.ignore_decimal_point": "360",
+    "decimals.longer_is_larger": "3.6",
+    "decimals.right_align_decimals": "3.6",
+    "decimals.shorter_is_larger": "3.6",
+    "decimals.whole_number_thinking": "3.6"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "3.6",
+    "360"
+   ],
+   "meta": {
+    "template": "basic_multiplication",
+    "v5_template_family": "dec_mul",
+    "operands": [
+     "2.4",
+     "1.5"
+    ],
+    "num1": "2.4",
+    "num2": "1.5",
+    "operation": "multiplication",
+    "operation_symbol": "*"
+   },
+   "audit_expr": "2.4*1.5",
+   "item_id": "v5i:0033"
+  },
+  {
+   "text": "Calculate: 3.2 * 1.25",
+   "category": "decimals",
+   "family": "dec_mul",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "4",
+   "predictions": {
+    "decimals.ignore_decimal_point": "4000",
+    "decimals.longer_is_larger": "4",
+    "decimals.right_align_decimals": "4",
+    "decimals.shorter_is_larger": "4",
+    "decimals.whole_number_thinking": "4"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "4",
+    "4000"
+   ],
+   "meta": {
+    "template": "basic_multiplication",
+    "v5_template_family": "dec_mul",
+    "operands": [
+     "3.2",
+     "1.25"
+    ],
+    "num1": "3.2",
+    "num2": "1.25",
+    "operation": "multiplication",
+    "operation_symbol": "*"
+   },
+   "audit_expr": "3.2*1.25",
+   "item_id": "v5i:0034"
+  },
+  {
+   "text": "Calculate: 1.8 * 0.75",
+   "category": "decimals",
+   "family": "dec_mul",
+   "split": "test",
+   "operation": "multiplication",
+   "correct": "1.35",
+   "predictions": {
+    "decimals.ignore_decimal_point": "1350",
+    "decimals.longer_is_larger": "1.35",
+    "decimals.right_align_decimals": "1.35",
+    "decimals.shorter_is_larger": "1.35",
+    "decimals.whole_number_thinking": "1.35"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "1.35",
+    "1350"
+   ],
+   "meta": {
+    "template": "basic_multiplication",
+    "v5_template_family": "dec_mul",
+    "operands": [
+     "1.8",
+     "0.75"
+    ],
+    "num1": "1.8",
+    "num2": "0.75",
+    "operation": "multiplication",
+    "operation_symbol": "*"
+   },
+   "audit_expr": "1.8*0.75",
+   "item_id": "v5i:0035"
+  },
+  {
+   "text": "Calculate: 7.2 / 1.5",
+   "category": "decimals",
+   "family": "dec_div",
+   "split": "test",
+   "operation": "division",
+   "correct": "4.8",
+   "predictions": {
+    "decimals.ignore_decimal_point": "4",
+    "decimals.longer_is_larger": "4.8",
+    "decimals.right_align_decimals": "4.8",
+    "decimals.shorter_is_larger": "4.8",
+    "decimals.whole_number_thinking": "4.8"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "4",
+    "4.8"
+   ],
+   "meta": {
+    "template": "division",
+    "v5_template_family": "dec_div",
+    "operands": [
+     "7.2",
+     "1.5"
+    ],
+    "num1": "7.2",
+    "num2": "1.5",
+    "operation": "division",
+    "operation_symbol": "/",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 1
+   },
+   "audit_expr": "7.2/1.5",
+   "item_id": "v5i:0036"
+  },
+  {
+   "text": "Calculate: 8.4 / 1.6",
+   "category": "decimals",
+   "family": "dec_div",
+   "split": "test",
+   "operation": "division",
+   "correct": "5.25",
+   "predictions": {
+    "decimals.ignore_decimal_point": "5",
+    "decimals.longer_is_larger": "5.25",
+    "decimals.right_align_decimals": "5.25",
+    "decimals.shorter_is_larger": "5.25",
+    "decimals.whole_number_thinking": "5.25"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "5",
+    "5.25"
+   ],
+   "meta": {
+    "template": "division",
+    "v5_template_family": "dec_div",
+    "operands": [
+     "8.4",
+     "1.6"
+    ],
+    "num1": "8.4",
+    "num2": "1.6",
+    "operation": "division",
+    "operation_symbol": "/",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 1
+   },
+   "audit_expr": "8.4/1.6",
+   "item_id": "v5i:0037"
+  },
+  {
+   "text": "Calculate: 9.6 / 2.4",
+   "category": "decimals",
+   "family": "dec_div",
+   "split": "test",
+   "operation": "division",
+   "correct": "4",
+   "predictions": {
+    "decimals.ignore_decimal_point": "4",
+    "decimals.longer_is_larger": "4",
+    "decimals.right_align_decimals": "4",
+    "decimals.shorter_is_larger": "4",
+    "decimals.whole_number_thinking": "4"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "4"
+   ],
+   "meta": {
+    "template": "division",
+    "v5_template_family": "dec_div",
+    "operands": [
+     "9.6",
+     "2.4"
+    ],
+    "num1": "9.6",
+    "num2": "2.4",
+    "operation": "division",
+    "operation_symbol": "/",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 1
+   },
+   "audit_expr": "9.6/2.4",
+   "item_id": "v5i:0038"
+  },
+  {
+   "text": "Calculate: 12.3 + 4.56",
+   "category": "decimals",
+   "family": "dec_add_misaligned",
+   "split": "test",
+   "operation": "addition",
+   "correct": "16.86",
+   "predictions": {
+    "decimals.ignore_decimal_point": "16.86",
+    "decimals.longer_is_larger": "16.86",
+    "decimals.right_align_decimals": "57.9",
+    "decimals.shorter_is_larger": "16.86",
+    "decimals.whole_number_thinking": "16.86"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "16.86",
+    "57.9"
+   ],
+   "meta": {
+    "template": "basic_addition",
+    "v5_template_family": "dec_add_misaligned",
+    "operands": [
+     "12.3",
+     "4.56"
+    ],
+    "num1": "12.3",
+    "num2": "4.56",
+    "operation": "addition",
+    "operation_symbol": "+",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 2
+   },
+   "audit_expr": "12.3+4.56",
+   "item_id": "v5i:0039"
+  },
+  {
+   "text": "Calculate: 3.5 + 2.75",
+   "category": "decimals",
+   "family": "dec_add_misaligned",
+   "split": "test",
+   "operation": "addition",
+   "correct": "6.25",
+   "predictions": {
+    "decimals.ignore_decimal_point": "6.25",
+    "decimals.longer_is_larger": "6.25",
+    "decimals.right_align_decimals": "31",
+    "decimals.shorter_is_larger": "6.25",
+    "decimals.whole_number_thinking": "6.25"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "31",
+    "6.25"
+   ],
+   "meta": {
+    "template": "basic_addition",
+    "v5_template_family": "dec_add_misaligned",
+    "operands": [
+     "3.5",
+     "2.75"
+    ],
+    "num1": "3.5",
+    "num2": "2.75",
+    "operation": "addition",
+    "operation_symbol": "+",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 2
+   },
+   "audit_expr": "3.5+2.75",
+   "item_id": "v5i:0040"
+  },
+  {
+   "text": "Calculate: 20.4 - 3.75",
+   "category": "decimals",
+   "family": "dec_sub_misaligned",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "16.65",
+   "predictions": {
+    "decimals.ignore_decimal_point": "16.65",
+    "decimals.longer_is_larger": "16.65",
+    "decimals.right_align_decimals": "17.1",
+    "decimals.shorter_is_larger": "16.65",
+    "decimals.whole_number_thinking": "16.65"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "16.65",
+    "17.1"
+   ],
+   "meta": {
+    "template": "basic_subtraction",
+    "v5_template_family": "dec_sub_misaligned",
+    "operands": [
+     "20.4",
+     "3.75"
+    ],
+    "num1": "20.4",
+    "num2": "3.75",
+    "operation": "subtraction",
+    "operation_symbol": "-",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 2
+   },
+   "audit_expr": "20.4-3.75",
+   "item_id": "v5i:0041"
+  },
+  {
+   "text": "Calculate: 15.2 - 4.75",
+   "category": "decimals",
+   "family": "dec_sub_misaligned",
+   "split": "test",
+   "operation": "subtraction",
+   "correct": "10.45",
+   "predictions": {
+    "decimals.ignore_decimal_point": "10.45",
+    "decimals.longer_is_larger": "10.45",
+    "decimals.right_align_decimals": "32.3",
+    "decimals.shorter_is_larger": "10.45",
+    "decimals.whole_number_thinking": "10.45"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "10.45",
+    "32.3"
+   ],
+   "meta": {
+    "template": "basic_subtraction",
+    "v5_template_family": "dec_sub_misaligned",
+    "operands": [
+     "15.2",
+     "4.75"
+    ],
+    "num1": "15.2",
+    "num2": "4.75",
+    "operation": "subtraction",
+    "operation_symbol": "-",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 2
+   },
+   "audit_expr": "15.2-4.75",
+   "item_id": "v5i:0042"
+  },
+  {
+   "text": "Which is larger: 0.45 or 0.8?",
+   "category": "decimals",
+   "family": "dec_compare_longer",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.8",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.8",
+    "decimals.longer_is_larger": "0.45",
+    "decimals.right_align_decimals": "0.8",
+    "decimals.shorter_is_larger": "0.8",
+    "decimals.whole_number_thinking": "0.8"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.45",
+    "0.8"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v5_template_family": "dec_compare_longer",
+    "operands": [
+     "0.45",
+     "0.8"
+    ],
+    "decimal1": "0.45",
+    "decimal2": "0.8",
+    "num1": "0.45",
+    "num2": "0.8"
+   },
+   "audit_expr": "max(0.45,0.8)",
+   "item_id": "v5i:0043"
+  },
+  {
+   "text": "Which is larger: 0.125 or 0.14?",
+   "category": "decimals",
+   "family": "dec_compare_longer",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.14",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.14",
+    "decimals.longer_is_larger": "0.125",
+    "decimals.right_align_decimals": "0.14",
+    "decimals.shorter_is_larger": "0.14",
+    "decimals.whole_number_thinking": "0.14"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.125",
+    "0.14"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v5_template_family": "dec_compare_longer",
+    "operands": [
+     "0.125",
+     "0.14"
+    ],
+    "decimal1": "0.125",
+    "decimal2": "0.14",
+    "num1": "0.125",
+    "num2": "0.14"
+   },
+   "audit_expr": "max(0.125,0.14)",
+   "item_id": "v5i:0044"
+  },
+  {
+   "text": "Which is larger: 0.09 or 0.1?",
+   "category": "decimals",
+   "family": "dec_compare_longer",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.1",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.1",
+    "decimals.longer_is_larger": "0.09",
+    "decimals.right_align_decimals": "0.1",
+    "decimals.shorter_is_larger": "0.1",
+    "decimals.whole_number_thinking": "0.1"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.09",
+    "0.1"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v5_template_family": "dec_compare_longer",
+    "operands": [
+     "0.09",
+     "0.1"
+    ],
+    "decimal1": "0.09",
+    "decimal2": "0.1",
+    "num1": "0.09",
+    "num2": "0.1"
+   },
+   "audit_expr": "max(0.09,0.1)",
+   "item_id": "v5i:0045"
+  },
+  {
+   "text": "Which is larger: 0.25 or 0.9?",
+   "category": "decimals",
+   "family": "dec_compare_longer",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.9",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.9",
+    "decimals.longer_is_larger": "0.25",
+    "decimals.right_align_decimals": "0.9",
+    "decimals.shorter_is_larger": "0.9",
+    "decimals.whole_number_thinking": "0.9"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": true,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.25",
+    "0.9"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v5_template_family": "dec_compare_longer",
+    "operands": [
+     "0.25",
+     "0.9"
+    ],
+    "decimal1": "0.25",
+    "decimal2": "0.9",
+    "num1": "0.25",
+    "num2": "0.9"
+   },
+   "audit_expr": "max(0.25,0.9)",
+   "item_id": "v5i:0046"
+  },
+  {
+   "text": "Which is larger: 0.3 or 0.496?",
+   "category": "decimals",
+   "family": "dec_compare_shorter",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.496",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.496",
+    "decimals.longer_is_larger": "0.496",
+    "decimals.right_align_decimals": "0.496",
+    "decimals.shorter_is_larger": "0.3",
+    "decimals.whole_number_thinking": "0.496"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.3",
+    "0.496"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v5_template_family": "dec_compare_shorter",
+    "operands": [
+     "0.3",
+     "0.496"
+    ],
+    "decimal1": "0.3",
+    "decimal2": "0.496",
+    "num1": "0.3",
+    "num2": "0.496"
+   },
+   "audit_expr": "max(0.3,0.496)",
+   "item_id": "v5i:0047"
+  },
+  {
+   "text": "Which is larger: 0.75 or 0.812?",
+   "category": "decimals",
+   "family": "dec_compare_shorter",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.812",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.812",
+    "decimals.longer_is_larger": "0.812",
+    "decimals.right_align_decimals": "0.812",
+    "decimals.shorter_is_larger": "0.75",
+    "decimals.whole_number_thinking": "0.812"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.75",
+    "0.812"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v5_template_family": "dec_compare_shorter",
+    "operands": [
+     "0.75",
+     "0.812"
+    ],
+    "decimal1": "0.75",
+    "decimal2": "0.812",
+    "num1": "0.75",
+    "num2": "0.812"
+   },
+   "audit_expr": "max(0.75,0.812)",
+   "item_id": "v5i:0048"
+  },
+  {
+   "text": "Which is larger: 0.6 or 0.625?",
+   "category": "decimals",
+   "family": "dec_compare_shorter",
+   "split": "test",
+   "operation": "decimal_comparison",
+   "correct": "0.625",
+   "predictions": {
+    "decimals.ignore_decimal_point": "0.625",
+    "decimals.longer_is_larger": "0.625",
+    "decimals.right_align_decimals": "0.625",
+    "decimals.shorter_is_larger": "0.6",
+    "decimals.whole_number_thinking": "0.625"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": true,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "0.6",
+    "0.625"
+   ],
+   "meta": {
+    "template": "basic_comparison",
+    "v5_template_family": "dec_compare_shorter",
+    "operands": [
+     "0.6",
+     "0.625"
+    ],
+    "decimal1": "0.6",
+    "decimal2": "0.625",
+    "num1": "0.6",
+    "num2": "0.625"
+   },
+   "audit_expr": "max(0.6,0.625)",
+   "item_id": "v5i:0049"
+  },
+  {
+   "text": "Calculate: 1.6 * 2.5",
+   "category": "decimals",
+   "family": "dec_dev_mul",
+   "split": "dev",
+   "operation": "multiplication",
+   "correct": "4",
+   "predictions": {
+    "decimals.ignore_decimal_point": "400",
+    "decimals.longer_is_larger": "4",
+    "decimals.right_align_decimals": "4",
+    "decimals.shorter_is_larger": "4",
+    "decimals.whole_number_thinking": "4"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": true,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": false,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "4",
+    "400"
+   ],
+   "meta": {
+    "template": "basic_multiplication",
+    "v5_template_family": "dec_dev_mul",
+    "operands": [
+     "1.6",
+     "2.5"
+    ],
+    "num1": "1.6",
+    "num2": "2.5",
+    "operation": "multiplication",
+    "operation_symbol": "*"
+   },
+   "audit_expr": "1.6*2.5",
+   "item_id": "v5i:0050"
+  },
+  {
+   "text": "Calculate: 1.2 + 3.45",
+   "category": "decimals",
+   "family": "dec_dev_add",
+   "split": "dev",
+   "operation": "addition",
+   "correct": "4.65",
+   "predictions": {
+    "decimals.ignore_decimal_point": "4.65",
+    "decimals.longer_is_larger": "4.65",
+    "decimals.right_align_decimals": "35.7",
+    "decimals.shorter_is_larger": "4.65",
+    "decimals.whole_number_thinking": "4.65"
+   },
+   "applicable": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "triggers": {
+    "decimals.ignore_decimal_point": false,
+    "decimals.longer_is_larger": false,
+    "decimals.right_align_decimals": true,
+    "decimals.shorter_is_larger": false,
+    "decimals.whole_number_thinking": false
+   },
+   "answers": [
+    "35.7",
+    "4.65"
+   ],
+   "meta": {
+    "template": "basic_addition",
+    "v5_template_family": "dec_dev_add",
+    "operands": [
+     "1.2",
+     "3.45"
+    ],
+    "num1": "1.2",
+    "num2": "3.45",
+    "operation": "addition",
+    "operation_symbol": "+",
+    "num1_decimal_places": 1,
+    "num2_decimal_places": 2
+   },
+   "audit_expr": "1.2+3.45",
+   "item_id": "v5i:0051"
+  }
+ ]
+}

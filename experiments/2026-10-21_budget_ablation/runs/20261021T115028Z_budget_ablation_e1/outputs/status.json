@@ -1,0 +1,13 @@
+{
+  "status": "ok",
+  "run_id": "20261021T115028Z_budget_ablation_e1",
+  "episodes": 23490,
+  "duration_seconds": 8.99,
+  "reproduction": {
+    "frozen_episodes": "experiments\\2026-10-20_llm_v4_v5\\v5\\out\\test_category_eps05_corrected_episodes.json",
+    "n_compared": 1305,
+    "episode_mismatches": 0,
+    "mismatch_examples": [],
+    "max_abs_aggregate_diff": 0.0
+  }
+}

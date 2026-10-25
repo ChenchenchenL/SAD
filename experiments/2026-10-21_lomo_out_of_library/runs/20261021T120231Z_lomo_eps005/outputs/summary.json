@@ -1,0 +1,3465 @@
+{
+  "settings": {
+    "experiment": "lomo_out_of_library",
+    "cases": "data/cases_test_v5_exclusion_corrected.json",
+    "priors": "data/priors_test_category.jsonl",
+    "seeds": 5,
+    "eps": 0.05,
+    "max_obs": 7,
+    "arms": [
+      "posterior_only",
+      "posterior_plus_E",
+      "stability_mixed_reference"
+    ],
+    "student_types": [
+      "stable_ool",
+      "slip_ool"
+    ],
+    "posterior_thresholds": {
+      "top1_cond": 0.8,
+      "margin_cond": 0.2,
+      "single_mass": 0.4,
+      "pair_ceiling": 0.2,
+      "none_ceiling": 0.15
+    },
+    "min_consistent_wrong": 2,
+    "lr_slip_threshold": 10.0,
+    "pair_guard_margin": -0.4054651081081644,
+    "bootstrap": 2000,
+    "bootstrap_seed": 20261026,
+    "prior_source": "frozen deepseek-v4.1-flash category-conditioned cached prior; removed rule dropped from weights, remaining ranks kept",
+    "hidden_label_boundary": "removed rule used only for simulation and scoring"
+  },
+  "status": "ok",
+  "duration_seconds": 1.0,
+  "manifest": {
+    "generated_at_utc": "2026-10-21T12:02:31.907498+00:00",
+    "python": "3.12.8",
+    "executable": "D:\\Program Files\\python\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "experiment": "2026-10-21_lomo_out_of_library",
+    "run_id": "20261021T120231Z_lomo_eps005",
+    "config": "experiments\\2026-10-21_lomo_out_of_library\\config.json",
+    "inputs": [
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/config.json",
+        "size_bytes": 436,
+        "sha256": "b7be60edf4d21ea4cd117d3685da42526b0ccc46a5cae15405385148617e908a"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/cases_test_v5_exclusion_corrected.json",
+        "size_bytes": 44273,
+        "sha256": "a47a41c385380d0306a4fc3a73a7ce0239db443d4f44bb888e90fe2bd53eb57e"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/priors_test_category.jsonl",
+        "size_bytes": 215841,
+        "sha256": "8ffc3a02593adba624d18604d7a6c1feeb14a566aba0a1138f9ee9b080860130"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_subtraction.json",
+        "size_bytes": 24850,
+        "sha256": "dd9668866f350ad00e4f2422017eda77f8b69a6ac4e1f1dc2ca5996ff2d0f655"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_fractions.json",
+        "size_bytes": 36805,
+        "sha256": "665e80874df3e178ac23e28e3c90f4fdeed5d4b148f5017125e1ef0a553dfd88"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_decimals.json",
+        "size_bytes": 25343,
+        "sha256": "dec2b72ac36b20ecfc991f7ad1f737ea62f388f4657967901f0ce66fd04d5233"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_negative_numbers.json",
+        "size_bytes": 25669,
+        "sha256": "e4ab84c00ea4e03ec7b3be9063350269d47b06d43e453c502ae9c020d5ad8ff5"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_order_of_operations.json",
+        "size_bytes": 24837,
+        "sha256": "2fd81d24ccf15149c2d6beff53d1145e3abb73ebed3f3261fb167a52f3e8a8e3"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/data/bank_v5_percentages.json",
+        "size_bytes": 16295,
+        "sha256": "4813b5b178084a8f8d6aeb7d7e0616e5ab2c50cd051b2ff31a8c9eb305032d5d"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/src/g0_lib.py",
+        "size_bytes": 31557,
+        "sha256": "713bd2e67e2004194415f865bd8bedfe628fe6b28bf6029519e3a90c47ddadb4"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/src/v5_engine.py",
+        "size_bytes": 26479,
+        "sha256": "bf4149a91997f23033cc4a12a185c73cc5d8154c5c827a939d06180318411b58"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/src/ablation.py",
+        "size_bytes": 21038,
+        "sha256": "46b254396575ec0fab68de51a693dff8636a065116ae3de3cc091bff025a9db7"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/src/lomo.py",
+        "size_bytes": 12789,
+        "sha256": "e7b3a1920509666a3ba1058151798839f15c631ab51b8fcc088125e3e41c4a51"
+      },
+      {
+        "path": "experiments/2026-10-21_lomo_out_of_library/run.py",
+        "size_bytes": 19317,
+        "sha256": "714b62d30223f580c7c47eff421040be24300a6911db8711baf4f41e14b5c353"
+      }
+    ]
+  },
+  "skipped": {},
+  "n_cases": 87,
+  "n_removed_labels": 29,
+  "n_episodes": 2610,
+  "uniqueness_check": {
+    "n_labels_checked": 35,
+    "violations": [],
+    "labels_with_max_overlap_ge2": 9
+  },
+  "aggregates": {
+    "posterior_only": {
+      "stable_ool": {
+        "false_commit": {
+          "mean": 0.4482758620689655,
+          "ci_low": 0.30104838709677423,
+          "ci_high": 0.6266976744186045,
+          "n_cases": 87
+        },
+        "false_single": {
+          "mean": 0.4482758620689655,
+          "ci_low": 0.30104838709677423,
+          "ci_high": 0.6266976744186045,
+          "n_cases": 87
+        },
+        "false_pair_mixed": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_cases": 87
+        },
+        "none": {
+          "mean": 0.4827586206896552,
+          "ci_low": 0.30335230632761684,
+          "ci_high": 0.638328797624938,
+          "n_cases": 87
+        },
+        "abstain": {
+          "mean": 0.06896551724137931,
+          "ci_low": 0.011764705882352941,
+          "ci_high": 0.14130709266578828,
+          "n_cases": 87
+        },
+        "safe": {
+          "mean": 0.5517241379310345,
+          "ci_low": 0.37330232558139537,
+          "ci_high": 0.6989516129032257,
+          "n_cases": 87
+        },
+        "n_obs": {
+          "mean": 3.1954022988505746,
+          "ci_low": 2.74192642261689,
+          "ci_high": 3.653497760490335,
+          "n_cases": 87
+        },
+        "n_inquiries": {
+          "mean": 2.1954022988505746,
+          "ci_low": 1.7419264226168902,
+          "ci_high": 2.653497760490335,
+          "n_cases": 87
+        },
+        "J5": {
+          "mean": 5.436781609195402,
+          "ci_low": 4.801880188018802,
+          "ci_high": 6.158585516410719,
+          "n_cases": 87
+        },
+        "J10": {
+          "mean": 7.67816091954023,
+          "ci_low": 6.380368357487923,
+          "ci_high": 9.275009057971015,
+          "n_cases": 87
+        },
+        "n_cases": 87,
+        "n_episodes": 435
+      },
+      "slip_ool": {
+        "false_commit": {
+          "mean": 0.47586206896551725,
+          "ci_low": 0.33101443464314356,
+          "ci_high": 0.6506337552742616,
+          "n_cases": 87
+        },
+        "false_single": {
+          "mean": 0.47586206896551725,
+          "ci_low": 0.33101443464314356,
+          "ci_high": 0.6506337552742616,
+          "n_cases": 87
+        },
+        "false_pair_mixed": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_cases": 87
+        },
+        "none": {
+          "mean": 0.4528735632183908,
+          "ci_low": 0.2769078947368421,
+          "ci_high": 0.6021902321374735,
+          "n_cases": 87
+        },
+        "abstain": {
+          "mean": 0.07126436781609195,
+          "ci_low": 0.015579420579420581,
+          "ci_high": 0.14047619047619048,
+          "n_cases": 87
+        },
+        "safe": {
+          "mean": 0.5241379310344828,
+          "ci_low": 0.34936624472573835,
+          "ci_high": 0.6689855653568564,
+          "n_cases": 87
+        },
+        "n_obs": {
+          "mean": 3.1793103448275866,
+          "ci_low": 2.733315789473685,
+          "ci_high": 3.6381252688172037,
+          "n_cases": 87
+        },
+        "n_inquiries": {
+          "mean": 2.1793103448275866,
+          "ci_low": 1.7333157894736844,
+          "ci_high": 2.6381252688172045,
+          "n_cases": 87
+        },
+        "J5": {
+          "mean": 5.558620689655172,
+          "ci_low": 4.9577442244224414,
+          "ci_high": 6.243642857142857,
+          "n_cases": 87
+        },
+        "J10": {
+          "mean": 7.937931034482758,
+          "ci_low": 6.7181342494714595,
+          "ci_high": 9.42808430232558,
+          "n_cases": 87
+        },
+        "n_cases": 87,
+        "n_episodes": 435
+      }
+    },
+    "posterior_plus_E": {
+      "stable_ool": {
+        "false_commit": {
+          "mean": 0.06896551724137931,
+          "ci_low": 0.01098901098901099,
+          "ci_high": 0.15584415584415584,
+          "n_cases": 87
+        },
+        "false_single": {
+          "mean": 0.06896551724137931,
+          "ci_low": 0.01098901098901099,
+          "ci_high": 0.15584415584415584,
+          "n_cases": 87
+        },
+        "false_pair_mixed": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_cases": 87
+        },
+        "none": {
+          "mean": 0.5977011494252874,
+          "ci_low": 0.42389214046822743,
+          "ci_high": 0.7403935185185185,
+          "n_cases": 87
+        },
+        "abstain": {
+          "mean": 0.3333333333333333,
+          "ci_low": 0.19509827137106323,
+          "ci_high": 0.4942528735632184,
+          "n_cases": 87
+        },
+        "safe": {
+          "mean": 0.9310344827586207,
+          "ci_low": 0.8441558441558441,
+          "ci_high": 0.989010989010989,
+          "n_cases": 87
+        },
+        "n_obs": {
+          "mean": 4.850574712643678,
+          "ci_low": 4.2825947603121515,
+          "ci_high": 5.447416094584287,
+          "n_cases": 87
+        },
+        "n_inquiries": {
+          "mean": 3.8505747126436782,
+          "ci_low": 3.2825947603121515,
+          "ci_high": 4.447416094584287,
+          "n_cases": 87
+        },
+        "J5": {
+          "mean": 5.195402298850575,
+          "ci_low": 4.6018357326191275,
+          "ci_high": 5.89876582278481,
+          "n_cases": 87
+        },
+        "J10": {
+          "mean": 5.540229885057471,
+          "ci_low": 4.7755044714515025,
+          "ci_high": 6.488234629294755,
+          "n_cases": 87
+        },
+        "n_cases": 87,
+        "n_episodes": 435
+      },
+      "slip_ool": {
+        "false_commit": {
+          "mean": 0.07126436781609195,
+          "ci_low": 0.012195121951219513,
+          "ci_high": 0.15853658536585366,
+          "n_cases": 87
+        },
+        "false_single": {
+          "mean": 0.07126436781609195,
+          "ci_low": 0.012195121951219513,
+          "ci_high": 0.15853658536585366,
+          "n_cases": 87
+        },
+        "false_pair_mixed": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_cases": 87
+        },
+        "none": {
+          "mean": 0.560919540229885,
+          "ci_low": 0.39517299969107195,
+          "ci_high": 0.6977553552769069,
+          "n_cases": 87
+        },
+        "abstain": {
+          "mean": 0.367816091954023,
+          "ci_low": 0.22889169581552013,
+          "ci_high": 0.52685298102981,
+          "n_cases": 87
+        },
+        "safe": {
+          "mean": 0.928735632183908,
+          "ci_low": 0.8414634146341463,
+          "ci_high": 0.9878048780487805,
+          "n_cases": 87
+        },
+        "n_obs": {
+          "mean": 4.960919540229884,
+          "ci_low": 4.388614332096475,
+          "ci_high": 5.543229629629629,
+          "n_cases": 87
+        },
+        "n_inquiries": {
+          "mean": 3.960919540229884,
+          "ci_low": 3.3886143320964752,
+          "ci_high": 4.5432296296296295,
+          "n_cases": 87
+        },
+        "J5": {
+          "mean": 5.317241379310344,
+          "ci_low": 4.726724733794134,
+          "ci_high": 6.0024759798688425,
+          "n_cases": 87
+        },
+        "J10": {
+          "mean": 5.673563218390804,
+          "ci_low": 4.9187304730473045,
+          "ci_high": 6.6184438549955775,
+          "n_cases": 87
+        },
+        "n_cases": 87,
+        "n_episodes": 435
+      }
+    },
+    "stability_mixed_reference": {
+      "stable_ool": {
+        "false_commit": {
+          "mean": 0.06896551724137931,
+          "ci_low": 0.01098901098901099,
+          "ci_high": 0.15584415584415584,
+          "n_cases": 87
+        },
+        "false_single": {
+          "mean": 0.06896551724137931,
+          "ci_low": 0.01098901098901099,
+          "ci_high": 0.15584415584415584,
+          "n_cases": 87
+        },
+        "false_pair_mixed": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n_cases": 87
+        },
+        "none": {
+          "mean": 0.6666666666666666,
+          "ci_low": 0.5,
+          "ci_high": 0.8095238095238095,
+          "n_cases": 87
+        },
+        "abstain": {
+          "mean": 0.26436781609195403,
+          "ci_low": 0.1299758064516129,
+          "ci_high": 0.42667073170731706,
+          "n_cases": 87
+        },
+        "safe": {
+          "mean": 0.9310344827586207,
+          "ci_low": 0.8441558441558441,
+          "ci_high": 0.989010989010989,
+          "n_cases": 87
+        },
+        "n_obs": {
+          "mean": 4.390804597701149,
+          "ci_low": 3.869552277432712,
+          "ci_high": 5.02199036918138,
+          "n_cases": 87
+        },
+        "n_inquiries": {
+          "mean": 3.3908045977011496,
+          "ci_low": 2.869552277432712,
+          "ci_high": 4.02199036918138,
+          "n_cases": 87
+        },
+        "J5": {
+          "mean": 4.735632183908046,
+          "ci_low": 4.160470843183609,
+          "ci_high": 5.432255200405884,
+          "n_cases": 87
+        },
+        "J10": {
+          "mean": 5.080459770114943,
+          "ci_low": 4.311745024021962,
+          "ci_high": 6.04655365648641,
+          "n_cases": 87
+        },
+        "n_cases": 87,
+        "n_episodes": 435
+      },
+      "slip_ool": {
+        "false_commit": {
+          "mean": 0.09655172413793103,
+          "ci_low": 0.034,
+          "ci_high": 0.18537456445993025,
+          "n_cases": 87
+        },
+        "false_single": {
+          "mean": 0.07126436781609195,
+          "ci_low": 0.012195121951219513,
+          "ci_high": 0.15853658536585366,
+          "n_cases": 87
+        },
+        "false_pair_mixed": {
+          "mean": 0.025287356321839084,
+          "ci_low": 0.008161886376172092,
+          "ci_high": 0.04554518110038852,
+          "n_cases": 87
+        },
+        "none": {
+          "mean": 0.639080459770115,
+          "ci_low": 0.47690789473684214,
+          "ci_high": 0.7802338856334612,
+          "n_cases": 87
+        },
+        "abstain": {
+          "mean": 0.2643678160919541,
+          "ci_low": 0.1355537634408602,
+          "ci_high": 0.4205147058823529,
+          "n_cases": 87
+        },
+        "safe": {
+          "mean": 0.9034482758620689,
+          "ci_low": 0.8146254355400696,
+          "ci_high": 0.966,
+          "n_cases": 87
+        },
+        "n_obs": {
+          "mean": 4.425287356321839,
+          "ci_low": 3.926854007316262,
+          "ci_high": 5.042151532677848,
+          "n_cases": 87
+        },
+        "n_inquiries": {
+          "mean": 3.425287356321839,
+          "ci_low": 2.926854007316262,
+          "ci_high": 4.042151532677849,
+          "n_cases": 87
+        },
+        "J5": {
+          "mean": 4.908045977011494,
+          "ci_low": 4.333222222222222,
+          "ci_high": 5.594928571428571,
+          "n_cases": 87
+        },
+        "J10": {
+          "mean": 5.390804597701149,
+          "ci_low": 4.595384332668277,
+          "ci_high": 6.374391891891891,
+          "n_cases": 87
+        },
+        "n_cases": 87,
+        "n_episodes": 435
+      }
+    }
+  },
+  "contrasts": {
+    "posterior_plus_E - posterior_only/stable_ool": {
+      "false_commit": {
+        "mean": -0.3793103448275862,
+        "ci_low": -0.5487933699759533,
+        "ci_high": -0.234554767533491,
+        "n_cases": 87
+      },
+      "false_single": {
+        "mean": -0.3793103448275862,
+        "ci_low": -0.5487933699759533,
+        "ci_high": -0.234554767533491,
+        "n_cases": 87
+      },
+      "false_pair_mixed": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "none": {
+        "mean": 0.11494252873563218,
+        "ci_low": 0.023529411764705882,
+        "ci_high": 0.23255813953488372,
+        "n_cases": 87
+      },
+      "abstain": {
+        "mean": 0.26436781609195403,
+        "ci_low": 0.14281832298136646,
+        "ci_high": 0.42108187134502906,
+        "n_cases": 87
+      },
+      "safe": {
+        "mean": 0.3793103448275862,
+        "ci_low": 0.23455476753349092,
+        "ci_high": 0.5487933699759533,
+        "n_cases": 87
+      },
+      "n_obs": {
+        "mean": 1.6551724137931034,
+        "ci_low": 1.0206066176470587,
+        "ci_high": 2.4189881146206442,
+        "n_cases": 87
+      },
+      "n_inquiries": {
+        "mean": 1.6551724137931034,
+        "ci_low": 1.0206066176470587,
+        "ci_high": 2.4189881146206442,
+        "n_cases": 87
+      },
+      "J5": {
+        "mean": -0.2413793103448276,
+        "ci_low": -0.5,
+        "ci_high": 0.02248482500322865,
+        "n_cases": 87
+      },
+      "J10": {
+        "mean": -2.1379310344827585,
+        "ci_low": -3.1341877446552244,
+        "ci_high": -1.2749877450980391,
+        "n_cases": 87
+      }
+    },
+    "posterior_plus_E - posterior_only/slip_ool": {
+      "false_commit": {
+        "mean": -0.4045977011494252,
+        "ci_low": -0.5686831834379773,
+        "ci_high": -0.26451433691756276,
+        "n_cases": 87
+      },
+      "false_single": {
+        "mean": -0.4045977011494252,
+        "ci_low": -0.5686831834379773,
+        "ci_high": -0.26451433691756276,
+        "n_cases": 87
+      },
+      "false_pair_mixed": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "none": {
+        "mean": 0.10804597701149425,
+        "ci_low": 0.03908045977011494,
+        "ci_high": 0.19222612681436202,
+        "n_cases": 87
+      },
+      "abstain": {
+        "mean": 0.296551724137931,
+        "ci_low": 0.17346598639455782,
+        "ci_high": 0.4536700143472022,
+        "n_cases": 87
+      },
+      "safe": {
+        "mean": 0.4045977011494252,
+        "ci_low": 0.2645143369175627,
+        "ci_high": 0.5686831834379772,
+        "n_cases": 87
+      },
+      "n_obs": {
+        "mean": 1.7816091954022988,
+        "ci_low": 1.1402811173974543,
+        "ci_high": 2.5631698564593304,
+        "n_cases": 87
+      },
+      "n_inquiries": {
+        "mean": 1.7816091954022988,
+        "ci_low": 1.1402811173974543,
+        "ci_high": 2.5631698564593304,
+        "n_cases": 87
+      },
+      "J5": {
+        "mean": -0.2413793103448276,
+        "ci_low": -0.4689567901234568,
+        "ci_high": 5.263157894711182e-05,
+        "n_cases": 87
+      },
+      "J10": {
+        "mean": -2.264367816091954,
+        "ci_low": -3.1974735060347363,
+        "ci_high": -1.4775399557413325,
+        "n_cases": 87
+      }
+    },
+    "stability_mixed_reference - posterior_only/stable_ool": {
+      "false_commit": {
+        "mean": -0.3793103448275862,
+        "ci_low": -0.5487933699759533,
+        "ci_high": -0.234554767533491,
+        "n_cases": 87
+      },
+      "false_single": {
+        "mean": -0.3793103448275862,
+        "ci_low": -0.5487933699759533,
+        "ci_high": -0.234554767533491,
+        "n_cases": 87
+      },
+      "false_pair_mixed": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "none": {
+        "mean": 0.1839080459770115,
+        "ci_low": 0.07228915662650602,
+        "ci_high": 0.3132530120481928,
+        "n_cases": 87
+      },
+      "abstain": {
+        "mean": 0.19540229885057472,
+        "ci_low": 0.04649826249665865,
+        "ci_high": 0.3695652173913043,
+        "n_cases": 87
+      },
+      "safe": {
+        "mean": 0.3793103448275862,
+        "ci_low": 0.23455476753349092,
+        "ci_high": 0.5487933699759533,
+        "n_cases": 87
+      },
+      "n_obs": {
+        "mean": 1.1954022988505748,
+        "ci_low": 0.44821026986506746,
+        "ci_high": 2.0814437984496124,
+        "n_cases": 87
+      },
+      "n_inquiries": {
+        "mean": 1.1954022988505748,
+        "ci_low": 0.44821026986506746,
+        "ci_high": 2.0814437984496124,
+        "n_cases": 87
+      },
+      "J5": {
+        "mean": -0.7011494252873564,
+        "ci_low": -1.1263224516988675,
+        "ci_high": -0.2872746865203766,
+        "n_cases": 87
+      },
+      "J10": {
+        "mean": -2.5977011494252875,
+        "ci_low": -3.6026785714285716,
+        "ci_high": -1.693093652037618,
+        "n_cases": 87
+      }
+    },
+    "stability_mixed_reference - posterior_only/slip_ool": {
+      "false_commit": {
+        "mean": -0.3793103448275862,
+        "ci_low": -0.5377342927342929,
+        "ci_high": -0.24444444444444446,
+        "n_cases": 87
+      },
+      "false_single": {
+        "mean": -0.4045977011494252,
+        "ci_low": -0.5686831834379773,
+        "ci_high": -0.26451433691756276,
+        "n_cases": 87
+      },
+      "false_pair_mixed": {
+        "mean": 0.025287356321839084,
+        "ci_low": 0.008161886376172092,
+        "ci_high": 0.04554518110038852,
+        "n_cases": 87
+      },
+      "none": {
+        "mean": 0.18620689655172412,
+        "ci_low": 0.08952100840336133,
+        "ci_high": 0.29333766233766234,
+        "n_cases": 87
+      },
+      "abstain": {
+        "mean": 0.19310344827586207,
+        "ci_low": 0.05185185185185184,
+        "ci_high": 0.35894559135635706,
+        "n_cases": 87
+      },
+      "safe": {
+        "mean": 0.3793103448275862,
+        "ci_low": 0.24444444444444446,
+        "ci_high": 0.5377342927342924,
+        "n_cases": 87
+      },
+      "n_obs": {
+        "mean": 1.2459770114942528,
+        "ci_low": 0.5030154639175258,
+        "ci_high": 2.105560344827586,
+        "n_cases": 87
+      },
+      "n_inquiries": {
+        "mean": 1.2459770114942528,
+        "ci_low": 0.5030154639175258,
+        "ci_high": 2.105560344827586,
+        "n_cases": 87
+      },
+      "J5": {
+        "mean": -0.6505747126436782,
+        "ci_low": -1.0425736990515253,
+        "ci_high": -0.27837294190742473,
+        "n_cases": 87
+      },
+      "J10": {
+        "mean": -2.5471264367816095,
+        "ci_low": -3.4228699517781793,
+        "ci_high": -1.7681794003868472,
+        "n_cases": 87
+      }
+    },
+    "stability_mixed_reference - posterior_plus_E/stable_ool": {
+      "false_commit": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "false_single": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "false_pair_mixed": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "none": {
+        "mean": 0.06896551724137931,
+        "ci_low": 0.010986024844720497,
+        "ci_high": 0.15069687798661988,
+        "n_cases": 87
+      },
+      "abstain": {
+        "mean": -0.06896551724137931,
+        "ci_low": -0.15069687798661993,
+        "ci_high": -0.010986024844720515,
+        "n_cases": 87
+      },
+      "safe": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "n_obs": {
+        "mean": -0.45977011494252873,
+        "ci_low": -0.7682926829268293,
+        "ci_high": -0.19475434204349895,
+        "n_cases": 87
+      },
+      "n_inquiries": {
+        "mean": -0.45977011494252873,
+        "ci_low": -0.7682926829268293,
+        "ci_high": -0.19475434204349895,
+        "n_cases": 87
+      },
+      "J5": {
+        "mean": -0.45977011494252873,
+        "ci_low": -0.7682926829268293,
+        "ci_high": -0.19475434204349895,
+        "n_cases": 87
+      },
+      "J10": {
+        "mean": -0.45977011494252873,
+        "ci_low": -0.7682926829268293,
+        "ci_high": -0.19475434204349895,
+        "n_cases": 87
+      }
+    },
+    "stability_mixed_reference - posterior_plus_E/slip_ool": {
+      "false_commit": {
+        "mean": 0.025287356321839084,
+        "ci_low": 0.008161886376172092,
+        "ci_high": 0.04554518110038852,
+        "n_cases": 87
+      },
+      "false_single": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_cases": 87
+      },
+      "false_pair_mixed": {
+        "mean": 0.025287356321839084,
+        "ci_low": 0.008161886376172092,
+        "ci_high": 0.04554518110038852,
+        "n_cases": 87
+      },
+      "none": {
+        "mean": 0.07816091954022988,
+        "ci_low": 0.019174820613176775,
+        "ci_high": 0.15238863287250382,
+        "n_cases": 87
+      },
+      "abstain": {
+        "mean": -0.10344827586206896,
+        "ci_low": -0.17701149425287357,
+        "ci_high": -0.043896832071769025,
+        "n_cases": 87
+      },
+      "safe": {
+        "mean": -0.025287356321839077,
+        "ci_low": -0.04554518110038853,
+        "ci_high": -0.008161886376172097,
+        "n_cases": 87
+      },
+      "n_obs": {
+        "mean": -0.5356321839080459,
+        "ci_low": -0.8394744964262508,
+        "ci_high": -0.26922839506172846,
+        "n_cases": 87
+      },
+      "n_inquiries": {
+        "mean": -0.5356321839080459,
+        "ci_low": -0.8394744964262508,
+        "ci_high": -0.26922839506172846,
+        "n_cases": 87
+      },
+      "J5": {
+        "mean": -0.4091954022988505,
+        "ci_low": -0.7067108433734939,
+        "ci_high": -0.15120373027259695,
+        "n_cases": 87
+      },
+      "J10": {
+        "mean": -0.2827586206896552,
+        "ci_low": -0.6023434201266714,
+        "ci_high": 4.2160368023510053e-19,
+        "n_cases": 87
+      }
+    }
+  },
+  "gate_counterfactual": {
+    "stable_ool": {
+      "posterior_only": {
+        "n_single_stops": 195,
+        "pct_E_pass": 0.1282051282051282,
+        "pct_LR_pass": 0.1282051282051282,
+        "pct_pair_guard_pass": 1.0,
+        "pct_any_gate_fail": 0.8717948717948718,
+        "min_log_lr_at_stop": 0.0,
+        "log10_threshold": 2.302585092994046
+      },
+      "posterior_plus_E": {
+        "n_single_stops": 0,
+        "pct_E_pass": null,
+        "pct_LR_pass": null,
+        "pct_pair_guard_pass": null,
+        "pct_any_gate_fail": null,
+        "min_log_lr_at_stop": null,
+        "log10_threshold": 2.302585092994046
+      },
+      "stability_mixed_reference": {
+        "n_single_stops": 0,
+        "pct_E_pass": null,
+        "pct_LR_pass": null,
+        "pct_pair_guard_pass": null,
+        "pct_any_gate_fail": null,
+        "min_log_lr_at_stop": null,
+        "log10_threshold": 2.302585092994046
+      }
+    },
+    "slip_ool": {
+      "posterior_only": {
+        "n_single_stops": 207,
+        "pct_E_pass": 0.11594202898550725,
+        "pct_LR_pass": 0.2318840579710145,
+        "pct_pair_guard_pass": 0.9903381642512077,
+        "pct_any_gate_fail": 0.8840579710144928,
+        "min_log_lr_at_stop": 0.0,
+        "log10_threshold": 2.302585092994046
+      },
+      "posterior_plus_E": {
+        "n_single_stops": 0,
+        "pct_E_pass": null,
+        "pct_LR_pass": null,
+        "pct_pair_guard_pass": null,
+        "pct_any_gate_fail": null,
+        "min_log_lr_at_stop": null,
+        "log10_threshold": 2.302585092994046
+      },
+      "stability_mixed_reference": {
+        "n_single_stops": 0,
+        "pct_E_pass": null,
+        "pct_LR_pass": null,
+        "pct_pair_guard_pass": null,
+        "pct_any_gate_fail": null,
+        "min_log_lr_at_stop": null,
+        "log10_threshold": 2.302585092994046
+      }
+    }
+  },
+  "gate_counterfactual_min_log_lr": 0.0,
+  "targets": {
+    "posterior_only": {
+      "stable_ool": {
+        "single_targets": {
+          "decimals.whole_number_thinking": 60,
+          "order_of_operations.pemdas_strictly_sequential": 35,
+          "order_of_operations.strict_left_to_right": 15,
+          "percentages.reverse_percentage_error": 15,
+          "percentages.add_percentages_directly": 15,
+          "fractions.denominator_comparison_error": 10,
+          "negative_numbers.multiplication_rule_for_addition": 10,
+          "order_of_operations.ignore_parentheses": 10,
+          "fractions.natural_number_bias_numerator_only": 5,
+          "fractions.multiply_across_for_division": 5,
+          "fractions.keep_common_denominator_for_multiplication": 5,
+          "percentages.percentage_as_index": 5,
+          "percentages.percent_equals_decimal": 5
+        },
+        "pair_member_counts": {}
+      },
+      "slip_ool": {
+        "single_targets": {
+          "decimals.whole_number_thinking": 53,
+          "order_of_operations.pemdas_strictly_sequential": 35,
+          "percentages.reverse_percentage_error": 15,
+          "order_of_operations.strict_left_to_right": 14,
+          "negative_numbers.multiplication_rule_for_addition": 11,
+          "percentages.add_percentages_directly": 11,
+          "fractions.denominator_comparison_error": 10,
+          "order_of_operations.ignore_parentheses": 10,
+          "percentages.percent_equals_decimal": 9,
+          "fractions.natural_number_bias_numerator_only": 7,
+          "percentages.percentage_as_index": 6,
+          "decimals.ignore_decimal_point": 5,
+          "fractions.multiply_across_for_division": 5,
+          "fractions.keep_common_denominator_for_multiplication": 5,
+          "fractions.ignore_denominators": 2,
+          "subtraction.smaller_from_larger": 2,
+          "decimals.shorter_is_larger": 1,
+          "decimals.longer_is_larger": 1,
+          "fractions.subtract_across": 1,
+          "negative_numbers.negative_swaps_operation": 1,
+          "negative_numbers.larger_absolute_value_always_wins": 1,
+          "order_of_operations.addition_before_subtraction_always": 1,
+          "subtraction.diff_0_n_equals_n": 1
+        },
+        "pair_member_counts": {}
+      }
+    },
+    "posterior_plus_E": {
+      "stable_ool": {
+        "single_targets": {
+          "order_of_operations.strict_left_to_right": 15,
+          "order_of_operations.ignore_parentheses": 15
+        },
+        "pair_member_counts": {}
+      },
+      "slip_ool": {
+        "single_targets": {
+          "order_of_operations.strict_left_to_right": 15,
+          "order_of_operations.ignore_parentheses": 15,
+          "percentages.percent_equals_decimal": 1
+        },
+        "pair_member_counts": {}
+      }
+    },
+    "stability_mixed_reference": {
+      "stable_ool": {
+        "single_targets": {
+          "order_of_operations.strict_left_to_right": 15,
+          "order_of_operations.ignore_parentheses": 15
+        },
+        "pair_member_counts": {}
+      },
+      "slip_ool": {
+        "single_targets": {
+          "order_of_operations.strict_left_to_right": 15,
+          "order_of_operations.ignore_parentheses": 15,
+          "<unspecified-mixed>": 10,
+          "MIXED|decimals.ignore_decimal_point|decimals.whole_number_thinking": 1,
+          "percentages.percent_equals_decimal": 1
+        },
+        "pair_member_counts": {
+          "decimals.ignore_decimal_point": 1,
+          "decimals.whole_number_thinking": 1
+        }
+      }
+    }
+  },
+  "overlap_buckets": {
+    "posterior_only": {
+      "stable_ool": {
+        "0": {
+          "n_labels": 18,
+          "n_episodes": 270,
+          "false_commit": {
+            "mean": 0.5555555555555556
+          },
+          "none": {
+            "mean": 0.35185185185185186
+          },
+          "abstain": {
+            "mean": 0.09259259259259259
+          }
+        },
+        "1": {
+          "n_labels": 4,
+          "n_episodes": 60,
+          "false_commit": {
+            "mean": 0.25
+          },
+          "none": {
+            "mean": 0.6666666666666666
+          },
+          "abstain": {
+            "mean": 0.08333333333333333
+          }
+        },
+        ">=2": {
+          "n_labels": 7,
+          "n_episodes": 105,
+          "false_commit": {
+            "mean": 0.2857142857142857
+          },
+          "none": {
+            "mean": 0.7142857142857143
+          },
+          "abstain": {
+            "mean": 0.0
+          }
+        }
+      },
+      "slip_ool": {
+        "0": {
+          "n_labels": 18,
+          "n_episodes": 270,
+          "false_commit": {
+            "mean": 0.5777777777777777
+          },
+          "none": {
+            "mean": 0.32222222222222224
+          },
+          "abstain": {
+            "mean": 0.1
+          }
+        },
+        "1": {
+          "n_labels": 4,
+          "n_episodes": 60,
+          "false_commit": {
+            "mean": 0.3
+          },
+          "none": {
+            "mean": 0.6333333333333333
+          },
+          "abstain": {
+            "mean": 0.06666666666666667
+          }
+        },
+        ">=2": {
+          "n_labels": 7,
+          "n_episodes": 105,
+          "false_commit": {
+            "mean": 0.3142857142857143
+          },
+          "none": {
+            "mean": 0.6857142857142857
+          },
+          "abstain": {
+            "mean": 0.0
+          }
+        }
+      }
+    },
+    "posterior_plus_E": {
+      "stable_ool": {
+        "0": {
+          "n_labels": 18,
+          "n_episodes": 270,
+          "false_commit": {
+            "mean": 0.0
+          },
+          "none": {
+            "mean": 0.5370370370370371
+          },
+          "abstain": {
+            "mean": 0.46296296296296297
+          }
+        },
+        "1": {
+          "n_labels": 4,
+          "n_episodes": 60,
+          "false_commit": {
+            "mean": 0.0
+          },
+          "none": {
+            "mean": 0.6666666666666666
+          },
+          "abstain": {
+            "mean": 0.3333333333333333
+          }
+        },
+        ">=2": {
+          "n_labels": 7,
+          "n_episodes": 105,
+          "false_commit": {
+            "mean": 0.2857142857142857
+          },
+          "none": {
+            "mean": 0.7142857142857143
+          },
+          "abstain": {
+            "mean": 0.0
+          }
+        }
+      },
+      "slip_ool": {
+        "0": {
+          "n_labels": 18,
+          "n_episodes": 270,
+          "false_commit": {
+            "mean": 0.003703703703703704
+          },
+          "none": {
+            "mean": 0.4888888888888889
+          },
+          "abstain": {
+            "mean": 0.5074074074074074
+          }
+        },
+        "1": {
+          "n_labels": 4,
+          "n_episodes": 60,
+          "false_commit": {
+            "mean": 0.0
+          },
+          "none": {
+            "mean": 0.6333333333333333
+          },
+          "abstain": {
+            "mean": 0.36666666666666664
+          }
+        },
+        ">=2": {
+          "n_labels": 7,
+          "n_episodes": 105,
+          "false_commit": {
+            "mean": 0.2857142857142857
+          },
+          "none": {
+            "mean": 0.7047619047619048
+          },
+          "abstain": {
+            "mean": 0.009523809523809525
+          }
+        }
+      }
+    },
+    "stability_mixed_reference": {
+      "stable_ool": {
+        "0": {
+          "n_labels": 18,
+          "n_episodes": 270,
+          "false_commit": {
+            "mean": 0.0
+          },
+          "none": {
+            "mean": 0.6296296296296297
+          },
+          "abstain": {
+            "mean": 0.37037037037037035
+          }
+        },
+        "1": {
+          "n_labels": 4,
+          "n_episodes": 60,
+          "false_commit": {
+            "mean": 0.0
+          },
+          "none": {
+            "mean": 0.75
+          },
+          "abstain": {
+            "mean": 0.25
+          }
+        },
+        ">=2": {
+          "n_labels": 7,
+          "n_episodes": 105,
+          "false_commit": {
+            "mean": 0.2857142857142857
+          },
+          "none": {
+            "mean": 0.7142857142857143
+          },
+          "abstain": {
+            "mean": 0.0
+          }
+        }
+      },
+      "slip_ool": {
+        "0": {
+          "n_labels": 18,
+          "n_episodes": 270,
+          "false_commit": {
+            "mean": 0.040740740740740744
+          },
+          "none": {
+            "mean": 0.5888888888888889
+          },
+          "abstain": {
+            "mean": 0.37037037037037035
+          }
+        },
+        "1": {
+          "n_labels": 4,
+          "n_episodes": 60,
+          "false_commit": {
+            "mean": 0.0
+          },
+          "none": {
+            "mean": 0.75
+          },
+          "abstain": {
+            "mean": 0.25
+          }
+        },
+        ">=2": {
+          "n_labels": 7,
+          "n_episodes": 105,
+          "false_commit": {
+            "mean": 0.29523809523809524
+          },
+          "none": {
+            "mean": 0.7047619047619048
+          },
+          "abstain": {
+            "mean": 0.0
+          }
+        }
+      }
+    }
+  },
+  "per_category": {
+    "posterior_only": {
+      "stable_ool": {
+        "subtraction": {
+          "n_episodes": 90,
+          "false_commit": 0.0,
+          "none": 0.8333333333333334,
+          "abstain": 0.16666666666666666
+        },
+        "fractions": {
+          "n_episodes": 90,
+          "false_commit": 0.2777777777777778,
+          "none": 0.5555555555555556,
+          "abstain": 0.16666666666666666
+        },
+        "decimals": {
+          "n_episodes": 60,
+          "false_commit": 1.0,
+          "none": 0.0,
+          "abstain": 0.0
+        },
+        "negative_numbers": {
+          "n_episodes": 75,
+          "false_commit": 0.13333333333333333,
+          "none": 0.8666666666666667,
+          "abstain": 0.0
+        },
+        "order_of_operations": {
+          "n_episodes": 60,
+          "false_commit": 1.0,
+          "none": 0.0,
+          "abstain": 0.0
+        },
+        "percentages": {
+          "n_episodes": 60,
+          "false_commit": 0.6666666666666666,
+          "none": 0.3333333333333333,
+          "abstain": 0.0
+        }
+      },
+      "slip_ool": {
+        "subtraction": {
+          "n_episodes": 90,
+          "false_commit": 0.03333333333333333,
+          "none": 0.8,
+          "abstain": 0.16666666666666666
+        },
+        "fractions": {
+          "n_episodes": 90,
+          "false_commit": 0.3333333333333333,
+          "none": 0.4888888888888889,
+          "abstain": 0.17777777777777778
+        },
+        "decimals": {
+          "n_episodes": 60,
+          "false_commit": 1.0,
+          "none": 0.0,
+          "abstain": 0.0
+        },
+        "negative_numbers": {
+          "n_episodes": 75,
+          "false_commit": 0.17333333333333334,
+          "none": 0.8266666666666667,
+          "abstain": 0.0
+        },
+        "order_of_operations": {
+          "n_episodes": 60,
+          "false_commit": 1.0,
+          "none": 0.0,
+          "abstain": 0.0
+        },
+        "percentages": {
+          "n_episodes": 60,
+          "false_commit": 0.6833333333333333,
+          "none": 0.31666666666666665,
+          "abstain": 0.0
+        }
+      }
+    },
+    "posterior_plus_E": {
+      "stable_ool": {
+        "subtraction": {
+          "n_episodes": 90,
+          "false_commit": 0.0,
+          "none": 0.8333333333333334,
+          "abstain": 0.16666666666666666
+        },
+        "fractions": {
+          "n_episodes": 90,
+          "false_commit": 0.0,
+          "none": 0.5555555555555556,
+          "abstain": 0.4444444444444444
+        },
+        "decimals": {
+          "n_episodes": 60,
+          "false_commit": 0.0,
+          "none": 0.0,
+          "abstain": 1.0
+        },
+        "negative_numbers": {
+          "n_episodes": 75,
+          "false_commit": 0.0,
+          "none": 1.0,
+          "abstain": 0.0
+        },
+        "order_of_operations": {
+          "n_episodes": 60,
+          "false_commit": 0.5,
+          "none": 0.0,
+          "abstain": 0.5
+        },
+        "percentages": {
+          "n_episodes": 60,
+          "false_commit": 0.0,
+          "none": 1.0,
+          "abstain": 0.0
+        }
+      },
+      "slip_ool": {
+        "subtraction": {
+          "n_episodes": 90,
+          "false_commit": 0.0,
+          "none": 0.8333333333333334,
+          "abstain": 0.16666666666666666
+        },
+        "fractions": {
+          "n_episodes": 90,
+          "false_commit": 0.0,
+          "none": 0.5111111111111111,
+          "abstain": 0.4888888888888889
+        },
+        "decimals": {
+          "n_episodes": 60,
+          "false_commit": 0.0,
+          "none": 0.0,
+          "abstain": 1.0
+        },
+        "negative_numbers": {
+          "n_episodes": 75,
+          "false_commit": 0.0,
+          "none": 0.9733333333333334,
+          "abstain": 0.02666666666666667
+        },
+        "order_of_operations": {
+          "n_episodes": 60,
+          "false_commit": 0.5,
+          "none": 0.0,
+          "abstain": 0.5
+        },
+        "percentages": {
+          "n_episodes": 60,
+          "false_commit": 0.016666666666666666,
+          "none": 0.8333333333333334,
+          "abstain": 0.15
+        }
+      }
+    },
+    "stability_mixed_reference": {
+      "stable_ool": {
+        "subtraction": {
+          "n_episodes": 90,
+          "false_commit": 0.0,
+          "none": 0.8888888888888888,
+          "abstain": 0.1111111111111111
+        },
+        "fractions": {
+          "n_episodes": 90,
+          "false_commit": 0.0,
+          "none": 0.8333333333333334,
+          "abstain": 0.16666666666666666
+        },
+        "decimals": {
+          "n_episodes": 60,
+          "false_commit": 0.0,
+          "none": 0.0,
+          "abstain": 1.0
+        },
+        "negative_numbers": {
+          "n_episodes": 75,
+          "false_commit": 0.0,
+          "none": 1.0,
+          "abstain": 0.0
+        },
+        "order_of_operations": {
+          "n_episodes": 60,
+          "false_commit": 0.5,
+          "none": 0.0,
+          "abstain": 0.5
+        },
+        "percentages": {
+          "n_episodes": 60,
+          "false_commit": 0.0,
+          "none": 1.0,
+          "abstain": 0.0
+        }
+      },
+      "slip_ool": {
+        "subtraction": {
+          "n_episodes": 90,
+          "false_commit": 0.03333333333333333,
+          "none": 0.8777777777777778,
+          "abstain": 0.08888888888888889
+        },
+        "fractions": {
+          "n_episodes": 90,
+          "false_commit": 0.011111111111111112,
+          "none": 0.8111111111111111,
+          "abstain": 0.17777777777777778
+        },
+        "decimals": {
+          "n_episodes": 60,
+          "false_commit": 0.03333333333333333,
+          "none": 0.0,
+          "abstain": 0.9666666666666667
+        },
+        "negative_numbers": {
+          "n_episodes": 75,
+          "false_commit": 0.0,
+          "none": 0.9866666666666667,
+          "abstain": 0.013333333333333334
+        },
+        "order_of_operations": {
+          "n_episodes": 60,
+          "false_commit": 0.5,
+          "none": 0.0,
+          "abstain": 0.5
+        },
+        "percentages": {
+          "n_episodes": 60,
+          "false_commit": 0.1,
+          "none": 0.8666666666666667,
+          "abstain": 0.03333333333333333
+        }
+      }
+    }
+  },
+  "fooled_by_label": {
+    "posterior_only": {
+      "stable_ool": [
+        {
+          "removed_rule": "decimals.ignore_decimal_point",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "decimals.longer_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "decimals.right_align_decimals",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "decimals.shorter_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.denominator_comparison_error",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.3333333333333333,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.3333333333333333,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.natural_number_bias_numerator_only",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.ignore_denominators",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 14
+        },
+        {
+          "removed_rule": "fractions.keep_common_denominator_for_multiplication",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.3333333333333333,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.multiply_across_for_division",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.3333333333333333,
+          "none_rate": 0.0,
+          "abstain_rate": 0.6666666666666666,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.natural_number_bias_numerator_only",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.6666666666666666,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.denominator_comparison_error",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.subtract_across",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "negative_numbers.larger_absolute_value_always_wins",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "negative_numbers.multiplication_rule_for_addition",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.two_negatives_always_positive",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_swaps_operation",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_times_negative_negative",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.6666666666666666,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "negative_numbers.two_negatives_always_positive",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 10
+        },
+        {
+          "removed_rule": "order_of_operations.addition_before_subtraction_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "order_of_operations.ignore_parentheses",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.strict_left_to_right",
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "order_of_operations.multiplication_before_division_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "order_of_operations.strict_left_to_right",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.ignore_parentheses",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.add_percentages_directly",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "percentages.percent_equals_decimal",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.3333333333333333,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.percentage_as_index",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.3333333333333333,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.reverse_percentage_error",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.always_borrow_left",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.borrow_from_bottom",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.borrow_no_decrement",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.smaller_from_larger",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.diff_0_n_equals_n",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.stops_borrow_at_zero",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "subtraction.smaller_from_larger",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.borrow_no_decrement",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.stops_borrow_at_zero",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.diff_0_n_equals_n",
+          "n_triggering_items": 5
+        }
+      ],
+      "slip_ool": [
+        {
+          "removed_rule": "decimals.ignore_decimal_point",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "decimals.longer_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "decimals.right_align_decimals",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "decimals.shorter_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.denominator_comparison_error",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.4666666666666667,
+          "none_rate": 0.26666666666666666,
+          "abstain_rate": 0.26666666666666666,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.natural_number_bias_numerator_only",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.ignore_denominators",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 14
+        },
+        {
+          "removed_rule": "fractions.keep_common_denominator_for_multiplication",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.26666666666666666,
+          "none_rate": 0.6,
+          "abstain_rate": 0.13333333333333333,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.multiply_across_for_division",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.4,
+          "none_rate": 0.0,
+          "abstain_rate": 0.6,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.natural_number_bias_numerator_only",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.7333333333333333,
+          "none_rate": 0.26666666666666666,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.denominator_comparison_error",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.subtract_across",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.8666666666666667,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "negative_numbers.larger_absolute_value_always_wins",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "negative_numbers.multiplication_rule_for_addition",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.two_negatives_always_positive",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_swaps_operation",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_times_negative_negative",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.7333333333333333,
+          "none_rate": 0.26666666666666666,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "negative_numbers.two_negatives_always_positive",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 10
+        },
+        {
+          "removed_rule": "order_of_operations.addition_before_subtraction_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "order_of_operations.ignore_parentheses",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.strict_left_to_right",
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "order_of_operations.multiplication_before_division_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "order_of_operations.strict_left_to_right",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.ignore_parentheses",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.add_percentages_directly",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "percentages.percent_equals_decimal",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.3333333333333333,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.percentage_as_index",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.4,
+          "none_rate": 0.6,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.reverse_percentage_error",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.always_borrow_left",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.borrow_from_bottom",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.13333333333333333,
+          "none_rate": 0.8666666666666667,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.borrow_no_decrement",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.smaller_from_larger",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.diff_0_n_equals_n",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.stops_borrow_at_zero",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "subtraction.smaller_from_larger",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.borrow_no_decrement",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.stops_borrow_at_zero",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.diff_0_n_equals_n",
+          "n_triggering_items": 5
+        }
+      ]
+    },
+    "posterior_plus_E": {
+      "stable_ool": [
+        {
+          "removed_rule": "decimals.ignore_decimal_point",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "decimals.longer_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "decimals.right_align_decimals",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "decimals.shorter_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.denominator_comparison_error",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.6666666666666666,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.natural_number_bias_numerator_only",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.ignore_denominators",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 14
+        },
+        {
+          "removed_rule": "fractions.keep_common_denominator_for_multiplication",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.3333333333333333,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.multiply_across_for_division",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.natural_number_bias_numerator_only",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.6666666666666666,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.denominator_comparison_error",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.subtract_across",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "negative_numbers.larger_absolute_value_always_wins",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "negative_numbers.multiplication_rule_for_addition",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.two_negatives_always_positive",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_swaps_operation",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_times_negative_negative",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "negative_numbers.two_negatives_always_positive",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 10
+        },
+        {
+          "removed_rule": "order_of_operations.addition_before_subtraction_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "order_of_operations.ignore_parentheses",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.strict_left_to_right",
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "order_of_operations.multiplication_before_division_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "order_of_operations.strict_left_to_right",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.ignore_parentheses",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.add_percentages_directly",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "percentages.percent_equals_decimal",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.percentage_as_index",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.reverse_percentage_error",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.always_borrow_left",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.borrow_from_bottom",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.borrow_no_decrement",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.smaller_from_larger",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.diff_0_n_equals_n",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.stops_borrow_at_zero",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "subtraction.smaller_from_larger",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.borrow_no_decrement",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.stops_borrow_at_zero",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.diff_0_n_equals_n",
+          "n_triggering_items": 5
+        }
+      ],
+      "slip_ool": [
+        {
+          "removed_rule": "decimals.ignore_decimal_point",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "decimals.longer_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "decimals.right_align_decimals",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "decimals.shorter_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.denominator_comparison_error",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.26666666666666666,
+          "abstain_rate": 0.7333333333333333,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.natural_number_bias_numerator_only",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.ignore_denominators",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 14
+        },
+        {
+          "removed_rule": "fractions.keep_common_denominator_for_multiplication",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.6,
+          "abstain_rate": 0.4,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.multiply_across_for_division",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.natural_number_bias_numerator_only",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.26666666666666666,
+          "abstain_rate": 0.7333333333333333,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.denominator_comparison_error",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.subtract_across",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "negative_numbers.larger_absolute_value_always_wins",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "negative_numbers.multiplication_rule_for_addition",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.two_negatives_always_positive",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_swaps_operation",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_times_negative_negative",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "negative_numbers.two_negatives_always_positive",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 10
+        },
+        {
+          "removed_rule": "order_of_operations.addition_before_subtraction_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "order_of_operations.ignore_parentheses",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.strict_left_to_right",
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "order_of_operations.multiplication_before_division_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "order_of_operations.strict_left_to_right",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.ignore_parentheses",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.add_percentages_directly",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.3333333333333333,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "percentages.percent_equals_decimal",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.percentage_as_index",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.reverse_percentage_error",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.26666666666666666,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.always_borrow_left",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.borrow_from_bottom",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.borrow_no_decrement",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.smaller_from_larger",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.diff_0_n_equals_n",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.stops_borrow_at_zero",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "subtraction.smaller_from_larger",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.borrow_no_decrement",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.stops_borrow_at_zero",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.diff_0_n_equals_n",
+          "n_triggering_items": 5
+        }
+      ]
+    },
+    "stability_mixed_reference": {
+      "stable_ool": [
+        {
+          "removed_rule": "decimals.ignore_decimal_point",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "decimals.longer_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "decimals.right_align_decimals",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "decimals.shorter_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.denominator_comparison_error",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.3333333333333333,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.natural_number_bias_numerator_only",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.ignore_denominators",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 14
+        },
+        {
+          "removed_rule": "fractions.keep_common_denominator_for_multiplication",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.multiply_across_for_division",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.natural_number_bias_numerator_only",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.6666666666666666,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.denominator_comparison_error",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.subtract_across",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "negative_numbers.larger_absolute_value_always_wins",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "negative_numbers.multiplication_rule_for_addition",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.two_negatives_always_positive",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_swaps_operation",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_times_negative_negative",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "negative_numbers.two_negatives_always_positive",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 10
+        },
+        {
+          "removed_rule": "order_of_operations.addition_before_subtraction_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "order_of_operations.ignore_parentheses",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.strict_left_to_right",
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "order_of_operations.multiplication_before_division_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "order_of_operations.strict_left_to_right",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.ignore_parentheses",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.add_percentages_directly",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "percentages.percent_equals_decimal",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.percentage_as_index",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.reverse_percentage_error",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.always_borrow_left",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.6666666666666666,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.borrow_from_bottom",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.borrow_no_decrement",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.smaller_from_larger",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.diff_0_n_equals_n",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.stops_borrow_at_zero",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "subtraction.smaller_from_larger",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.borrow_no_decrement",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.stops_borrow_at_zero",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.diff_0_n_equals_n",
+          "n_triggering_items": 5
+        }
+      ],
+      "slip_ool": [
+        {
+          "removed_rule": "decimals.ignore_decimal_point",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "decimals.longer_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "decimals.right_align_decimals",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.0,
+          "abstain_rate": 0.9333333333333333,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "decimals.shorter_is_larger",
+          "category": "decimals",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.0,
+          "abstain_rate": 0.9333333333333333,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.denominator_comparison_error",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.5333333333333333,
+          "abstain_rate": 0.4666666666666667,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.natural_number_bias_numerator_only",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.ignore_denominators",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 14
+        },
+        {
+          "removed_rule": "fractions.keep_common_denominator_for_multiplication",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.multiply_across_for_division",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "fractions.natural_number_bias_numerator_only",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.4666666666666667,
+          "abstain_rate": 0.5333333333333333,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "fractions.denominator_comparison_error",
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "fractions.subtract_across",
+          "category": "fractions",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "negative_numbers.larger_absolute_value_always_wins",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "negative_numbers.multiplication_rule_for_addition",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.two_negatives_always_positive",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_swaps_operation",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 6
+        },
+        {
+          "removed_rule": "negative_numbers.negative_times_negative_negative",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "negative_numbers.two_negatives_always_positive",
+          "category": "negative_numbers",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 6,
+          "max_overlap_rule": "negative_numbers.multiplication_rule_for_addition",
+          "n_triggering_items": 10
+        },
+        {
+          "removed_rule": "order_of_operations.addition_before_subtraction_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 4
+        },
+        {
+          "removed_rule": "order_of_operations.ignore_parentheses",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.strict_left_to_right",
+          "n_triggering_items": 5
+        },
+        {
+          "removed_rule": "order_of_operations.multiplication_before_division_always",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 0.0,
+          "abstain_rate": 1.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "order_of_operations.strict_left_to_right",
+          "category": "order_of_operations",
+          "n_episodes": 15,
+          "false_commit_rate": 1.0,
+          "none_rate": 0.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 5,
+          "max_overlap_rule": "order_of_operations.ignore_parentheses",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.add_percentages_directly",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.13333333333333333,
+          "none_rate": 0.8,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "percentages.percent_equals_decimal",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.percentage_as_index",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "percentages.reverse_percentage_error",
+          "category": "percentages",
+          "n_episodes": 15,
+          "false_commit_rate": 0.26666666666666666,
+          "none_rate": 0.6666666666666666,
+          "abstain_rate": 0.06666666666666667,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.always_borrow_left",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.13333333333333333,
+          "none_rate": 0.3333333333333333,
+          "abstain_rate": 0.5333333333333333,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 3
+        },
+        {
+          "removed_rule": "subtraction.borrow_from_bottom",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 0,
+          "max_overlap_rule": null,
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.borrow_no_decrement",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.smaller_from_larger",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.diff_0_n_equals_n",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.stops_borrow_at_zero",
+          "n_triggering_items": 7
+        },
+        {
+          "removed_rule": "subtraction.smaller_from_larger",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.06666666666666667,
+          "none_rate": 0.9333333333333333,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 2,
+          "max_overlap_rule": "subtraction.borrow_no_decrement",
+          "n_triggering_items": 13
+        },
+        {
+          "removed_rule": "subtraction.stops_borrow_at_zero",
+          "category": "subtraction",
+          "n_episodes": 15,
+          "false_commit_rate": 0.0,
+          "none_rate": 1.0,
+          "abstain_rate": 0.0,
+          "max_overlap_count": 1,
+          "max_overlap_rule": "subtraction.diff_0_n_equals_n",
+          "n_triggering_items": 5
+        }
+      ]
+    }
+  }
+}

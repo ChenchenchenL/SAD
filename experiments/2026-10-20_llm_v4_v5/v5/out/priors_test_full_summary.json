@@ -1,0 +1,23 @@
+{
+  "cases": "v5/data/cases_test_v5.json",
+  "priors": "v5/out/priors_test_full.jsonl",
+  "library_mode": "full",
+  "model": "deepseek-v4.1-flash",
+  "prompt_version": "v5_prior_2026-10-20",
+  "n_ok": 90,
+  "top10_global_recall": 0.9888888888888889,
+  "top1_global": 0.6444444444444445,
+  "top10_category_recall": 0.9888888888888889,
+  "top1_category_rank": 0.6444444444444445,
+  "type_counts": {
+    "slip": 1,
+    "mixed": 21,
+    "stable": 57,
+    "unsure": 11
+  },
+  "usage": {
+    "input_tokens": 887114,
+    "output_tokens": 15362
+  },
+  "estimated_cost_usd": 0.25484396000000004
+}

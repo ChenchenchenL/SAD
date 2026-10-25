@@ -1,0 +1,22 @@
+{
+  "experiment": "e6lite_threshold_sensitivity",
+  "description": "E6-lite: OFAT threshold sweep (u1/margin/S/P/N/E/LR/pair_guard) of the frozen v5 stability_mixed/maxent stopping rule on frozen priors. Sensitivity analysis only - no threshold selection.",
+  "bank_dir": "data",
+  "bank_prefix": "bank_v5_",
+  "test_cases": "data/cases_test_v5_exclusion_corrected.json",
+  "test_priors": "data/priors_test_category.jsonl",
+  "dev_cases": "data/cases_dev_v5.json",
+  "dev_priors": "data/priors_dev_category.jsonl",
+  "frozen_test_episodes": "../2026-10-20_llm_v4_v5/v5/out/test_category_eps05_corrected_episodes.json",
+  "frozen_dev_episodes": "../2026-10-20_llm_v4_v5/v5/out/dev_prior_episodes.json",
+  "test_seeds": 5,
+  "dev_seeds": 3,
+  "eps_primary": 0.05,
+  "eps_secondary": [0.0, 0.10],
+  "max_obs": 7,
+  "bootstrap": 2000,
+  "bootstrap_seed": 20261027,
+  "direct_check_configs": ["u1=0.9", "E=1", "P=0.1", "pair_guard=off"],
+  "families_expected": 36,
+  "dev_families_expected": 11
+}
