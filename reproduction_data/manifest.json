@@ -6816,10 +6816,11 @@
       "path": "results/figures/scripts/fig1_fig5_selection_noise.py",
       "stored_path": "results/figures/scripts/fig1_fig5_selection_noise.py",
       "source_sha256": "b29fe36d8e6f80e1584e2779a76c215f22a233273371dad893e512b88d2873be",
-      "published_sha256": "b29fe36d8e6f80e1584e2779a76c215f22a233273371dad893e512b88d2873be",
-      "size_bytes": 9041,
+      "published_sha256": "744cac59343a1a0d74ee9bacdbdfb188fda12e6a26c1fbdff313d15a1556f264",
+      "size_bytes": 9132,
       "gzip": false,
-      "path_or_endpoint_normalization": false
+      "path_or_endpoint_normalization": false,
+      "display_change": "160 mm selection figure width preserves text legibility at manuscript size"
     },
     {
       "path": "results/figures/scripts/fig3_feedback_forest.py",

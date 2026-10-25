@@ -46,8 +46,8 @@ def errors(row, factor=1):
     return np.array([[row["mean"] - row["ci_low"]], [row["ci_high"] - row["mean"]]]) * factor
 
 
-def setup():
-    fig, axes = plt.subplots(1, 3, figsize=(7.204724409448819, 3.3858267716535435))
+def setup(width_mm=183):
+    fig, axes = plt.subplots(1, 3, figsize=(width_mm / 25.4, 86 / 25.4))
     fig.subplots_adjust(left=.095, right=.985, top=.76, bottom=.27, wspace=.58)
     for ax, label in zip(axes, "abc"):
         ax.annotate(label, xy=(0, 1), xycoords="axes fraction", xytext=(-15, 13),
@@ -106,7 +106,8 @@ def save(fig, name):
 def selection():
     df = pd.read_csv(FIGURES / "data/selection_comparison_means.csv")
     df = df[df["epsilon"] == .05]
-    fig, axes = setup()
+    # Match the manuscript scale closely enough to retain >=5 pt figure text.
+    fig, axes = setup(width_mm=160)
     for method, color, marker in zip(METHODS, METHOD_COLORS, METHOD_MARKERS):
         x = select(df, block="fixed3", arm=method, student_type="slip", metric="false")
         y = select(df, block="fixed3", arm=method, student_type="stable", metric="correct")
